@@ -1,0 +1,36 @@
+{
+  "policy": "OFFICIAL_VENDOR_ONLY",
+  "documents": [
+    {"vendor":"STMicroelectronics","product":"STM32F4DISCOVERY","part":"STM32F407VGT6","board":"STM32F4DISCOVERY / STM32F407G-DISC1","type":"Datasheet","title":"STM32F405/407 Datasheet DS8597","revision":"official-current","url":"https://www.st.com/resource/en/datasheet/stm32f407vg.pdf"},
+    {"vendor":"STMicroelectronics","product":"STM32F4DISCOVERY","part":"STM32F407VGT6","board":"STM32F4DISCOVERY / STM32F407G-DISC1","type":"Reference Manual","title":"STM32F405/407/415/417 Reference Manual RM0090","revision":"official-current","url":"https://www.st.com/resource/en/reference_manual/rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf"},
+    {"vendor":"STMicroelectronics","product":"STM32F4DISCOVERY","part":"STM32F407VGT6","board":"STM32F4DISCOVERY / STM32F407G-DISC1","type":"Board User Manual","title":"Discovery kit with STM32F407VG MCU UM1472 Rev 9","revision":"Rev 9","url":"https://www.st.com/resource/en/user_manual/um1472-stm32f4-discovery-stmicroelectronics.pdf"},
+    {"vendor":"STMicroelectronics","product":"STM32F4DISCOVERY","part":"STM32F407VGT6","board":"STM32F4DISCOVERY / STM32F407G-DISC1","type":"Errata","title":"STM32F405/407xx and STM32F415/417xx device errata ES0182","revision":"official-current","url":"https://www.st.com/resource/en/errata_sheet/es0182-stm32f405407xx-and-stm32f415417xx-device-limitations-stmicroelectronics.pdf"},
+    {"vendor":"STMicroelectronics","product":"STM32F4DISCOVERY","part":"STM32F407VGT6","board":"STM32F4DISCOVERY / STM32F407G-DISC1","type":"Software Package","title":"STM32CubeF4 MCU Package","revision":"official-current","url":"https://www.st.com/en/embedded-software/stm32cubef4.html"},
+    {"vendor":"NXP","product":"i.MX 8M Plus","part":"MIMX8ML","board":"i.MX 8M Plus EVK","type":"Reference Manual","title":"i.MX 8M Plus Applications Processor Reference Manual","revision":"Rev 3","url":"https://www.nxp.com/webapp/Download?colCode=IMX8MPRM"},
+    {"vendor":"NXP","product":"i.MX 8M Plus","part":"MIMX8ML","board":"i.MX 8M Plus EVK","type":"Board User Guide","title":"i.MX 8M Plus LPDDR4 EVK Board Hardware User's Guide","revision":"Rev 0","url":"https://www.nxp.com/webapp/Download?colCode=IMX8MPEVKHUG"},
+    {"vendor":"AMD","product":"Zynq-7000","part":"7Z020","board":"ZedBoard","type":"Technical Reference Manual","title":"Zynq-7000 SoC Technical Reference Manual UG585","revision":"Rev 1.15","url":"https://docs.amd.com/r/en-US/ug585-zynq-7000-SoC-TRM"},
+    {"vendor":"AMD","product":"Zynq-7000","part":"7Z020","type":"Datasheet","title":"Zynq-7000 SoC Data Sheet DS187","revision":"official-current","url":"https://docs.xilinx.com/v/u/en-US/ds187-Zynq-7000-Data-Sheet"},
+    {"vendor":"AMD","product":"Zynq UltraScale+ MPSoC","part":"ZCU104","type":"Technical Reference Manual","title":"Zynq UltraScale+ Device Technical Reference Manual UG1085","revision":"Rev 2.5","url":"https://docs.amd.com/v/u/en-US/ug1085-zynq-ultrascale-trm"}
+  ],
+  "board_facts": {
+    "stm32f4discovery": {
+      "mcu": "STM32F407VGT6",
+      "architecture": "ARM Cortex-M4 with FPU",
+      "max_clock_mhz": 168,
+      "flash_kb": 1024,
+      "ram_kb": 192,
+      "user_leds": {
+        "LD3_ORANGE": {"port":"GPIOD","pin":13,"signal":"PD13","active_level":"HIGH"},
+        "LD4_GREEN": {"port":"GPIOD","pin":12,"signal":"PD12","active_level":"HIGH"},
+        "LD5_RED": {"port":"GPIOD","pin":14,"signal":"PD14","active_level":"HIGH"},
+        "LD6_BLUE": {"port":"GPIOD","pin":15,"signal":"PD15","active_level":"HIGH"}
+      },
+      "user_button": {"name":"B1_USER","port":"GPIOA","pin":0,"signal":"PA0"},
+      "usb_vbus_led": {"name":"LD7_GREEN","port":"GPIOA","pin":9,"signal":"PA9"},
+      "usb_overcurrent_led": {"name":"LD8_RED","port":"GPIOD","pin":5,"signal":"PD5"},
+      "default_serial_candidate": {"peripheral":"USART2","tx":"PA2","rx":"PA3","note":"requires external/appropriate VCP wiring; do not assume onboard ST-LINK VCP connection"},
+      "source_manual":"UM1472",
+      "source_authority":"OFFICIAL_VENDOR"
+    }
+  }
+}

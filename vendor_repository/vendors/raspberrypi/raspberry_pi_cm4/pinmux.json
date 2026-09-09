@@ -1,0 +1,16 @@
+[
+  {
+    "pinNumber": "A1",
+    "pinName": "PAD_UART1_TX",
+    "signalName": "UART1_TX",
+    "ioType": "OUTPUT",
+    "provenance": {
+      "document": "raspberry_pi_cm4_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "RASPBERRYPI",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]

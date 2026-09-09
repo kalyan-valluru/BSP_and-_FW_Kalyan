@@ -1,0 +1,17 @@
+{
+  "id": "zynq-7000",
+  "name": "Zynq-7000 Dual ARM Cortex-A9",
+  "category": "processors",
+  "metadataVersion": "1.0.0",
+  "schemaVersion": "v2.0",
+  "vendorId": "amd-xilinx",
+  "architecture": "ARM Cortex-A9",
+  "family": "Zynq",
+  "registerWidth": 32,
+  "defaultClockMHz": 667,
+  "coresCount": 2,
+  "memoryRanges": [
+    { "name": "DDR", "start": "0x00100000", "size": "512M" },
+    { "name": "OCM", "start": "0x00000000", "size": "256K" }
+  ]
+}

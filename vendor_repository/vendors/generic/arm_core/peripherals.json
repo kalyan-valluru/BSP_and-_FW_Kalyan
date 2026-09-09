@@ -1,0 +1,16 @@
+[
+  {
+    "name": "sys_ctrl",
+    "baseAddress": "0x40000000",
+    "irq": 32,
+    "busInterface": "AHB / APB",
+    "provenance": {
+      "document": "arm_core_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "GENERIC",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]

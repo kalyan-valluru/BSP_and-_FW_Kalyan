@@ -1,0 +1,16 @@
+{
+  "id": "am335x",
+  "name": "TI Sitara AM335x ARM Cortex-A8 Processor",
+  "category": "processors",
+  "metadataVersion": "1.0.0",
+  "schemaVersion": "v2.0",
+  "vendorId": "ti",
+  "architecture": "ARM Cortex-A8",
+  "family": "Sitara",
+  "registerWidth": 32,
+  "defaultClockMHz": 1000,
+  "coresCount": 1,
+  "memoryRanges": [
+    { "name": "DDR3", "start": "0x80000000", "size": "536870912" }
+  ]
+}

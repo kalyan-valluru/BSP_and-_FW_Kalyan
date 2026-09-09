@@ -1,0 +1,3 @@
+Pin,Signal,GPIO Block,Alternate Function,Driver Name,Base Address,Clock Frequency,Direction,Connected Component
+PA0,B1_USER,GPIOA,GPIO_IN,stm32f4_gpio,0x40020000,168 MHz,INPUT,B1 USER Button
+PD12,LD4_GREEN,GPIOD,GPIO_OUT,stm32f4_gpio,0x40020C00,168 MHz,OUTPUT,LD4 Green LED

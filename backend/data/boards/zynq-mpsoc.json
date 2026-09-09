@@ -1,0 +1,39 @@
+{
+  "id": "xilinx-zynq-mpsoc",
+  "name": "Xilinx Zynq MPSoC",
+  "vendor": "Xilinx",
+  "architecture": "ARM Cortex-A53 + FPGA",
+  "frequency": "1.2 GHz",
+  "memorySize": "2 GB",
+  "flashType": "QSPI Flash",
+  "defaultBus": "AXI4-Lite",
+  "defaultClock": "s_axi_aclk",
+  "defaultFreq": "100 MHz",
+  "memoryRegions": [
+    { "start": "0xFF000000", "end": "0xFFBFFFFF", "name": "LPD Peripheral Map" },
+    { "start": "0xFD000000", "end": "0xFDFFFFFF", "name": "FPD Peripheral Map" },
+    { "start": "0x80000000", "end": "0xDFFFFFFF", "name": "PL AXI High Address" }
+  ],
+  "suggestedBaseAddresses": {
+    "uart": "0xFF010000",
+    "gpio": "0xFF0A0000",
+    "i2c": "0xFF020000",
+    "spi": "0xFF040000",
+    "can": "0xFF060000",
+    "eth": "0xFF0B0000",
+    "usb": "0xFF9D0000",
+    "sd": "0xFF160000",
+    "timer": "0xFF110000"
+  },
+  "defaultDrivers": {
+    "uart": "xuartps",
+    "gpio": "xgpiops",
+    "i2c": "xiicps",
+    "spi": "xspips",
+    "timer": "xttcps",
+    "can": "xcanps",
+    "eth": "xemacps",
+    "usb": "xusbps",
+    "sd": "xsdps"
+  }
+}

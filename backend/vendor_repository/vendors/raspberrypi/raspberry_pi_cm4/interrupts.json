@@ -1,0 +1,16 @@
+[
+  {
+    "irqNumber": 32,
+    "name": "sys_ctrl_IRQ",
+    "peripheralBlock": "sys_ctrl",
+    "controllerType": "GIC",
+    "provenance": {
+      "document": "raspberry_pi_cm4_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "RASPBERRYPI",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]

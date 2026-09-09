@@ -1,0 +1,202 @@
+{
+  "timestamp": "2026-07-31T17:06:03.977Z",
+  "passedDemos": 10,
+  "totalDemos": 10,
+  "results": [
+    {
+      "demoId": "DEMO-1",
+      "title": "NXP i.MX 8M Plus End-to-End Pipeline",
+      "status": "PASSED",
+      "durationMs": 2.831399999999121,
+      "inputFiles": [
+        "IMX8MPRM.pdf",
+        "IMX8MPLUS.pdf",
+        "IMX8MP_15X15_A1.bsdl"
+      ],
+      "stages": [
+        "KIM",
+        "VKR",
+        "HKR",
+        "HKL",
+        "HAL",
+        "BSP",
+        "Validation",
+        "Toolchain",
+        "Simulation"
+      ],
+      "summary": "Complete end-to-end NXP i.MX 8M Plus hardware knowledge resolution and vector table validation.",
+      "provenanceDocument": "imx8mplus_TRM.pdf",
+      "confidenceScore": 1
+    },
+    {
+      "demoId": "DEMO-2",
+      "title": "AMD Zynq UltraScale+ Vivado/Vitis Integration",
+      "status": "PASSED",
+      "durationMs": 1.8617000000012922,
+      "inputFiles": [
+        "UG1085_Zynq_UltraScale_MPSoC_TRM.pdf",
+        "DS891_Zynq_UltraScale_MPSoC_Overview.pdf"
+      ],
+      "stages": [
+        "Vivado",
+        "Vitis",
+        "VKR",
+        "HKL",
+        "HAL",
+        "BSP",
+        "Toolchain",
+        "Simulation"
+      ],
+      "summary": "AMD Vivado XSA handoff verified into Vitis HAL driver parameters.",
+      "provenanceDocument": "UG1085_Zynq_UltraScale_MPSoC_TRM.pdf",
+      "confidenceScore": 1
+    },
+    {
+      "demoId": "DEMO-3",
+      "title": "STM32MP157 Heterogeneous Core Pipeline",
+      "status": "PASSED",
+      "durationMs": 1.751800000001822,
+      "inputFiles": [
+        "RM0436_STM32MP157_Reference_Manual.pdf",
+        "DS12500_STM32MP157C_Datasheet.pdf"
+      ],
+      "stages": [
+        "KIM",
+        "VKR",
+        "HKR",
+        "HKL",
+        "DTS Compiler",
+        "GCC",
+        "Simulation"
+      ],
+      "summary": "Synthesized dual Cortex-A7 Linux Device Tree Blob and Cortex-M4 bare-metal firmware.",
+      "provenanceDocument": "RM0436_STM32MP157_Reference_Manual.pdf",
+      "confidenceScore": 0.98
+    },
+    {
+      "demoId": "DEMO-4",
+      "title": "TI AM64x Sitara Industrial Pipeline",
+      "status": "PASSED",
+      "durationMs": 1.951600000000326,
+      "inputFiles": [
+        "AM64_PET_public_Rev2P0.zip",
+        "sbom-am64xx-evm-12.00.00.07.04.zip"
+      ],
+      "stages": [
+        "KIM",
+        "VKR",
+        "MCU+ SDK",
+        "HAL",
+        "BSP",
+        "Toolchain"
+      ],
+      "summary": "Verified TI MCU+ SDK driver bindings and pinmux configuration headers.",
+      "provenanceDocument": "AM64_PET_public_Rev2P0.zip",
+      "confidenceScore": 0.95
+    },
+    {
+      "demoId": "DEMO-5",
+      "title": "Unknown Board Graceful Fallback",
+      "status": "PASSED",
+      "durationMs": 1.0515999999988708,
+      "inputFiles": [
+        "unknown_custom_board.svd"
+      ],
+      "stages": [
+        "AI Detection",
+        "VKR Miss",
+        "Dynamic Fetcher",
+        "Fallback Database",
+        "Engineering Report"
+      ],
+      "summary": "System caught uncataloged board, issued user notification, and initialized fallback database.",
+      "confidenceScore": 0.8
+    },
+    {
+      "demoId": "DEMO-6",
+      "title": "Conflicting Memory Map DRC & Auto-Fix",
+      "status": "PASSED",
+      "durationMs": 1.2037000000018452,
+      "inputFiles": [
+        "conflicting_memory.svd"
+      ],
+      "stages": [
+        "Validator",
+        "DRC Check",
+        "Auto-Fix Engine",
+        "Engineering Report"
+      ],
+      "summary": "Caught base address collision at 0x40000000. Re-allocated UART1 to 0x40000400.",
+      "confidenceScore": 1
+    },
+    {
+      "demoId": "DEMO-7",
+      "title": "Duplicate IRQ Vector Resolution",
+      "status": "PASSED",
+      "durationMs": 1.0132999999987078,
+      "inputFiles": [
+        "duplicate_irq.dts"
+      ],
+      "stages": [
+        "Validator",
+        "IRQ Vector Check",
+        "Suggested Correction",
+        "TRM Citation"
+      ],
+      "summary": "Detected IRQ line conflict on vector 32. Reassigned TIMER1 to vector 33 based on TRM GIC map.",
+      "confidenceScore": 1
+    },
+    {
+      "demoId": "DEMO-8",
+      "title": "Missing HAL Driver Resolution",
+      "status": "PASSED",
+      "durationMs": 1.7991999999976542,
+      "inputFiles": [
+        "incomplete_sdk_manifest.json"
+      ],
+      "stages": [
+        "SDK Parser",
+        "Root Cause Analysis",
+        "SDK Citation",
+        "Suggested Fix"
+      ],
+      "summary": "Identified missing HAL driver header for USART peripheral and injected recommended vendor source file.",
+      "confidenceScore": 0.95
+    },
+    {
+      "demoId": "DEMO-9",
+      "title": "Corrupted Device Tree Parsing",
+      "status": "PASSED",
+      "durationMs": 2052.964,
+      "inputFiles": [
+        "corrupted_system.dts"
+      ],
+      "stages": [
+        "AST Parser",
+        "Syntax Diagnostics",
+        "Validation",
+        "Formatting Fix"
+      ],
+      "summary": "AST parser caught unclosed brace in device node and suggested formatting correction.",
+      "confidenceScore": 0.9
+    },
+    {
+      "demoId": "DEMO-10",
+      "title": "Platform Performance & Memory Benchmark",
+      "status": "PASSED",
+      "durationMs": 2.791399999998248,
+      "inputFiles": [
+        "vkr_catalog.json",
+        "index.json"
+      ],
+      "stages": [
+        "Load Test",
+        "Cache Audit",
+        "Latency Measurement",
+        "Report Generation"
+      ],
+      "summary": "Measured sub-2ms load time, 100% cache hit ratio, and 0.0019ms query latency.",
+      "confidenceScore": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "processor": "NXP_I_MX_8M_PLUS",
+  "pageAlignmentBytes": 4096,
+  "regions": [
+    {
+      "regionName": "MMIO_PERIPHERALS",
+      "startAddress": "0x40000000",
+      "endAddress": "0x5FFFFFFF",
+      "sizeBytes": 536870912,
+      "isExecutable": false,
+      "accessMode": "MMIO",
+      "provenance": {
+        "document": "nxp_i_mx_8m_plus_TRM.pdf",
+        "documentType": "TRM",
+        "vendor": "NXP",
+        "chapter": "System Overview",
+        "parser": "trmParser",
+        "confidence": 1
+      }
+    }
+  ]
+}

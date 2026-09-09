@@ -1,0 +1,25 @@
+{
+  "halHeaderFile": "bsp_config.h",
+  "supportedPeripherals": [
+    "sys_ctrl"
+  ],
+  "sourceFiles": [
+    "bsp_init.c"
+  ],
+  "apiFunctions": [
+    "BSP_Init()",
+    "HAL_UART_Transmit()"
+  ],
+  "exampleProjects": [
+    "uart_echo",
+    "gpio_toggle"
+  ],
+  "provenance": {
+    "document": "arm_cortex-a9_TRM.pdf",
+    "documentType": "TRM",
+    "vendor": "GENERIC",
+    "chapter": "System Overview",
+    "parser": "trmParser",
+    "confidence": 1
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "artifact": "system.dts",
+  "path": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\workspace\\test_rpi_gic_1787056734448\\system.dts",
+  "generatedBy": "LLM",
+  "model": "Gemini / AI Router",
+  "hardwareModelVersion": "v2.0",
+  "inputHash": "76d628bbcfd24bee",
+  "hardwareModelHash": "76d628bbcfd24bee",
+  "expectedPeripheralCount": 1,
+  "actualPeripheralCount": 4,
+  "consistencyValidation": {
+    "valid": true,
+    "checksPassed": 2,
+    "checksFailed": 0,
+    "details": [
+      {
+        "name": "UART1",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      }
+    ]
+  },
+  "generatedAt": "2026-08-18T12:38:54.480Z",
+  "validationStatus": "compiled",
+  "compiler": "dtc",
+  "compilerVersion": "1.7.0",
+  "repairAttempts": 0,
+  "documentationGrounded": true,
+  "retrievedSources": [
+    "RP-008248-DS-1-bcm2711-peripherals.pdf",
+    "RP-008168-DS-4-cm4-datasheet.pdf",
+    "example1-overlay.dts"
+  ],
+  "retrievedSourceIds": [
+    "RPI_BCM2711_PERIPHERALS_PDF",
+    "RPI_CM4_DATASHEET_PDF",
+    "RPI_EXAMPLE_OVERLAY_DTS"
+  ],
+  "infrastructureResolvedFromDocumentation": true,
+  "documentationResolution": {
+    "sourceType": "local_authoritative_source",
+    "ragChunks": 3,
+    "infrastructureResolved": true
+  },
+  "phandleValidation": {
+    "valid": true,
+    "checkedPhandles": [
+      "gic",
+      "clkc"
+    ],
+    "missingLabels": [],
+    "errors": []
+  },
+  "officialDocUrl": "https://datasheets.raspberrypi.com/bcm2711/bcm2711-peripherals.pdf"
+}

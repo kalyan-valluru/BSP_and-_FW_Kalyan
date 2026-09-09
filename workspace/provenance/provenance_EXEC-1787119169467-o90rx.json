@@ -1,0 +1,66 @@
+{
+  "manifestId": "PROV-1787119172027-EXEC-1",
+  "executionId": "EXEC-1787119169467-o90rx",
+  "hardwareLockId": "HWLOCK-1787119169446-c98d6d59",
+  "generatedAt": "2026-08-19T05:59:32.027Z",
+  "items": [
+    {
+      "filename": "system.dts",
+      "artifactHash": "4b05b0e104559fe06929838570bd5d8a62b795d2c771272be70c85d5059e5515",
+      "executionId": "EXEC-1787119169467-o90rx",
+      "hardwareLockId": "HWLOCK-1787119169446-c98d6d59",
+      "generatedBy": "autonomous-bsp-fw-agent",
+      "targetFlow": "linux",
+      "createdAt": "2026-08-19T05:59:32.025Z",
+      "claims": [
+        {
+          "claim": "pcf8523.deviceAddress",
+          "value": "0x68",
+          "verificationStatus": "VENDOR_SOURCE_VERIFIED",
+          "evidenceReferences": [
+            "Raspberry_Pi_CM4_Board_to_BSP_Firmware_Test(1).pdf",
+            "backend/vendor_repository/vendors/raspberrypi/cm4/peripherals.json"
+          ]
+        },
+        {
+          "claim": "uart0.baseAddress",
+          "value": "0xFE201000",
+          "verificationStatus": "VENDOR_SOURCE_VERIFIED",
+          "evidenceReferences": [
+            "Raspberry_Pi_CM4_Board_to_BSP_Firmware_Test(1).pdf",
+            "backend/vendor_repository/vendors/raspberrypi/cm4/peripherals.json"
+          ]
+        }
+      ]
+    },
+    {
+      "filename": "system.dtb",
+      "artifactHash": "b981fe225f5e0f23881e396480a00efd89704cbc933b6a0f31f5ad1e149524a2",
+      "executionId": "EXEC-1787119169467-o90rx",
+      "hardwareLockId": "HWLOCK-1787119169446-c98d6d59",
+      "generatedBy": "autonomous-bsp-fw-agent",
+      "targetFlow": "linux",
+      "createdAt": "2026-08-19T05:59:32.027Z",
+      "claims": [
+        {
+          "claim": "pcf8523.deviceAddress",
+          "value": "0x68",
+          "verificationStatus": "VENDOR_SOURCE_VERIFIED",
+          "evidenceReferences": [
+            "Raspberry_Pi_CM4_Board_to_BSP_Firmware_Test(1).pdf",
+            "backend/vendor_repository/vendors/raspberrypi/cm4/peripherals.json"
+          ]
+        },
+        {
+          "claim": "uart0.baseAddress",
+          "value": "0xFE201000",
+          "verificationStatus": "VENDOR_SOURCE_VERIFIED",
+          "evidenceReferences": [
+            "Raspberry_Pi_CM4_Board_to_BSP_Firmware_Test(1).pdf",
+            "backend/vendor_repository/vendors/raspberrypi/cm4/peripherals.json"
+          ]
+        }
+      ]
+    }
+  ]
+}

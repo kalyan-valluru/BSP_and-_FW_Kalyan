@@ -1,0 +1,139 @@
+/*******************************************************************/
+/* Linker Script for Zynq UltraScale+ Cortex-A53 Standalone App   */
+/*******************************************************************/
+
+_STACK_SIZE = DEFINED(_STACK_SIZE) ? _STACK_SIZE : 0x6000;
+_HEAP_SIZE = DEFINED(_HEAP_SIZE) ? _HEAP_SIZE : 0x2000;
+
+_EL0_STACK_SIZE = DEFINED(_EL0_STACK_SIZE) ? _EL0_STACK_SIZE : 1024;
+_EL1_STACK_SIZE = DEFINED(_EL1_STACK_SIZE) ? _EL1_STACK_SIZE : 2048;
+_EL2_STACK_SIZE = DEFINED(_EL2_STACK_SIZE) ? _EL2_STACK_SIZE : 1024;
+
+MEMORY
+{
+{{MEMORY_REGIONS}}
+}
+
+ENTRY(_vector_table)
+
+SECTIONS
+{
+.text : {
+   *(.vectors)
+   *(.boot)
+   *(.text)
+   *(.text.*)
+   *(.gnu.linkonce.t.*)
+   *(.plt)
+   *(.gnu_warning)
+   *(.gcc_except_table)
+   *(.glue_7)
+   *(.glue_7t)
+   *(.vfp11_veneer)
+   *(.v4bx)
+   *(.iplt)
+} > {{DEFAULT_MEMORY_REGION}}
+
+.init : {
+   KEEP (*(.init))
+} > {{DEFAULT_MEMORY_REGION}}
+
+.fini : {
+   KEEP (*(.fini))
+} > {{DEFAULT_MEMORY_REGION}}
+
+.rodata : {
+   __rodata_start = .;
+   *(.rodata)
+   *(.rodata.*)
+   *(.gnu.linkonce.r.*)
+   __rodata_end = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+.data : {
+   __data_start = .;
+   *(.data)
+   *(.data.*)
+   *(.gnu.linkonce.d.*)
+   *(.jcr)
+   *(.got)
+   *(.got.plt)
+   __data_end = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+.mmu_tbl0 (ALIGN(4096)) : {
+   __mmu_tbl0_start = .;
+   *(.mmu_tbl0)
+   __mmu_tbl0_end = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+.mmu_tbl1 (ALIGN(4096)) : {
+   __mmu_tbl1_start = .;
+   *(.mmu_tbl1)
+   __mmu_tbl1_end = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+.mmu_tbl2 (ALIGN(4096)) : {
+   __mmu_tbl2_start = .;
+   *(.mmu_tbl2)
+   __mmu_tbl2_end = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+.bss (NOLOAD) : {
+   . = ALIGN(4);
+   __bss_start__ = .;
+   __bss_start = .;
+   *(.bss)
+   *(.bss.*)
+   *(.gnu.linkonce.b.*)
+   *(COMMON)
+   . = ALIGN(4);
+   __bss_end__ = .;
+   __bss_end = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+.sbss (NOLOAD) : {
+   . = ALIGN(4);
+   __sbss_start = .;
+   *(.sbss)
+   *(.sbss.*)
+   *(.gnu.linkonce.sb.*)
+   . = ALIGN(4);
+   __sbss_end = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+.heap (NOLOAD) : {
+   . = ALIGN(16);
+   _heap = .;
+   HeapBase = .;
+   _heap_start = .;
+   . += _HEAP_SIZE;
+   _heap_end = .;
+   HeapLimit = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+.stack (NOLOAD) : {
+   . = ALIGN(64);
+   _el3_stack_end = .;
+   . += _STACK_SIZE;
+   __el3_stack = .;
+   _el2_stack_end = .;
+   . += _EL2_STACK_SIZE;
+   . = ALIGN(64);
+   __el2_stack = .;
+   _el1_stack_end = .;
+   . += _EL1_STACK_SIZE;
+   . = ALIGN(64);
+   __el1_stack = .;
+   _el0_stack_end = .;
+   . += _EL0_STACK_SIZE;
+   . = ALIGN(64);
+   __el0_stack = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+_end = .;
+}
+
+/* Provide dummy stubs for _init and _fini if not provided by libc */
+PROVIDE(_init = 0);
+PROVIDE(_fini = 0);

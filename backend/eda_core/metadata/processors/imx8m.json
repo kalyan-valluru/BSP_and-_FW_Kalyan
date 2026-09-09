@@ -1,0 +1,16 @@
+{
+  "id": "imx8m-plus",
+  "name": "NXP i.MX8M Plus Quad Cortex-A53",
+  "category": "processors",
+  "metadataVersion": "1.0.0",
+  "schemaVersion": "v2.0",
+  "vendorId": "nxp",
+  "architecture": "ARM Cortex-A53",
+  "family": "i.MX",
+  "registerWidth": 64,
+  "defaultClockMHz": 1800,
+  "coresCount": 4,
+  "memoryRanges": [
+    { "name": "DDR4", "start": "0x40000000", "size": "2147483648" }
+  ]
+}

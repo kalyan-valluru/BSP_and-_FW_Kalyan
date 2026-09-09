@@ -1,0 +1,13 @@
+{
+  "artifact": "dtb",
+  "path": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\scratch\\test_pipeline_run\\test2_repair\\system.dtb",
+  "compiler": "dtc",
+  "compilerSource": "configured",
+  "compilerVersion": "1.7.0",
+  "input": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\scratch\\test_pipeline_run\\test2_repair\\system.dts",
+  "output": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\scratch\\test_pipeline_run\\test2_repair\\system.dtb",
+  "exitCode": 0,
+  "fileSize": 405,
+  "magicValid": true,
+  "generatedAt": "2026-08-14T13:50:44.411Z"
+}

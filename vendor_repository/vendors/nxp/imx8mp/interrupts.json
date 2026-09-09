@@ -1,0 +1,16 @@
+[
+  {
+    "irqNumber": 32,
+    "name": "sys_ctrl_IRQ",
+    "peripheralBlock": "sys_ctrl",
+    "controllerType": "GIC",
+    "provenance": {
+      "document": "imx8mp_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "NXP",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "processor": "IMX8MP_CPU_BOARD",
+  "domains": [
+    {
+      "domainName": "SYS_CLK_ROOT",
+      "nominalFrequencyHz": 400000000,
+      "sourceType": "PLL",
+      "provenance": {
+        "document": "imx8mp_cpu_board_TRM.pdf",
+        "documentType": "TRM",
+        "vendor": "NXP",
+        "chapter": "System Overview",
+        "parser": "trmParser",
+        "confidence": 1
+      }
+    }
+  ]
+}

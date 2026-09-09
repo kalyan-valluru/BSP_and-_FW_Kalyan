@@ -1,0 +1,26 @@
+BSP Astra - Official demo documentation download
+
+EASIEST METHOD
+1. Extract the project ZIP.
+2. Open the bsp_work folder.
+3. Double-click DOWNLOAD_DEMO_DOCS.cmd.
+
+COMMAND-PROMPT METHOD
+Open Command Prompt inside bsp_work and run:
+
+  node knowledge_base\download_all_demo_docs.mjs
+
+Downloaded official vendor files are saved under:
+
+  workspace\vendor_knowledge\raw\
+
+Download status, errors and SHA-256 hashes are saved in:
+
+  workspace\vendor_knowledge\download_status.json
+
+POLICY
+- Only official vendor domains are accepted.
+- Redirects outside the official vendor domain are rejected.
+- PDF documents are checked for a real %PDF signature.
+- Login/error HTML pages are never saved as fake PDFs.
+- Failed downloads remain PENDING_RUNTIME_DOWNLOAD and are not fabricated.

@@ -1,0 +1,92 @@
+{
+  "vendor": "NXP Semiconductors",
+  "platform": "i.MX 8M Plus",
+  "board": "i.MX 8M Plus LPDDR4 EVK",
+  "structure": {
+    "type": "Modular System",
+    "cpuBoard": {
+      "name": "i.MX 8M Plus LPDDR4 CPU Board",
+      "variant": "8MPLUSLPD4-CPU",
+      "schematicRef": "SCH-46368_A3",
+      "layoutRef": "LAY-46368_A1",
+      "components": [
+        "i.MX 8M Plus Quad SoC",
+        "6 GB LPDDR4 RAM",
+        "32 GB eMMC 5.1 Flash",
+        "QSPI Flash"
+      ]
+    },
+    "baseBoard": {
+      "name": "i.MX 8M Plus EVK Base Board",
+      "variant": "8MPLUS-BB",
+      "schematicRef": "SCH-46370_B1",
+      "layoutRef": "LAY-46370_B",
+      "peripherals": [
+        "Dual Gigabit Ethernet (2x RJ45)",
+        "Dual USB 3.0 Type-C / Host",
+        "HDMI 2.0a Output",
+        "MIPI-CSI Camera Connector",
+        "CAN-FD Bus Transceivers",
+        "GPIO Expansion Header",
+        "USB-to-UART Debug Console (FTDI)"
+      ]
+    }
+  },
+  "relationships": [
+    {
+      "subject": "EVK",
+      "predicate": "contains",
+      "object": "8MPLUSLPD4-CPU Board"
+    },
+    {
+      "subject": "EVK",
+      "predicate": "contains",
+      "object": "8MPLUS-BB Base Board"
+    },
+    {
+      "subject": "EVK",
+      "predicate": "uses",
+      "object": "i.MX 8M Plus SoC"
+    },
+    {
+      "subject": "8MPLUSLPD4-CPU Board",
+      "predicate": "contains",
+      "object": "i.MX 8M Plus SoC"
+    },
+    {
+      "subject": "8MPLUSLPD4-CPU Board",
+      "predicate": "contains",
+      "object": "6 GB LPDDR4"
+    },
+    {
+      "subject": "8MPLUSLPD4-CPU Board",
+      "predicate": "contains",
+      "object": "32 GB eMMC 5.1"
+    },
+    {
+      "subject": "8MPLUS-BB Base Board",
+      "predicate": "exposes",
+      "object": "Dual Gigabit Ethernet"
+    },
+    {
+      "subject": "8MPLUS-BB Base Board",
+      "predicate": "exposes",
+      "object": "Dual USB 3.0 Type-C"
+    },
+    {
+      "subject": "8MPLUS-BB Base Board",
+      "predicate": "exposes",
+      "object": "CAN-FD Ports"
+    },
+    {
+      "subject": "8MPLUS-BB Base Board",
+      "predicate": "exposes",
+      "object": "HDMI 2.0 Output"
+    },
+    {
+      "subject": "8MPLUS-BB Base Board",
+      "predicate": "exposes",
+      "object": "FTDI Debug UART"
+    }
+  ]
+}

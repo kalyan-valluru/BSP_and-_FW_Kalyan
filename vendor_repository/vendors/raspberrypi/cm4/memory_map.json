@@ -1,0 +1,22 @@
+{
+  "processor": "BCM2711",
+  "pageAlignmentBytes": 4096,
+  "regions": [
+    {
+      "regionName": "MMIO_PERIPHERALS",
+      "startAddress": "0x68",
+      "endAddress": "0x5FFFFFFF",
+      "sizeBytes": 536870912,
+      "isExecutable": false,
+      "accessMode": "MMIO",
+      "provenance": {
+        "document": "cm4_TRM.pdf",
+        "documentType": "TRM",
+        "vendor": "RASPBERRYPI",
+        "chapter": "System Overview",
+        "parser": "trmParser",
+        "confidence": 1
+      }
+    }
+  ]
+}

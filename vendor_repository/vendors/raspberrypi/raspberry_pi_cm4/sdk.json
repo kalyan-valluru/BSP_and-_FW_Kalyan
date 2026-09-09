@@ -1,0 +1,25 @@
+{
+  "halHeaderFile": "bsp_config.h",
+  "supportedPeripherals": [
+    "sys_ctrl"
+  ],
+  "sourceFiles": [
+    "bsp_init.c"
+  ],
+  "apiFunctions": [
+    "BSP_Init()",
+    "HAL_UART_Transmit()"
+  ],
+  "exampleProjects": [
+    "uart_echo",
+    "gpio_toggle"
+  ],
+  "provenance": {
+    "document": "raspberry_pi_cm4_TRM.pdf",
+    "documentType": "TRM",
+    "vendor": "RASPBERRYPI",
+    "chapter": "System Overview",
+    "parser": "trmParser",
+    "confidence": 1
+  }
+}

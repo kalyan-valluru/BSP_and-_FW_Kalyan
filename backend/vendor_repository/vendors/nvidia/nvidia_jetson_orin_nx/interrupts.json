@@ -1,0 +1,16 @@
+[
+  {
+    "irqNumber": 32,
+    "name": "flash_IRQ",
+    "peripheralBlock": "flash",
+    "controllerType": "GIC",
+    "provenance": {
+      "document": "nvidia_jetson_orin_nx_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "NVIDIA",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]

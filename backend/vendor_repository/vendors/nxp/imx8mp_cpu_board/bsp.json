@@ -1,0 +1,21 @@
+{
+  "linkerScriptTemplate": "lscript.ld",
+  "startupAssemblyFile": "startup_ARM.s",
+  "deviceTreeBinding": "system-top.dts",
+  "compilationFlags": [
+    "-O2",
+    "-Wall",
+    "-Wextra"
+  ],
+  "supportedToolchains": [
+    "arm-none-eabi-gcc"
+  ],
+  "provenance": {
+    "document": "imx8mp_cpu_board_TRM.pdf",
+    "documentType": "TRM",
+    "vendor": "NXP",
+    "chapter": "System Overview",
+    "parser": "trmParser",
+    "confidence": 1
+  }
+}

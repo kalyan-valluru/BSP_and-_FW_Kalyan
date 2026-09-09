@@ -1,0 +1,10 @@
+{
+  "STMicroelectronics:stm32f4discovery:stm32f407vgt6": {
+    "board": "STM32F4DISCOVERY",
+    "device": "STM32F407VGT6",
+    "vendor": "STMicroelectronics",
+    "officialOnly": true,
+    "documents": [],
+    "note": "Document binaries are acquired from the registered official ST URLs on first use when not already cached."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "processor": "AMD_XILINX_ZYNQ_ULTRASCALE_",
+  "pageAlignmentBytes": 4096,
+  "regions": [
+    {
+      "regionName": "MMIO_PERIPHERALS",
+      "startAddress": "0x40000000",
+      "endAddress": "0x5FFFFFFF",
+      "sizeBytes": 536870912,
+      "isExecutable": false,
+      "accessMode": "MMIO",
+      "provenance": {
+        "document": "amd_xilinx_zynq_ultrascale__TRM.pdf",
+        "documentType": "TRM",
+        "vendor": "XILINX",
+        "chapter": "System Overview",
+        "parser": "trmParser",
+        "confidence": 1
+      }
+    }
+  ]
+}

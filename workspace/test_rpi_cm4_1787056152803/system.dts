@@ -1,0 +1,58 @@
+/dts-v1/;
+
+/ {
+	model = "Raspberry Pi Compute Module 4 (BCM2711)";
+	compatible = "raspberrypi,4-compute-module", "brcm,bcm2711";
+	#address-cells = <2>;
+	#size-cells = <2>;
+
+	chosen {
+		bootargs = "console=ttyS0,115200n8 root=/dev/mmcblk0p2 rw rootwait";
+	};
+
+	memory@0 {
+		device_type = "memory";
+		reg = <0x0 0x0 0x0 0x40000000>;
+	};
+
+	gic: interrupt-controller@40041000 {
+		compatible = "arm,gic-400";
+		#interrupt-cells = <3>;
+		interrupt-controller;
+		reg = <0x0 0x40041000 0x0 0x1000>,
+		      <0x0 0x40042000 0x0 0x2000>;
+	};
+
+	clkc: clock-controller@7e101000 {
+		compatible = "brcm,bcm2711-cprman";
+		#clock-cells = <1>;
+		reg = <0x0 0x7e101000 0x0 0x2000>;
+	};
+
+	uart1: uart1@7e215040 {
+		compatible = "brcm,bcm2835-aux-uart";
+		reg = <0x0 0x7e215040 0x0 0x1000>;
+		interrupt-parent = <&gic>;
+		interrupts = <0 29 4>;
+		clocks = <&clkc 29>;
+		status = "okay";
+	};
+
+	i2c1: i2c1@7e804000 {
+		compatible = "brcm,bcm2835-i2c";
+		reg = <0x0 0x7e804000 0x0 0x1000>;
+		interrupt-parent = <&gic>;
+		interrupts = <0 53 4>;
+		clocks = <&clkc 53>;
+		status = "okay";
+	};
+
+	pcie0: pcie0@7d500000 {
+		compatible = "brcm,bcm2711-pcie";
+		reg = <0x0 0x7d500000 0x0 0x1000>;
+		interrupt-parent = <&gic>;
+		interrupts = <0 148 4>;
+		clocks = <&clkc 148>;
+		status = "okay";
+	};
+};

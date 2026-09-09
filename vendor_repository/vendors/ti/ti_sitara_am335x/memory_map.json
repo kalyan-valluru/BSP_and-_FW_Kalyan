@@ -1,0 +1,22 @@
+{
+  "processor": "TI_SITARA_AM335X",
+  "pageAlignmentBytes": 4096,
+  "regions": [
+    {
+      "regionName": "MMIO_PERIPHERALS",
+      "startAddress": "0x40000000",
+      "endAddress": "0x5FFFFFFF",
+      "sizeBytes": 536870912,
+      "isExecutable": false,
+      "accessMode": "MMIO",
+      "provenance": {
+        "document": "ti_sitara_am335x_TRM.pdf",
+        "documentType": "TRM",
+        "vendor": "TI",
+        "chapter": "System Overview",
+        "parser": "trmParser",
+        "confidence": 1
+      }
+    }
+  ]
+}

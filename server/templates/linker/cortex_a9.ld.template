@@ -1,0 +1,131 @@
+/*******************************************************************/
+/* Linker Script for Zynq-7000 Cortex-A9 Standalone Application   */
+/*******************************************************************/
+
+_STACK_SIZE = DEFINED(_STACK_SIZE) ? _STACK_SIZE : 0x6000;
+_HEAP_SIZE = DEFINED(_HEAP_SIZE) ? _HEAP_SIZE : 0x2000;
+
+_ABORT_STACK_SIZE = DEFINED(_ABORT_STACK_SIZE) ? _ABORT_STACK_SIZE : 1024;
+_SUPERVISOR_STACK_SIZE = DEFINED(_SUPERVISOR_STACK_SIZE) ? _SUPERVISOR_STACK_SIZE : 2048;
+_FIQ_STACK_SIZE = DEFINED(_FIQ_STACK_SIZE) ? _FIQ_STACK_SIZE : 1024;
+_UNDEF_STACK_SIZE = DEFINED(_UNDEF_STACK_SIZE) ? _UNDEF_STACK_SIZE : 1024;
+
+MEMORY
+{
+{{MEMORY_REGIONS}}
+}
+
+ENTRY(_vector_table)
+
+SECTIONS
+{
+.text : {
+   *(.vectors)
+   *(.boot)
+   *(.text)
+   *(.text.*)
+   *(.gnu.linkonce.t.*)
+   *(.plt)
+   *(.gnu_warning)
+   *(.gcc_except_table)
+   *(.glue_7)
+   *(.glue_7t)
+   *(.vfp11_veneer)
+   *(.v4bx)
+   *(.iplt)
+} > {{DEFAULT_MEMORY_REGION}}
+
+.init : {
+   KEEP (*(.init))
+} > {{DEFAULT_MEMORY_REGION}}
+
+.fini : {
+   KEEP (*(.fini))
+} > {{DEFAULT_MEMORY_REGION}}
+
+.rodata : {
+   __rodata_start = .;
+   *(.rodata)
+   *(.rodata.*)
+   *(.gnu.linkonce.r.*)
+   __rodata_end = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+.data : {
+   __data_start = .;
+   *(.data)
+   *(.data.*)
+   *(.gnu.linkonce.d.*)
+   *(.jcr)
+   *(.got)
+   *(.got.plt)
+   __data_end = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+.bss (NOLOAD) : {
+   . = ALIGN(4);
+   __bss_start__ = .;
+   __bss_start = .;
+   *(.bss)
+   *(.bss.*)
+   *(.gnu.linkonce.b.*)
+   *(COMMON)
+   . = ALIGN(4);
+   __bss_end__ = .;
+   __bss_end = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+.sbss (NOLOAD) : {
+   . = ALIGN(4);
+   __sbss_start = .;
+   *(.sbss)
+   *(.sbss.*)
+   *(.gnu.linkonce.sb.*)
+   . = ALIGN(4);
+   __sbss_end = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+.heap (NOLOAD) : {
+   . = ALIGN(16);
+   _heap = .;
+   HeapBase = .;
+   _heap_start = .;
+   . += _HEAP_SIZE;
+   _heap_end = .;
+   HeapLimit = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+.stack (NOLOAD) : {
+   . = ALIGN(16);
+   _stack_end = .;
+   . += _STACK_SIZE;
+   _stack = .;
+   __stack = _stack;
+   . = ALIGN(16);
+   _irq_stack_end = .;
+   . += _STACK_SIZE;
+   __irq_stack = .;
+   _supervisor_stack_end = .;
+   . += _SUPERVISOR_STACK_SIZE;
+   . = ALIGN(16);
+   __supervisor_stack = .;
+   _abort_stack_end = .;
+   . += _ABORT_STACK_SIZE;
+   . = ALIGN(16);
+   __abort_stack = .;
+   _fiq_stack_end = .;
+   . += _FIQ_STACK_SIZE;
+   . = ALIGN(16);
+   __fiq_stack = .;
+   _undef_stack_end = .;
+   . += _UNDEF_STACK_SIZE;
+   . = ALIGN(16);
+   __undef_stack = .;
+} > {{DEFAULT_MEMORY_REGION}}
+
+_end = .;
+}
+
+/* Provide dummy stubs for _init and _fini if not provided by libc */
+PROVIDE(_init = 0);
+PROVIDE(_fini = 0);

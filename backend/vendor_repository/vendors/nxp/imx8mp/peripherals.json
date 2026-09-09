@@ -1,0 +1,15 @@
+[
+  {
+    "name": "sys_ctrl",
+    "baseAddress": "0x30000000",
+    "busInterface": "AHB/AXI",
+    "provenance": {
+      "document": "iMX8M_Plus_reference_manual_IMX8MPRM.pdf",
+      "documentType": "TRM",
+      "vendor": "NXP",
+      "chapter": "Peripheral Registers",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]

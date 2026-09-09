@@ -1,0 +1,11 @@
+{
+  "id": "irq_uartlite_0",
+  "name": "UART Lite Interrupt Route",
+  "category": "interrupts",
+  "metadataVersion": "1.0.0",
+  "schemaVersion": "v2.0",
+  "processorId": "zynq-7000",
+  "irqNumber": 61,
+  "triggerType": "level",
+  "handlerName": "XUartLite_InterruptHandler"
+}

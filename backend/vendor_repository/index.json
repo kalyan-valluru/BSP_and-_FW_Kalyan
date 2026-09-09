@@ -1,0 +1,2202 @@
+{
+  "processors": {
+    "arm_core": "generic/arm_core",
+    "arm_cortex-a72": "generic/arm_cortex-a72",
+    "arm_cortex-a9": "generic/arm_cortex-a9",
+    "digilent_zedboard": "generic/digilent_zedboard",
+    "zedboard": "generic/zedboard",
+    "nvidia_jetson_orin_nx": "nvidia/nvidia_jetson_orin_nx",
+    "i.mx 8m plus": "nxp/imx8mp",
+    "imx8mp_base_board": "nxp/imx8mp_base_board",
+    "imx8mp_cpu_board": "nxp/imx8mp_cpu_board",
+    "nxp_i_mx_8m_plus": "nxp/nxp_i_mx_8m_plus",
+    "bcm2711": "raspberrypi/cm4",
+    "raspberry_pi_cm4": "raspberrypi/raspberry_pi_cm4",
+    "stm32h7": "st/stm32h7",
+    "stm32mp157": "st/stm32mp157",
+    "ti_sitara_am335x": "ti/ti_sitara_am335x",
+    "amd_xilinx_zynq-7000": "xilinx/amd_xilinx_zynq-7000",
+    "amd_xilinx_zynq_ultrascale_": "xilinx/amd_xilinx_zynq_ultrascale_",
+    "zynq-7000": "xilinx/zynq-7000"
+  },
+  "peripherals": {
+    "sys_ctrl": {
+      "vendor": "xilinx",
+      "family": "zynq-7000",
+      "baseAddress": "0x40000000"
+    },
+    "flash": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x0"
+    },
+    "ina32211_1_40": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x40"
+    },
+    "ina3221_1_41": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x41"
+    },
+    "vdd_5v0_sys": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x0"
+    },
+    "vdd_ao_1v8": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "vdd_ao_3v3": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2"
+    },
+    "xbar_i2s1_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x14"
+    },
+    "xbar_i2s2_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x15"
+    },
+    "xbar_i2s4_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x17"
+    },
+    "xbar_i2s6_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x19"
+    },
+    "xbar_dmic3_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1c"
+    },
+    "xbar_sfc1_in_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x20"
+    },
+    "xbar_sfc2_in_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x22"
+    },
+    "xbar_sfc3_in_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x24"
+    },
+    "xbar_sfc4_in_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x26"
+    },
+    "xbar_mvc1_in_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x28"
+    },
+    "xbar_mvc2_in_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2a"
+    },
+    "xbar_amx1_in1_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2c"
+    },
+    "xbar_amx1_in2_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2d"
+    },
+    "xbar_amx1_in3_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2e"
+    },
+    "xbar_amx1_in4_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2f"
+    },
+    "xbar_amx2_in1_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x31"
+    },
+    "xbar_amx2_in2_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x32"
+    },
+    "xbar_amx2_in3_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x33"
+    },
+    "xbar_amx2_in4_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x34"
+    },
+    "xbar_amx3_in1_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x36"
+    },
+    "xbar_amx3_in2_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x37"
+    },
+    "xbar_amx3_in3_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x38"
+    },
+    "xbar_amx3_in4_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x39"
+    },
+    "xbar_amx4_in1_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3b"
+    },
+    "xbar_amx4_in2_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3c"
+    },
+    "xbar_amx4_in3_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3d"
+    },
+    "xbar_amx4_in4_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3e"
+    },
+    "xbar_adx1_in_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x40"
+    },
+    "xbar_adx2_in_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x45"
+    },
+    "xbar_adx3_in_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x4a"
+    },
+    "xbar_adx4_in_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x4f"
+    },
+    "xbar_mix_in1_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x54"
+    },
+    "xbar_mix_in2_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x55"
+    },
+    "xbar_mix_in3_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x56"
+    },
+    "xbar_mix_in4_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x57"
+    },
+    "xbar_mix_in5_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x58"
+    },
+    "xbar_mix_in6_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x59"
+    },
+    "xbar_mix_in7_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x5a"
+    },
+    "xbar_mix_in8_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x5b"
+    },
+    "xbar_mix_in9_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x5c"
+    },
+    "xbar_mix_in10_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x5d"
+    },
+    "i2s1_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "i2s2_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "i2s4_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "i2s6_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "sfc1_out_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "sfc2_out_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "sfc3_out_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "sfc4_out_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "amx1_out_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x4"
+    },
+    "amx2_out_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x4"
+    },
+    "amx3_out_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x4"
+    },
+    "amx4_out_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x4"
+    },
+    "adx1_out1_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "adx1_out2_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2"
+    },
+    "adx1_out3_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3"
+    },
+    "adx1_out4_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x4"
+    },
+    "adx2_out1_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "adx2_out2_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2"
+    },
+    "adx2_out3_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3"
+    },
+    "adx2_out4_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x4"
+    },
+    "adx3_out1_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "adx3_out2_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2"
+    },
+    "adx3_out3_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3"
+    },
+    "adx3_out4_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x4"
+    },
+    "adx4_out1_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "adx4_out2_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2"
+    },
+    "adx4_out3_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3"
+    },
+    "adx4_out4_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x4"
+    },
+    "dmic3_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "mvc1_out_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "mvc2_out_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "mix_out1_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xa"
+    },
+    "mix_out2_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xb"
+    },
+    "mix_out3_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xc"
+    },
+    "mix_out4_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xd"
+    },
+    "mix_out5_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xe"
+    },
+    "admaif0_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x0"
+    },
+    "admaif1_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "admaif2_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2"
+    },
+    "admaif3_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3"
+    },
+    "admaif4_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x4"
+    },
+    "admaif5_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x5"
+    },
+    "admaif6_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x6"
+    },
+    "admaif7_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x7"
+    },
+    "admaif8_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x8"
+    },
+    "admaif9_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x9"
+    },
+    "admaif10_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xa"
+    },
+    "admaif11_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xb"
+    },
+    "admaif12_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xc"
+    },
+    "admaif13_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xd"
+    },
+    "admaif14_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xe"
+    },
+    "admaif15_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xf"
+    },
+    "admaif16_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x10"
+    },
+    "admaif17_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x11"
+    },
+    "admaif18_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x12"
+    },
+    "admaif19_port": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x13"
+    },
+    "ucsi-ccg": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x8"
+    },
+    "ccg_typec_con0": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x0"
+    },
+    "ccg_typec_con1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x1"
+    },
+    "bus": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x0"
+    },
+    "gpcdma": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2600000"
+    },
+    "aconnect": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2900000"
+    },
+    "tegra_ahub": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2900800"
+    },
+    "tegra_i2s1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2901000"
+    },
+    "tegra_i2s2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2901100"
+    },
+    "tegra_i2s3": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2901200"
+    },
+    "tegra_i2s4": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2901300"
+    },
+    "tegra_i2s5": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2901400"
+    },
+    "tegra_i2s6": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2901500"
+    },
+    "tegra_sfc1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2902000"
+    },
+    "tegra_sfc2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2902200"
+    },
+    "tegra_sfc3": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2902400"
+    },
+    "tegra_sfc4": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2902600"
+    },
+    "tegra_amx1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2903000"
+    },
+    "tegra_amx2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2903100"
+    },
+    "tegra_amx3": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2903200"
+    },
+    "tegra_amx4": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2903300"
+    },
+    "tegra_adx1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2903800"
+    },
+    "tegra_adx2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2903900"
+    },
+    "tegra_adx3": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2903a00"
+    },
+    "tegra_adx4": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2903b00"
+    },
+    "tegra_dmic1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2904000"
+    },
+    "tegra_dmic2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2904100"
+    },
+    "tegra_dmic3": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2904200"
+    },
+    "tegra_dmic4": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2904300"
+    },
+    "tegra_dspk1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2905000"
+    },
+    "tegra_dspk2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2905100"
+    },
+    "tegra_mvc1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x290a000"
+    },
+    "tegra_mvc2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x290a200"
+    },
+    "tegra_amixer": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x290bb00"
+    },
+    "tegra_admaif": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x290f000"
+    },
+    "adma": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2930000"
+    },
+    "agic": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2a40000"
+    },
+    "misc": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x100000"
+    },
+    "host1x": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x13e00000"
+    },
+    "vic": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x15340000"
+    },
+    "gpio": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2200000"
+    },
+    "mc": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2c00000"
+    },
+    "emc": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x2c60000"
+    },
+    "uarta": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3100000"
+    },
+    "gen1_i2c": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3160000"
+    },
+    "cam_i2c": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3180000"
+    },
+    "dp_aux_ch1_i2c": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3190000"
+    },
+    "dp_aux_ch0_i2c": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x31b0000"
+    },
+    "dp_aux_ch2_i2c": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x31c0000"
+    },
+    "dp_aux_ch3_i2c": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x31e0000"
+    },
+    "spi": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3300000"
+    },
+    "pwm1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3280000"
+    },
+    "pwm2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3290000"
+    },
+    "pwm3": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x32a0000"
+    },
+    "pwm5": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x32c0000"
+    },
+    "pwm6": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x32d0000"
+    },
+    "pwm7": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x32e0000"
+    },
+    "pwm8": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x32f0000"
+    },
+    "mmc": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3460000"
+    },
+    "hda": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3510000"
+    },
+    "xusb_padctl": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3520000"
+    },
+    "usb": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3610000"
+    },
+    "fuse": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3810000"
+    },
+    "hte_lic": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3aa0000"
+    },
+    "hsp_top0": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3c00000"
+    },
+    "ethernet": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x6b00000"
+    },
+    "smmu_niso1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x8000000"
+    },
+    "p2u_hsio_0": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3e00000"
+    },
+    "p2u_hsio_1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3e10000"
+    },
+    "p2u_hsio_2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3e20000"
+    },
+    "p2u_hsio_3": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3e30000"
+    },
+    "p2u_hsio_4": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3e40000"
+    },
+    "p2u_hsio_5": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3e50000"
+    },
+    "p2u_hsio_6": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3e60000"
+    },
+    "p2u_hsio_7": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3e70000"
+    },
+    "p2u_nvhs_0": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3e90000"
+    },
+    "p2u_nvhs_1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3ea0000"
+    },
+    "p2u_nvhs_2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3eb0000"
+    },
+    "p2u_nvhs_3": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3ec0000"
+    },
+    "p2u_nvhs_4": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3ed0000"
+    },
+    "p2u_nvhs_5": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3ee0000"
+    },
+    "p2u_nvhs_6": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3ef0000"
+    },
+    "p2u_nvhs_7": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3f00000"
+    },
+    "p2u_gbe_0": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3f20000"
+    },
+    "p2u_gbe_1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3f30000"
+    },
+    "p2u_gbe_2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3f40000"
+    },
+    "p2u_gbe_3": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3f50000"
+    },
+    "p2u_gbe_4": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3f60000"
+    },
+    "p2u_gbe_5": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3f70000"
+    },
+    "p2u_gbe_6": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3f80000"
+    },
+    "p2u_gbe_7": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x3f90000"
+    },
+    "sce-fabric": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xb600000"
+    },
+    "rce-fabric": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xbe00000"
+    },
+    "hsp_aon": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xc150000"
+    },
+    "hte_aon": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xc1e0000"
+    },
+    "gen2_i2c": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xc240000"
+    },
+    "gen8_i2c": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xc250000"
+    },
+    "rtc": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xc2a0000"
+    },
+    "gpio_aon": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xc2f0000"
+    },
+    "pwm4": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xc340000"
+    },
+    "pmc": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xc360000"
+    },
+    "aon-fabric": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xc600000"
+    },
+    "bpmp-fabric": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xd600000"
+    },
+    "dce-fabric": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xde00000"
+    },
+    "gic": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xf400000"
+    },
+    "smmu_iso": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x10000000"
+    },
+    "smmu_niso0": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x12000000"
+    },
+    "cbb-fabric": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x13a00000"
+    },
+    "ccplex": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0xe000000"
+    },
+    "pcie": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x141e0000"
+    },
+    "pcie-ep": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x140e0000"
+    },
+    "sram": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x40000000"
+    },
+    "cpu_bpmp_tx": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x70000"
+    },
+    "cpu_bpmp_rx": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x71000"
+    },
+    "tegra_tmp451": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x4c"
+    },
+    "cpu0_0": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x0"
+    },
+    "cpu0_1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x100"
+    },
+    "cpu0_2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x200"
+    },
+    "cpu0_3": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x300"
+    },
+    "cpu1_0": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x10000"
+    },
+    "cpu1_1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x10100"
+    },
+    "cpu1_2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x10200"
+    },
+    "cpu1_3": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x10300"
+    },
+    "cpu2_0": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x20000"
+    },
+    "cpu2_1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x20100"
+    },
+    "cpu2_2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x20200"
+    },
+    "cpu2_3": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "baseAddress": "0x20300"
+    },
+    "pcf8523": {
+      "vendor": "raspberrypi",
+      "family": "cm4",
+      "baseAddress": "0x68"
+    }
+  },
+  "registers": {},
+  "addresses": {
+    "0x40000000": {
+      "vendor": "xilinx",
+      "family": "zynq-7000",
+      "peripheral": "sys_ctrl"
+    },
+    "0x0": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cpu0_0"
+    },
+    "0x40": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_adx1_in_port"
+    },
+    "0x41": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "ina3221_1_41"
+    },
+    "0x1": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "ccg_typec_con1"
+    },
+    "0x2": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif2_port"
+    },
+    "0x14": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_i2s1_port"
+    },
+    "0x15": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_i2s2_port"
+    },
+    "0x17": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_i2s4_port"
+    },
+    "0x19": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_i2s6_port"
+    },
+    "0x1c": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_dmic3_port"
+    },
+    "0x20": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_sfc1_in_port"
+    },
+    "0x22": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_sfc2_in_port"
+    },
+    "0x24": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_sfc3_in_port"
+    },
+    "0x26": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_sfc4_in_port"
+    },
+    "0x28": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_mvc1_in_port"
+    },
+    "0x2a": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_mvc2_in_port"
+    },
+    "0x2c": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx1_in1_port"
+    },
+    "0x2d": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx1_in2_port"
+    },
+    "0x2e": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx1_in3_port"
+    },
+    "0x2f": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx1_in4_port"
+    },
+    "0x31": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx2_in1_port"
+    },
+    "0x32": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx2_in2_port"
+    },
+    "0x33": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx2_in3_port"
+    },
+    "0x34": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx2_in4_port"
+    },
+    "0x36": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx3_in1_port"
+    },
+    "0x37": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx3_in2_port"
+    },
+    "0x38": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx3_in3_port"
+    },
+    "0x39": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx3_in4_port"
+    },
+    "0x3b": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx4_in1_port"
+    },
+    "0x3c": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx4_in2_port"
+    },
+    "0x3d": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx4_in3_port"
+    },
+    "0x3e": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_amx4_in4_port"
+    },
+    "0x45": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_adx2_in_port"
+    },
+    "0x4a": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_adx3_in_port"
+    },
+    "0x4f": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_adx4_in_port"
+    },
+    "0x54": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_mix_in1_port"
+    },
+    "0x55": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_mix_in2_port"
+    },
+    "0x56": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_mix_in3_port"
+    },
+    "0x57": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_mix_in4_port"
+    },
+    "0x58": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_mix_in5_port"
+    },
+    "0x59": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_mix_in6_port"
+    },
+    "0x5a": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_mix_in7_port"
+    },
+    "0x5b": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_mix_in8_port"
+    },
+    "0x5c": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_mix_in9_port"
+    },
+    "0x5d": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xbar_mix_in10_port"
+    },
+    "0x4": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif4_port"
+    },
+    "0x3": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif3_port"
+    },
+    "0xa": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif10_port"
+    },
+    "0xb": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif11_port"
+    },
+    "0xc": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif12_port"
+    },
+    "0xd": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif13_port"
+    },
+    "0xe": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif14_port"
+    },
+    "0x5": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif5_port"
+    },
+    "0x6": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif6_port"
+    },
+    "0x7": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif7_port"
+    },
+    "0x8": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "ucsi-ccg"
+    },
+    "0x9": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif9_port"
+    },
+    "0xf": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif15_port"
+    },
+    "0x10": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif16_port"
+    },
+    "0x11": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif17_port"
+    },
+    "0x12": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif18_port"
+    },
+    "0x13": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "admaif19_port"
+    },
+    "0x2600000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "gpcdma"
+    },
+    "0x2900000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "aconnect"
+    },
+    "0x2900800": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_ahub"
+    },
+    "0x2901000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_i2s1"
+    },
+    "0x2901100": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_i2s2"
+    },
+    "0x2901200": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_i2s3"
+    },
+    "0x2901300": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_i2s4"
+    },
+    "0x2901400": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_i2s5"
+    },
+    "0x2901500": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_i2s6"
+    },
+    "0x2902000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_sfc1"
+    },
+    "0x2902200": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_sfc2"
+    },
+    "0x2902400": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_sfc3"
+    },
+    "0x2902600": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_sfc4"
+    },
+    "0x2903000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_amx1"
+    },
+    "0x2903100": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_amx2"
+    },
+    "0x2903200": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_amx3"
+    },
+    "0x2903300": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_amx4"
+    },
+    "0x2903800": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_adx1"
+    },
+    "0x2903900": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_adx2"
+    },
+    "0x2903a00": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_adx3"
+    },
+    "0x2903b00": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_adx4"
+    },
+    "0x2904000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_dmic1"
+    },
+    "0x2904100": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_dmic2"
+    },
+    "0x2904200": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_dmic3"
+    },
+    "0x2904300": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_dmic4"
+    },
+    "0x2905000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_dspk1"
+    },
+    "0x2905100": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_dspk2"
+    },
+    "0x290a000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_mvc1"
+    },
+    "0x290a200": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_mvc2"
+    },
+    "0x290bb00": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_amixer"
+    },
+    "0x290f000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_admaif"
+    },
+    "0x2930000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "adma"
+    },
+    "0x2a40000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "agic"
+    },
+    "0x100000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "misc"
+    },
+    "0x13e00000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "host1x"
+    },
+    "0x15340000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "vic"
+    },
+    "0x2200000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "gpio"
+    },
+    "0x2c00000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "mc"
+    },
+    "0x2c60000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "emc"
+    },
+    "0x3100000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "uarta"
+    },
+    "0x3160000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "gen1_i2c"
+    },
+    "0x3180000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cam_i2c"
+    },
+    "0x3190000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "dp_aux_ch1_i2c"
+    },
+    "0x31b0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "dp_aux_ch0_i2c"
+    },
+    "0x31c0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "dp_aux_ch2_i2c"
+    },
+    "0x31e0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "dp_aux_ch3_i2c"
+    },
+    "0x3270000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "spi"
+    },
+    "0x3280000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pwm1"
+    },
+    "0x3290000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pwm2"
+    },
+    "0x32a0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pwm3"
+    },
+    "0x32c0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pwm5"
+    },
+    "0x32d0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pwm6"
+    },
+    "0x32e0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pwm7"
+    },
+    "0x32f0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pwm8"
+    },
+    "0x3300000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "spi"
+    },
+    "0x3400000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "mmc"
+    },
+    "0x3460000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "mmc"
+    },
+    "0x3510000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "hda"
+    },
+    "0x3520000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "xusb_padctl"
+    },
+    "0x3550000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "usb"
+    },
+    "0x3610000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "usb"
+    },
+    "0x3810000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "fuse"
+    },
+    "0x3aa0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "hte_lic"
+    },
+    "0x3c00000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "hsp_top0"
+    },
+    "0x6800000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "ethernet"
+    },
+    "0x6900000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "ethernet"
+    },
+    "0x6a00000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "ethernet"
+    },
+    "0x6b00000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "ethernet"
+    },
+    "0x8000000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "smmu_niso1"
+    },
+    "0x3e00000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_hsio_0"
+    },
+    "0x3e10000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_hsio_1"
+    },
+    "0x3e20000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_hsio_2"
+    },
+    "0x3e30000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_hsio_3"
+    },
+    "0x3e40000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_hsio_4"
+    },
+    "0x3e50000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_hsio_5"
+    },
+    "0x3e60000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_hsio_6"
+    },
+    "0x3e70000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_hsio_7"
+    },
+    "0x3e90000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_nvhs_0"
+    },
+    "0x3ea0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_nvhs_1"
+    },
+    "0x3eb0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_nvhs_2"
+    },
+    "0x3ec0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_nvhs_3"
+    },
+    "0x3ed0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_nvhs_4"
+    },
+    "0x3ee0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_nvhs_5"
+    },
+    "0x3ef0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_nvhs_6"
+    },
+    "0x3f00000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_nvhs_7"
+    },
+    "0x3f20000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_gbe_0"
+    },
+    "0x3f30000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_gbe_1"
+    },
+    "0x3f40000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_gbe_2"
+    },
+    "0x3f50000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_gbe_3"
+    },
+    "0x3f60000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_gbe_4"
+    },
+    "0x3f70000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_gbe_5"
+    },
+    "0x3f80000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_gbe_6"
+    },
+    "0x3f90000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "p2u_gbe_7"
+    },
+    "0xb600000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "sce-fabric"
+    },
+    "0xbe00000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "rce-fabric"
+    },
+    "0xc150000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "hsp_aon"
+    },
+    "0xc1e0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "hte_aon"
+    },
+    "0xc240000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "gen2_i2c"
+    },
+    "0xc250000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "gen8_i2c"
+    },
+    "0xc2a0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "rtc"
+    },
+    "0xc2f0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "gpio_aon"
+    },
+    "0xc340000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pwm4"
+    },
+    "0xc360000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pmc"
+    },
+    "0xc600000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "aon-fabric"
+    },
+    "0xd600000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "bpmp-fabric"
+    },
+    "0xde00000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "dce-fabric"
+    },
+    "0xf400000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "gic"
+    },
+    "0x10000000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "smmu_iso"
+    },
+    "0x12000000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "smmu_niso0"
+    },
+    "0x13a00000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cbb-fabric"
+    },
+    "0xe000000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "ccplex"
+    },
+    "0x140a0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pcie"
+    },
+    "0x140c0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pcie"
+    },
+    "0x140e0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pcie-ep"
+    },
+    "0x14100000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pcie"
+    },
+    "0x14120000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pcie"
+    },
+    "0x14140000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pcie"
+    },
+    "0x14160000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pcie"
+    },
+    "0x14180000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pcie"
+    },
+    "0x141a0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pcie-ep"
+    },
+    "0x141c0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pcie-ep"
+    },
+    "0x141e0000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "pcie-ep"
+    },
+    "0x70000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cpu_bpmp_tx"
+    },
+    "0x71000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cpu_bpmp_rx"
+    },
+    "0x4c": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "tegra_tmp451"
+    },
+    "0x100": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cpu0_1"
+    },
+    "0x200": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cpu0_2"
+    },
+    "0x300": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cpu0_3"
+    },
+    "0x10000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cpu1_0"
+    },
+    "0x10100": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cpu1_1"
+    },
+    "0x10200": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cpu1_2"
+    },
+    "0x10300": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cpu1_3"
+    },
+    "0x20000": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cpu2_0"
+    },
+    "0x20100": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cpu2_1"
+    },
+    "0x20200": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cpu2_2"
+    },
+    "0x20300": {
+      "vendor": "nvidia",
+      "family": "nvidia_jetson_orin_nx",
+      "peripheral": "cpu2_3"
+    },
+    "0x30000000": {
+      "vendor": "st",
+      "family": "stm32mp157",
+      "peripheral": "sys_ctrl"
+    },
+    "0x68": {
+      "vendor": "raspberrypi",
+      "family": "cm4",
+      "peripheral": "pcf8523"
+    }
+  },
+  "interrupts": {
+    "32": {
+      "vendor": "xilinx",
+      "family": "zynq-7000",
+      "peripheral": "sys_ctrl"
+    }
+  },
+  "pins": {},
+  "clockDomains": {},
+  "drivers": {}
+}

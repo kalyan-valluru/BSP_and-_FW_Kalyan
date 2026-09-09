@@ -1,0 +1,36 @@
+{
+  "id": "stm32h7",
+  "name": "STM32H7",
+  "vendor": "STMicroelectronics",
+  "architecture": "ARM Cortex-M7",
+  "frequency": "480 MHz",
+  "memorySize": "2 MB Flash / 1 MB RAM",
+  "flashType": "Internal Flash",
+  "defaultBus": "APB/AHB",
+  "defaultClock": "PCLK",
+  "defaultFreq": "100 MHz",
+  "memoryRegions": [
+    { "start": "0x40000000", "end": "0x5FFFFFFF", "name": "APB/AHB Peripherals" },
+    { "start": "0x20000000", "end": "0x3FFFFFFF", "name": "SRAM Domain" },
+    { "start": "0x08000000", "end": "0x0BFFFFFF", "name": "Flash Memory" }
+  ],
+  "suggestedBaseAddresses": {
+    "uart": "0x40013800",
+    "gpio": "0x58020000",
+    "i2c": "0x40005400",
+    "spi": "0x40013000",
+    "timer": "0x40016C00",
+    "adc": "0x40022400",
+    "sd": "0x52007000",
+    "can": "0x4000A000"
+  },
+  "defaultDrivers": {
+    "uart": "stm32_uart",
+    "gpio": "stm32_gpio",
+    "i2c": "stm32_i2c",
+    "spi": "stm32_spi",
+    "timer": "stm32_timer",
+    "adc": "stm32_adc",
+    "can": "stm32_fdcan"
+  }
+}

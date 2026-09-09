@@ -1,0 +1,51 @@
+/dts-v1/;
+
+/ {
+	model = "TI Sitara AM335x EVM (BeagleBone Black) (TI Sitara AM335x)";
+	compatible = "ti,am335x-evm", "ti,am335x";
+	#address-cells = <1>;
+	#size-cells = <1>;
+
+	chosen {
+		bootargs = "console=ttyS0,115200n8 root=/dev/mmcblk0p2 rw rootwait";
+	};
+
+	memory@0 {
+		device_type = "memory";
+		reg = <0x0 0x40000000>;
+	};
+	uart0@44E09000 {
+		compatible = "ti_uart";
+		reg = <0x44E09000 0x1000>;
+		interrupts = <72>;
+		status = "okay";
+	};
+
+	gpio1@4804C000 {
+		compatible = "ti_gpio";
+		reg = <0x4804C000 0x1000>;
+		interrupts = <98>;
+		status = "okay";
+	};
+
+	i2c1@4802A000 {
+		compatible = "ti_i2c";
+		reg = <0x4802A000 0x1000>;
+		interrupts = <70>;
+		status = "okay";
+	};
+
+	spi0@48030100 {
+		compatible = "ti_spi";
+		reg = <0x48030100 0x1000>;
+		interrupts = <65>;
+		status = "okay";
+	};
+
+	mmc0@48060000 {
+		compatible = "ti_mmc";
+		reg = <0x48060000 0x1000>;
+		interrupts = <64>;
+		status = "okay";
+	};
+};

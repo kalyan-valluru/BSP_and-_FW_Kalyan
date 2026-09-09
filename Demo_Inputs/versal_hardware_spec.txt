@@ -1,0 +1,18 @@
+AMD Versal Adaptive SoC Hardware Specification
+==============================================
+Architecture: Versal Prime Series (VM1102)
+Processor Subsystem: Dual-core ARM Cortex-A72, Dual-core ARM Cortex-R5F
+Network-on-Chip (NoC): Integrated DDRMC memory controllers and interconnect matrix.
+
+AXI Address Space Mapping:
+--------------------------
+1. APU / RPU Interconnect Matrix
+   - LPD_MIO: 0xFF000000 - 0xFFFFFFFF (MIO, GPIO, UART, SPI controllers)
+   - FPD_SLAVE: 0xFD000000 - 0xFDFFFFFF (PCIe, SATA, DisplayPort interfaces)
+   - CPM5_PCIE: 0xE0000000 - 0xEFFFFFFF (DMA, PCIe config space)
+
+2. Core Peripherals
+   - axi_uart_0: Base 0xFF000000, Type UART, Pin MIO[42:43], Driver xuartps, Interrupt 16
+   - axi_spi_0: Base 0xFF040000, Type SPI, Pin MIO[38:41], Driver xspips, Interrupt 18
+   - axi_ethernet_0: Base 0xFF0E0000, Type GEM, Pin MIO[24:35], Driver xemacps, Interrupt 24
+   - noc_ddr_0: Base 0x00000000, Type DDR4, Range 2GB (NoC mapped)

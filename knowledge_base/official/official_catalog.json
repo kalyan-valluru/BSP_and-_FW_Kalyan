@@ -1,0 +1,160 @@
+{
+  "policy": "OFFICIAL_VENDOR_ONLY",
+  "allowed_domains": [
+    "st.com",
+    "amd.com",
+    "xilinx.com",
+    "digilent.com",
+    "files.digilent.com",
+    "nxp.com",
+    "ti.com",
+    "nvidia.com",
+    "developer.nvidia.com",
+    "docs.nvidia.com",
+    "raspberrypi.com",
+    "datasheets.raspberrypi.com"
+  ],
+  "documents": [
+    {
+      "vendor": "STMicroelectronics",
+      "product": "STM32F4DISCOVERY",
+      "part": "STM32F407VGT6",
+      "board": "STM32F4DISCOVERY / STM32F407G-DISC1",
+      "document_type": "datasheet",
+      "title": "STM32F405/407 Datasheet",
+      "official_url": "https://www.st.com/resource/en/datasheet/stm32f405rg.pdf",
+      "relative_path": "STMicroelectronics/STM32F4DISCOVERY/datasheet/stm32f405rg.pdf"
+    },
+    {
+      "vendor": "STMicroelectronics",
+      "product": "STM32F4DISCOVERY",
+      "part": "STM32F407VGT6",
+      "board": "STM32F4DISCOVERY / STM32F407G-DISC1",
+      "document_type": "reference_manual",
+      "title": "STM32F405/407/415/417 Reference Manual RM0090",
+      "official_url": "https://www.st.com/resource/en/reference_manual/rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf",
+      "relative_path": "STMicroelectronics/STM32F4DISCOVERY/reference_manual/rm0090.pdf"
+    },
+    {
+      "vendor": "STMicroelectronics",
+      "product": "STM32F4DISCOVERY",
+      "part": "STM32F407VGT6",
+      "board": "STM32F4DISCOVERY / STM32F407G-DISC1",
+      "document_type": "board_manual",
+      "title": "Discovery kit with STM32F407VG MCU Data Brief / Manual",
+      "official_url": "https://www.st.com/resource/en/data_brief/stm32f4discovery.pdf",
+      "relative_path": "STMicroelectronics/STM32F4DISCOVERY/board_manual/stm32f4discovery.pdf"
+    },
+    {
+      "vendor": "STMicroelectronics",
+      "product": "STM32F4DISCOVERY",
+      "part": "STM32F407VGT6",
+      "board": "STM32F4DISCOVERY / STM32F407G-DISC1",
+      "document_type": "schematic",
+      "title": "STM32F4DISCOVERY Board Schematic MB997",
+      "official_url": "https://www.st.com/resource/en/schematic_pack/mb997-f407vgt6-e01_schematic.pdf",
+      "relative_path": "STMicroelectronics/STM32F4DISCOVERY/schematic/mb997-f407vgt6-e01_schematic.pdf"
+    },
+    {
+      "vendor": "AMD / Digilent",
+      "product": "Zynq-7000",
+      "part": "7Z020",
+      "board": "ZedBoard",
+      "document_type": "reference_manual",
+      "title": "Zynq-7000 SoC Technical Reference Manual UG585",
+      "official_url": "https://docs.amd.com/r/en-US/ug585-zynq-7000-SoC-TRM",
+      "relative_path": "ZedBoard/UG585.pdf"
+    },
+    {
+      "vendor": "AMD / Digilent",
+      "product": "Zynq-7000",
+      "part": "7Z020",
+      "board": "ZedBoard",
+      "document_type": "datasheet",
+      "title": "Zynq-7000 SoC Overview DS190",
+      "official_url": "https://docs.xilinx.com/v/u/en-US/ds190-Zynq-7000-Overview",
+      "relative_path": "ZedBoard/ds190-Zynq-7000-Overview.pdf"
+    },
+    {
+      "vendor": "Digilent",
+      "product": "Zynq-7000",
+      "part": "7Z020",
+      "board": "ZedBoard",
+      "document_type": "board_manual",
+      "title": "ZedBoard Hardware User Guide v2.2",
+      "official_url": "https://files.digilent.com/resources/programmable-logic/zedboard/ZedBoard_HW_UG_v2_2.pdf",
+      "relative_path": "ZedBoard/ZedBoard_HW_UG_v2_2.pdf"
+    },
+    {
+      "vendor": "Digilent",
+      "product": "Zynq-7000",
+      "part": "7Z020",
+      "board": "ZedBoard",
+      "document_type": "schematic",
+      "title": "Official ZedBoard Schematic",
+      "official_url": "https://digilent.com/reference/_media/reference/programmable-logic/zedboard/zedboard_sch.pdf",
+      "relative_path": "ZedBoard/zedboard_sch.pdf"
+    },
+    {
+      "vendor": "NVIDIA",
+      "product": "Jetson Orin NX",
+      "part": "T234",
+      "board": "Jetson Orin NX",
+      "document_type": "datasheet",
+      "title": "Jetson Orin NX Series Modules Datasheet DS-10712-001",
+      "official_url": "https://developer.nvidia.com/embedded/downloads",
+      "relative_path": "NVIDIA Jetson Orin NX/Jetson-Orin-NX-Series-Modules-Datasheet_DS-10712-001_v1.7.pdf"
+    },
+    {
+      "vendor": "NVIDIA",
+      "product": "Jetson Orin NX",
+      "part": "T234",
+      "board": "Jetson Orin NX",
+      "document_type": "module_schematic",
+      "title": "Jetson Orin NX Module Schematic",
+      "official_url": "https://developer.nvidia.com/embedded/downloads",
+      "status": "NOT_PUBLICLY_AVAILABLE",
+      "note": "NVIDIA does not publicly publish raw module schematics for Jetson Orin NX modules. Official carrier-board design files apply."
+    },
+    {
+      "vendor": "TI",
+      "product": "Sitara AM335x",
+      "part": "AM335x",
+      "board": "AM335x development target",
+      "document_type": "reference_manual",
+      "title": "AM335x Sitara Processors Technical Reference Manual SPRUH73",
+      "official_url": "https://www.ti.com/lit/pdf/spruh73",
+      "relative_path": "AM335x/spruh73q.pdf"
+    },
+    {
+      "vendor": "TI",
+      "product": "Sitara AM335x",
+      "part": "AM335x",
+      "board": "AM335x development target",
+      "document_type": "datasheet",
+      "title": "AM335x Sitara Processors Datasheet",
+      "official_url": "https://www.ti.com/lit/ds/symlink/am3359.pdf",
+      "relative_path": "AM335x/am3358.pdf"
+    },
+    {
+      "vendor": "NXP",
+      "product": "i.MX 8M Plus",
+      "part": "MIMX8ML",
+      "board": "i.MX 8M Plus EVK",
+      "document_type": "reference_manual",
+      "title": "i.MX 8M Plus Applications Processor Reference Manual IMX8MPRM",
+      "official_url": "https://www.nxp.com/docs/en/reference-manual/IMX8MPRM.pdf",
+      "relative_path": "i.MX 8M Plus/IMX8MPRM.pdf"
+    },
+    {
+      "vendor": "RaspberryPi",
+      "product": "Compute Module 4",
+      "part": "BCM2711",
+      "board": "Compute Module 4",
+      "document_type": "datasheet",
+      "title": "Raspberry Pi Compute Module 4 Datasheet",
+      "official_url": "https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf",
+      "relative_path": "Raspberry Pi Compute Module 4/RP-008168-DS-4-cm4-datasheet.pdf"
+    }
+  ]
+}

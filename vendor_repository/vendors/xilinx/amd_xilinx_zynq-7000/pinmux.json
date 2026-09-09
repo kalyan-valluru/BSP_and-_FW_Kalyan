@@ -1,0 +1,16 @@
+[
+  {
+    "pinNumber": "A1",
+    "pinName": "PAD_UART1_TX",
+    "signalName": "UART1_TX",
+    "ioType": "OUTPUT",
+    "provenance": {
+      "document": "amd_xilinx_zynq-7000_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "XILINX",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]

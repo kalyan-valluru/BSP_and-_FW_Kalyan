@@ -1,0 +1,67 @@
+{
+  "artifact": "system.dts",
+  "path": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\workspace\\test_stm32mp157_1787056607576\\system.dts",
+  "generatedBy": "LLM",
+  "model": "Gemini / AI Router",
+  "hardwareModelVersion": "v2.0",
+  "inputHash": "19c7a9ff81e2fb7f",
+  "hardwareModelHash": "19c7a9ff81e2fb7f",
+  "expectedPeripheralCount": 2,
+  "actualPeripheralCount": 5,
+  "consistencyValidation": {
+    "valid": true,
+    "checksPassed": 3,
+    "checksFailed": 0,
+    "details": [
+      {
+        "name": "USART4",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      },
+      {
+        "name": "I2C1",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      }
+    ]
+  },
+  "generatedAt": "2026-08-18T12:36:47.645Z",
+  "validationStatus": "compiled",
+  "compiler": "dtc",
+  "compilerVersion": "1.7.0",
+  "repairAttempts": 0,
+  "documentationGrounded": true,
+  "retrievedSources": [
+    "rm0436-stm32mp157-advanced-armbased-32bit-mpus-stmicroelectronics.pdf",
+    "DS_stm32mp157f.pdf",
+    "um2637-discovery-kits-with-increasedfrequency-800-mhz-stm32mp157-mpus-stmicroelectronics.pdf"
+  ],
+  "retrievedSourceIds": [
+    "ST_RM0436_PDF",
+    "ST_DS12500_PDF",
+    "ST_UM2637_PDF"
+  ],
+  "infrastructureResolvedFromDocumentation": true,
+  "documentationResolution": {
+    "sourceType": "local_authoritative_source",
+    "ragChunks": 3,
+    "infrastructureResolved": true
+  },
+  "phandleValidation": {
+    "valid": true,
+    "checkedPhandles": [
+      "clkc"
+    ],
+    "missingLabels": [],
+    "errors": []
+  },
+  "officialDocUrl": "https://www.st.com/resource/en/reference_manual/dm00327659-stm32mp157-advanced-armbased-32bit-mpus-stmicroelectronics.pdf"
+}

@@ -1,0 +1,46 @@
+{
+  "manifestId": "PROV-1787122441927-EXEC-1",
+  "executionId": "EXEC-1787122439336-zc9t5",
+  "hardwareLockId": "HWLOCK-1787122439315-6d6c484c",
+  "generatedAt": "2026-08-19T06:54:01.927Z",
+  "items": [
+    {
+      "filename": "system.dts",
+      "artifactHash": "1a473ee4ac184743fb2c52fa40641a0d9d91ac9c57b377ea1eb39c7b676b3ba0",
+      "executionId": "EXEC-1787122439336-zc9t5",
+      "hardwareLockId": "HWLOCK-1787122439315-6d6c484c",
+      "generatedBy": "autonomous-bsp-fw-agent",
+      "targetFlow": "linux",
+      "createdAt": "2026-08-19T06:54:01.926Z",
+      "claims": [
+        {
+          "claim": "undefined.baseAddress",
+          "value": "0x68",
+          "verificationStatus": "AI_INFERRED",
+          "evidenceReferences": [
+            "Authoritative Hardware Evidence"
+          ]
+        }
+      ]
+    },
+    {
+      "filename": "system.dtb",
+      "artifactHash": "b981fe225f5e0f23881e396480a00efd89704cbc933b6a0f31f5ad1e149524a2",
+      "executionId": "EXEC-1787122439336-zc9t5",
+      "hardwareLockId": "HWLOCK-1787122439315-6d6c484c",
+      "generatedBy": "autonomous-bsp-fw-agent",
+      "targetFlow": "linux",
+      "createdAt": "2026-08-19T06:54:01.927Z",
+      "claims": [
+        {
+          "claim": "undefined.baseAddress",
+          "value": "0x68",
+          "verificationStatus": "AI_INFERRED",
+          "evidenceReferences": [
+            "Authoritative Hardware Evidence"
+          ]
+        }
+      ]
+    }
+  ]
+}

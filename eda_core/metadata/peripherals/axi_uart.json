@@ -1,0 +1,12 @@
+{
+  "id": "axi_uartlite_0",
+  "name": "AXI UART Lite Peripheral",
+  "category": "peripherals",
+  "metadataVersion": "1.0.0",
+  "schemaVersion": "v2.0",
+  "vendorId": "amd-xilinx",
+  "processorId": "zynq-7000",
+  "registerMapSize": 4096,
+  "supportedBuses": ["AXI4-Lite"],
+  "defaultDrivers": ["xuartlite"]
+}

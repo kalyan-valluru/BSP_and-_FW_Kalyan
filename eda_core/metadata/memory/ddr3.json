@@ -1,0 +1,11 @@
+{
+  "id": "ddr3_ram",
+  "name": "DDR3 System RAM",
+  "category": "memory",
+  "metadataVersion": "1.0.0",
+  "schemaVersion": "v2.0",
+  "processorId": "zynq-7000",
+  "startAddress": "0x00100000",
+  "sizeBytes": 536870912,
+  "accessType": "read_write"
+}

@@ -1,0 +1,40 @@
+/dts-v1/;
+
+/ {
+	model = "Jetson Orin NX Developer Kit (Tegra234)";
+	compatible = "nvidia,p3767-0000", "nvidia,tegra234";
+	#address-cells = <2>;
+	#size-cells = <2>;
+
+	chosen {
+		bootargs = "console=ttyS0,115200n8 root=/dev/mmcblk0p2 rw rootwait";
+	};
+
+	memory@0 {
+		device_type = "memory";
+		reg = <0x0 0x0 0x0 0x40000000>;
+	};
+
+	gic: interrupt-controller@2f00000 {
+		compatible = "arm,gic-v3";
+		#interrupt-cells = <3>;
+		interrupt-controller;
+		reg = <0x0 0x02f00000 0x0 0x10000>,
+		      <0x0 0x02f10000 0x0 0x20000>;
+	};
+
+	clkc: clock-controller@2930000 {
+		compatible = "nvidia,tegra234-car";
+		#clock-cells = <1>;
+		reg = <0x0 0x02930000 0x0 0x10000>;
+	};
+
+	uart0: uart0@03100000 {
+		compatible = "nvidia,tegra234-uart";
+		reg = <0x0 0x03100000 0x0 0x1000>;
+		interrupt-parent = <&gic>;
+		interrupts = <0 112 4>;
+		clocks = <&clkc 112>;
+		status = "okay";
+	};
+};

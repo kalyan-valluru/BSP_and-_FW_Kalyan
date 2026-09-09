@@ -1,0 +1,8 @@
+
+addrmap my_soc {
+    regfile uart1_rf {
+        reg {
+            field {} status[32];
+        } reg_inst;
+    } uart1 @ 0x41200000;
+};

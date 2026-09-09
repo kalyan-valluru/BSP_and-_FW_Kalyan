@@ -1,0 +1,49 @@
+/dts-v1/;
+
+/ {
+	model = "STM32MP157A-DK2 Discovery Kit (STM32MP157)";
+	compatible = "st,stm32mp157c-dk2", "st,stm32mp157";
+	#address-cells = <1>;
+	#size-cells = <1>;
+
+	chosen {
+		bootargs = "console=ttyS0,115200n8 root=/dev/mmcblk0p2 rw rootwait";
+	};
+
+	memory@0 {
+		device_type = "memory";
+		reg = <0x0 0x40000000>;
+	};
+
+	gic: interrupt-controller@a0021000 {
+		compatible = "arm,gic-400";
+		#interrupt-cells = <3>;
+		interrupt-controller;
+		reg = <0xa0021000 0x1000>,
+		      <0xa0022000 0x2000>;
+	};
+
+	clkc: clock-controller@50000000 {
+		compatible = "st,stm32mp1-rcc";
+		#clock-cells = <1>;
+		reg = <0x50000000 0x1000>;
+	};
+
+	usart4: usart4@40010000 {
+		compatible = "st,stm32h7-uart";
+		reg = <0x40010000 0x1000>;
+		interrupt-parent = <&gic>;
+		interrupts = <0 52 4>;
+		clocks = <&clkc 52>;
+		status = "okay";
+	};
+
+	i2c1: i2c1@40012000 {
+		compatible = "st,stm32f7-i2c";
+		reg = <0x40012000 0x1000>;
+		interrupt-parent = <&gic>;
+		interrupts = <0 33 4>;
+		clocks = <&clkc 33>;
+		status = "okay";
+	};
+};

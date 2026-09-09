@@ -1,0 +1,16 @@
+[
+  {
+    "irqNumber": 32,
+    "name": "sys_ctrl_IRQ",
+    "peripheralBlock": "sys_ctrl",
+    "controllerType": "GIC",
+    "provenance": {
+      "document": "zynq-7000_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "XILINX",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]

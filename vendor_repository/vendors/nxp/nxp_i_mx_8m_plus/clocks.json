@@ -1,0 +1,18 @@
+{
+  "processor": "NXP_I_MX_8M_PLUS",
+  "domains": [
+    {
+      "domainName": "SYS_CLK_ROOT",
+      "nominalFrequencyHz": 400000000,
+      "sourceType": "PLL",
+      "provenance": {
+        "document": "nxp_i_mx_8m_plus_TRM.pdf",
+        "documentType": "TRM",
+        "vendor": "NXP",
+        "chapter": "System Overview",
+        "parser": "trmParser",
+        "confidence": 1
+      }
+    }
+  ]
+}

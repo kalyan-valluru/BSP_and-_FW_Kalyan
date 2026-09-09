@@ -1,0 +1,40 @@
+{
+  "id": "xilinx-zynq-7000",
+  "name": "Xilinx Zynq-7000",
+  "vendor": "Xilinx",
+  "architecture": "ARM Cortex-A9 + FPGA",
+  "frequency": "667 MHz",
+  "memorySize": "512 MB",
+  "flashType": "QSPI Flash",
+  "defaultBus": "AXI4-Lite",
+  "defaultClock": "s_axi_aclk",
+  "defaultFreq": "100 MHz",
+  "memoryRegions": [
+    { "start": "0x40000000", "end": "0x7FFFFFFF", "name": "PL AXI GP0" },
+    { "start": "0x80000000", "end": "0xBFFFFFFF", "name": "PL AXI GP1" },
+    { "start": "0xE0000000", "end": "0xE02FFFFF", "name": "IOP Registers" },
+    { "start": "0xF8000000", "end": "0xF8FFFFFF", "name": "SLCR" }
+  ],
+  "suggestedBaseAddresses": {
+    "uart": "0x40600000",
+    "gpio": "0x41200000",
+    "i2c": "0x41600000",
+    "spi": "0x44A00000",
+    "timer": "0x41C00000",
+    "can": "0xE0008000",
+    "eth": "0xE000B000",
+    "usb": "0xE0002000",
+    "sd": "0xE000E000"
+  },
+  "defaultDrivers": {
+    "uart": "xuartlite",
+    "gpio": "xgpio",
+    "i2c": "xiic",
+    "spi": "xspi",
+    "timer": "xtmrctr",
+    "can": "xcanps",
+    "eth": "xemacps",
+    "usb": "xusbps",
+    "sd": "xsdps"
+  }
+}

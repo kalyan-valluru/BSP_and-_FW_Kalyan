@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Theme (Default when .dark is absent) */
+  --color-obsidian: 255 255 255;
+  --color-obsidian-50: 248 250 252;
+  --color-obsidian-100: 241 245 249;
+  --color-obsidian-200: 226 232 240;
+  --color-obsidian-300: 203 213 225;
+  --color-obsidian-400: 148 163 184;
+  --color-obsidian-900: 255 255 255;
+
+  --color-slate-deep: 241 245 249;
+
+  --color-text-primary: 15 23 42;
+  --color-text-secondary: 51 65 85;
+  --color-text-muted: 100 116 139;
+
+  --color-neon-cyan: 13 148 136;
+  --color-neon-cyan-dim: 13 148 136;
+  --color-neon-emerald: 16 185 129;
+  --color-neon-emerald-dim: 16 185 129;
+  --color-neon-amber: 217 119 6;
+  --color-neon-amber-dim: 217 119 6;
+
+  --color-status-success: 16 185 129;
+  --color-status-warning: 217 119 6;
+  --color-status-error: 225 29 72;
+  --color-status-info: 2 132 199;
+
+  --border-color-grid: rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+  --body-bg: #f8fafc;
+  --body-text: #0f172a;
+}
+
+:root.dark {
+  /* Dark Theme (When .dark class is on html) */
+  --color-obsidian: 10 10 10;
+  --color-obsidian-50: 17 17 17;
+  --color-obsidian-100: 26 26 26;
+  --color-obsidian-200: 36 36 36;
+  --color-obsidian-300: 50 50 50;
+  --color-obsidian-400: 75 75 75;
+  --color-obsidian-900: 5 5 5;
+
+  --color-slate-deep: 15 23 42;
+
+  --color-text-primary: 248 250 252;
+  --color-text-secondary: 203 213 225;
+  --color-text-muted: 148 163 184;
+
+  --color-neon-cyan: 0 245 212;
+  --color-neon-cyan-dim: 0 245 212;
+  --color-neon-emerald: 16 185 129;
+  --color-neon-emerald-dim: 16 185 129;
+  --color-neon-amber: 245 158 11;
+  --color-neon-amber-dim: 245 158 11;
+
+  --color-status-success: 16 185 129;
+  --color-status-warning: 245 158 11;
+  --color-status-error: 239 68 68;
+  --color-status-info: 56 189 248;
+
+  --border-color-grid: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(26, 26, 26, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --body-bg: #050505;
+  --body-text: #f8fafc;
+}
+
+@layer base {
+  body {
+    background-color: var(--body-bg);
+    color: var(--body-text);
+    @apply font-sans antialiased overflow-x-hidden selection:bg-[#00f5d4]/30;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer utilities {
+  /* Dynamic Color mappings for components */
+  .bg-obsidian { background-color: rgb(var(--color-obsidian)); }
+  .bg-obsidian-50 { background-color: rgb(var(--color-obsidian-50)); }
+  .bg-obsidian-100 { background-color: rgb(var(--color-obsidian-100)); }
+  .bg-obsidian-200 { background-color: rgb(var(--color-obsidian-200)); }
+  .bg-obsidian-900 { background-color: rgb(var(--color-obsidian-900)); }
+
+  .text-text-primary { color: rgb(var(--color-text-primary)); }
+  .text-text-secondary { color: rgb(var(--color-text-secondary)); }
+  .text-text-muted { color: rgb(var(--color-text-muted)); }
+
+  .border-grid { border-color: var(--border-color-grid); }
+  .border-border-grid { border-color: var(--border-color-grid); }
+
+  .text-neon-cyan { color: rgb(var(--color-neon-cyan)); }
+  .text-neon-purple { color: #b026ff; }
+  .text-neon-emerald { color: rgb(var(--color-neon-emerald)); }
+  .text-neon-amber { color: rgb(var(--color-neon-amber)); }
+  .border-neon-cyan { border-color: rgb(var(--color-neon-cyan) / 0.5); }
+  .border-status-error { border-color: rgb(var(--color-status-error) / 0.5); }
+
+  .shadow-neon-cyan { box-shadow: 0 0 15px rgba(0, 245, 212, 0.2); }
+  .shadow-neon-purple { box-shadow: 0 0 15px rgba(176, 38, 255, 0.2); }
+  .shadow-neon-error { box-shadow: 0 0 15px rgba(239, 68, 68, 0.2); }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card:hover {
+    border-color: rgba(0, 245, 212, 0.3);
+    box-shadow: 0 0 20px rgba(0, 245, 212, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, var(--body-text) 0%, rgb(var(--color-neon-cyan)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-purple {
+    background: linear-gradient(135deg, var(--body-text) 0%, #b026ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Scanline effect */
+  .scanlines::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0),
+      rgba(255,255,255,0) 50%,
+      rgba(0,0,0,0.1) 50%,
+      rgba(0,0,0,0.1)
+    );
+    background-size: 100% 4px;
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--body-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-obsidian-200));
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-neon-cyan));
+}

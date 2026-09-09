@@ -1,0 +1,110 @@
+{
+  "manifestId": "PROV-1787587119591-EXEC-1",
+  "executionId": "EXEC-1787587116943-gvj0p",
+  "hardwareLockId": "HWLOCK-1787587116836-5fc19796",
+  "generatedAt": "2026-08-24T15:58:39.591Z",
+  "items": [
+    {
+      "filename": "system.dts",
+      "artifactHash": "a76ae13437f071fa0e451889bade4ac91842af4228acdf72dfcb0f6ea68c50c3",
+      "executionId": "EXEC-1787587116943-gvj0p",
+      "hardwareLockId": "HWLOCK-1787587116836-5fc19796",
+      "generatedBy": "autonomous-bsp-fw-agent",
+      "targetFlow": "linux",
+      "createdAt": "2026-08-24T15:58:39.590Z",
+      "claims": [
+        {
+          "claim": "UART0.baseAddress",
+          "value": "0x44E09000",
+          "verificationStatus": "SOURCE_VERIFIED",
+          "evidenceReferences": [
+            "Authoritative Hardware Evidence"
+          ]
+        },
+        {
+          "claim": "GPIO1.baseAddress",
+          "value": "0x4804C000",
+          "verificationStatus": "SOURCE_VERIFIED",
+          "evidenceReferences": [
+            "Authoritative Hardware Evidence"
+          ]
+        },
+        {
+          "claim": "I2C1.baseAddress",
+          "value": "0x4802A000",
+          "verificationStatus": "SOURCE_VERIFIED",
+          "evidenceReferences": [
+            "Authoritative Hardware Evidence"
+          ]
+        },
+        {
+          "claim": "SPI0.baseAddress",
+          "value": "0x48030000",
+          "verificationStatus": "SOURCE_VERIFIED",
+          "evidenceReferences": [
+            "Authoritative Hardware Evidence"
+          ]
+        },
+        {
+          "claim": "MMC0.baseAddress",
+          "value": "0x48060000",
+          "verificationStatus": "SOURCE_VERIFIED",
+          "evidenceReferences": [
+            "Authoritative Hardware Evidence"
+          ]
+        }
+      ]
+    },
+    {
+      "filename": "system.dtb",
+      "artifactHash": "b981fe225f5e0f23881e396480a00efd89704cbc933b6a0f31f5ad1e149524a2",
+      "executionId": "EXEC-1787587116943-gvj0p",
+      "hardwareLockId": "HWLOCK-1787587116836-5fc19796",
+      "generatedBy": "autonomous-bsp-fw-agent",
+      "targetFlow": "linux",
+      "createdAt": "2026-08-24T15:58:39.591Z",
+      "claims": [
+        {
+          "claim": "UART0.baseAddress",
+          "value": "0x44E09000",
+          "verificationStatus": "SOURCE_VERIFIED",
+          "evidenceReferences": [
+            "Authoritative Hardware Evidence"
+          ]
+        },
+        {
+          "claim": "GPIO1.baseAddress",
+          "value": "0x4804C000",
+          "verificationStatus": "SOURCE_VERIFIED",
+          "evidenceReferences": [
+            "Authoritative Hardware Evidence"
+          ]
+        },
+        {
+          "claim": "I2C1.baseAddress",
+          "value": "0x4802A000",
+          "verificationStatus": "SOURCE_VERIFIED",
+          "evidenceReferences": [
+            "Authoritative Hardware Evidence"
+          ]
+        },
+        {
+          "claim": "SPI0.baseAddress",
+          "value": "0x48030000",
+          "verificationStatus": "SOURCE_VERIFIED",
+          "evidenceReferences": [
+            "Authoritative Hardware Evidence"
+          ]
+        },
+        {
+          "claim": "MMC0.baseAddress",
+          "value": "0x48060000",
+          "verificationStatus": "SOURCE_VERIFIED",
+          "evidenceReferences": [
+            "Authoritative Hardware Evidence"
+          ]
+        }
+      ]
+    }
+  ]
+}

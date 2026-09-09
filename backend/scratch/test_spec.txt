@@ -1,0 +1,39 @@
+
+Zynq-7000 Hardware Specification (Test Input 2)
+Board: Zynq-7000 XC7Z020 Development Board
+
+Processor
+Device: XC7Z020
+CPU: Dual ARM Cortex-A9
+Architecture: ARMv7
+Clock: 100 MHz
+
+Memory
+DDR3: 512 MB
+QSPI Flash: 16 MB
+
+Peripheral | Instance | Base Address | Size | IRQ
+AXI GPIO | gpio_0 | 0x41200000 | 64 KB | 61
+AXI UART Lite | uartlite_0 | 0x40600000 | 64 KB | 59
+AXI Timer | timer_0 | 0x41C00000 | 64 KB | 60
+AXI IIC | iic_0 | 0x41600000 | 64 KB | 62
+AXI SPI | spi_0 | 0x44A00000 | 64 KB | 63
+
+GPIO Connections
+Channel 1: LED0, LED1, LED2, LED3
+Channel 2: Push Button 0, Push Button 1, Push Button 2
+
+UART
+UART Lite, 115200 baud, 8 data bits, 1 stop bit, no parity.
+
+Timer
+32-bit AXI Timer with interrupts enabled.
+
+SPI
+Master Mode, SPI Mode 0, 8-bit transfer.
+
+I2C
+100 kHz, EEPROM connected.
+
+Supported OS
+Standalone, Linux

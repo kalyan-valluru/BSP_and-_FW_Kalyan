@@ -1,0 +1,28 @@
+{
+  "vendor": "nxp",
+  "family": "imx8mp",
+  "processorName": "i.MX 8M Plus",
+  "cpuArchitecture": "ARM Cortex-A (64-bit / 32-bit)",
+  "coreCount": 4,
+  "maxFrequency": "1.6 GHz",
+  "operatingVoltage": "1.8V / 3.3V",
+  "packageType": "BGA / QFP Package",
+  "operatingTemperature": "-40°C to +105°C",
+  "versionInfo": {
+    "trmRevision": "Rev. 3.0",
+    "datasheetRevision": "Rev. 1.2",
+    "sdkVersion": "v25.03",
+    "bspVersion": "v6.6",
+    "importTimestamp": "2026-08-18T12:28:56.642Z",
+    "checksum": "sha256_indexed",
+    "status": "ACTIVE"
+  },
+  "provenance": {
+    "document": "imx8mp_TRM.pdf",
+    "documentType": "TRM",
+    "vendor": "NXP",
+    "chapter": "System Overview",
+    "parser": "trmParser",
+    "confidence": 1
+  }
+}

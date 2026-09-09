@@ -1,0 +1,6 @@
+/dts-v1/;
+/ {
+	model = "Broken Board";
+	compatible = "ti,am335x";
+	syntax_error_unclosed_string = "missing quote
+};

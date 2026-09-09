@@ -1,0 +1,10 @@
+{
+  "id": "fclk_0",
+  "name": "FPGA Fabric Clock 0",
+  "category": "clocks",
+  "metadataVersion": "1.0.0",
+  "schemaVersion": "v2.0",
+  "processorId": "zynq-7000",
+  "source": "PS FCLK0",
+  "frequencyHz": 100000000
+}

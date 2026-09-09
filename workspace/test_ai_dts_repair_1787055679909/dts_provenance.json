@@ -1,0 +1,59 @@
+{
+  "artifact": "system.dts",
+  "path": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\workspace\\test_ai_dts_repair_1787055679909\\system.dts",
+  "generatedBy": "LLM",
+  "model": "Gemini / AI Router",
+  "hardwareModelVersion": "v2.0",
+  "inputHash": "cf41520b3cf1ef14",
+  "hardwareModelHash": "cf41520b3cf1ef14",
+  "expectedPeripheralCount": 1,
+  "actualPeripheralCount": 4,
+  "consistencyValidation": {
+    "valid": true,
+    "checksPassed": 2,
+    "checksFailed": 0,
+    "details": [
+      {
+        "name": "UART0",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      }
+    ]
+  },
+  "generatedAt": "2026-08-18T12:21:19.991Z",
+  "validationStatus": "compiled",
+  "compiler": "dtc",
+  "compilerVersion": "1.7.0",
+  "repairAttempts": 1,
+  "documentationGrounded": true,
+  "retrievedSources": [
+    "tegra234.dtsi",
+    "tegra234-p3737-0000+p3701-0000.dts",
+    "tegra234-clock.h"
+  ],
+  "retrievedSourceIds": [
+    "NV_TEGRA234_DTSI",
+    "NV_TEGRA234_DTS",
+    "NV_TEGRA234_CLOCK_H"
+  ],
+  "infrastructureResolvedFromDocumentation": true,
+  "documentationResolution": {
+    "sourceType": "local_authoritative_source",
+    "ragChunks": 0,
+    "infrastructureResolved": true
+  },
+  "phandleValidation": {
+    "valid": true,
+    "checkedPhandles": [
+      "gic",
+      "clkc"
+    ],
+    "missingLabels": [],
+    "errors": []
+  },
+  "officialDocUrl": "https://docs.nvidia.com/jetson/archives/r36.4.3/DeveloperGuide/SD/Kernel/DeviceTree.html"
+}

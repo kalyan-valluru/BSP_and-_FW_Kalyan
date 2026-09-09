@@ -1,0 +1,16 @@
+[
+  {
+    "irqNumber": 32,
+    "name": "sys_ctrl_IRQ",
+    "peripheralBlock": "sys_ctrl",
+    "controllerType": "GIC",
+    "provenance": {
+      "document": "ti_sitara_am335x_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "TI",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]

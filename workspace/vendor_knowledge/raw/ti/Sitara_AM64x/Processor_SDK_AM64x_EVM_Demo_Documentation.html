@@ -1,0 +1,761 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.1. Benchmark Demo - User Guide &mdash; Processor SDK AM64X Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Processor SDK AM64X Documentation" href="../../index.html"/>
+        <link rel="up" title="5. Applications" href="../../devices/AM64X/index_Applications.html"/>
+        <link rel="next" title="5.2. Servo Drive Demo - User Guide" href="Servo_Drive_Demo_User_Guide.html"/>
+        <link rel="prev" title="5. Applications" href="../../devices/AM64X/index_Applications.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+<script >bazadebezolkohpepadr="1724787114"</script><script type="text/javascript" src="https://software-dl.ti.com/akam/13/66ce290e"  defer></script></head>
+
+<body class="wy-body-for-nav" role="document">
+  <header id="tiHeader">
+    <div class="top">
+      <ul>
+        <li id="top_logo">
+          <a href="https://www.ti.com">
+            <img src="../../_static/img/ti_logo.png"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav"></div>
+  </header>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../devices/AM64X/index.html" class="icon icon-home"> Processor SDK for AM64X
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                07_02_00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devices/AM64X/Overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/AM64X/Release_Specific.html">2. Release Specific</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/AM64X/index_Linux.html">3. Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devices/AM64X/index_RTOS.html">4. RTOS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../devices/AM64X/index_Applications.html">5. Applications</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">5.1. Benchmark Demo - User Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">5.1.1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hardware-prerequisites">5.1.2. Hardware Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-started">5.1.3. Get Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#software-architecture">5.1.4. Software Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-blocks">5.1.5. Building Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#demo-internals">5.1.6. Demo Internals</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#programming-paradigm">5.1.6.1. Programming Paradigm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#node-js">5.1.6.2. Node JS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#http">5.1.6.3. HTTP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#json">5.1.6.4. JSON</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#build-linux-baremetal-demos-and-update-sd-card">5.1.7. Build Linux+Baremetal Demos and Update SD card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-baremetal-demos-and-update-sd-card">5.1.8. Build Baremetal Demos and Update SD card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#directory-structure">5.1.9. Directory Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#benchmark-results">5.1.10. Benchmark Results</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#r5-benchmarks-average">5.1.10.1. R5 Benchmarks (Average)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Servo_Drive_Demo_User_Guide.html">5.2. Servo Drive Demo - User Guide</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../devices/AM64X/index.html">Processor SDK for AM64X</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../devices/AM64X/index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../devices/AM64X/index_Applications.html">5. Applications</a> &raquo;</li>
+      
+    <li>5.1. Benchmark Demo - User Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="benchmark-demo-user-guide">
+<span id="benchmark-demo-user-guide-label"></span><h1>5.1. Benchmark Demo - User Guide<a class="headerlink" href="#benchmark-demo-user-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>5.1.1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The default application loaded on the AM64x is the Benchmark Demo. It&#8217;s
+purpose is to showcase the capabilities of the four R5F cores as well as
+the A53 core right out of the box. One of the four R5F benchmarks will run
+on one of the 4 R5F cores. There are 4 running options available for each
+benchmark. Users can switch using the drop-down to test the AM64x and view
+it&#8217;s performance.</p>
+<p>All of the necessary equipment requirement and instructions are provided here.</p>
+</div>
+<div class="section" id="hardware-prerequisites">
+<h2>5.1.2. Hardware Prerequisites<a class="headerlink" href="#hardware-prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>TI AM64x EVM</li>
+<li>PC (Windows or Linux)</li>
+<li>Ethernet cables</li>
+<li>Ethernet switch or ethernet router with DHCP service</li>
+<li>SD card (minimum 2GB)</li>
+</ul>
+</div>
+<div class="section" id="get-started">
+<h2>5.1.3. Get Started<a class="headerlink" href="#get-started" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Follow the instructions in section
+<a class="reference internal" href="../../devices/AM64X/Overview/Create_SD_Card.html#am64x-create-sd-card-with-default-images"><span>Create SD Card with Default Images</span></a> to create an SD card with
+the prebuilt WIC image.</p>
+</li>
+<li><p class="first">Insert the SD card into the AM64x EVM</p>
+</li>
+<li><p class="first">Set the AM64x EVM Boot mode to &#8220;Boot from SD card&#8221;</p>
+<ul class="simple">
+<li>SW2(1:8) on, on, off, off, off, off, on, off</li>
+<li>SW3(1:8) off, on, off, off, off, off, off, off</li>
+</ul>
+</li>
+<li><p class="first">Connect an ethernet cable from your ethernet switch or router to the
+AM64x EVM</p>
+</li>
+<li><p class="first">Connect your PC to the same&nbsp;ethernet switch or router</p>
+</li>
+<li><p class="first">Connect the UART (J26 via USB cable) to the PC&#8217;s USB port.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Open the the main UART0 port using the TeraTerm or other UART emulator</dt>
+<dd><p class="first last">program. Set the port to 115200bps, 8 bit, no parity, 1 stop bit, no flow control</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Power on the AM64x</p>
+</li>
+<li><dl class="first docutils">
+<dt>After the Linux boot completes, login as &#8220;root&#8221;, then type in &#8220;ifconfig&#8221; in</dt>
+<dd><p class="first last">Linux prompt to find out the IP address for the AM64x EVM</p>
+</dd>
+</dl>
+</li>
+</ol>
+<img alt="../../_images/OOB_Linux_ifconfig.png" src="../../_images/OOB_Linux_ifconfig.png" />
+<ol class="arabic simple" start="10">
+<li>On the PC, open a Internet Browser and enter in the
+following:&nbsp;<a class="reference external" href="http://IP_ADDRESS_OF_AM64x_EVM:8081">http://IP_ADDRESS_OF_AM64x_EVM:8081</a>, for example, <a class="reference external" href="http://192.168.86.198:8081">http://192.168.86.198:8081</a></li>
+<li>The following web page will pop up:</li>
+</ol>
+<img alt="../../_images/OOB_GUI_root.png" src="../../_images/OOB_GUI_root.png" />
+<ol class="arabic simple" start="12">
+<li>Click on the &#8220;Benchmark Demo&#8221;:</li>
+</ol>
+<img alt="../../_images/OOB_GUI_stats.png" src="../../_images/OOB_GUI_stats.png" />
+<ol class="arabic simple" start="13">
+<li>With the current release, the R5F app for each R5F core are fixed. User can only
+change the &#8220;Options&#8221; for each core, then click &#8220;LOAD&#8221; to refresh the statistics</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="16%" />
+<col width="20%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>R5 Core</strong></th>
+<th class="head"><strong>App Name</strong></th>
+<th class="head">Default Option</th>
+<th class="head"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0_0</td>
+<td>ADC and PWM Loop</td>
+<td>8Khz</td>
+<td>ADC/PWM benchmark for R5 5 ADC sample read &amp; 1 PWM write</td>
+</tr>
+<tr class="row-odd"><td>0_1</td>
+<td>CFFT</td>
+<td>1Khz &amp; 128pt</td>
+<td>CMSIS CFFT benchmark for R5</td>
+</tr>
+<tr class="row-even"><td>1_0</td>
+<td>FIR Filtering</td>
+<td>1Khz</td>
+<td>CMSIS FIR filtering benchmark for R5 320pt &amp; 29-tap</td>
+</tr>
+<tr class="row-odd"><td>1_1</td>
+<td>FOC Loop</td>
+<td>16Khz</td>
+<td>CMSIS FOC benchmark for R5</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Sometimes, you see spikes in &#8220;CPU Usage&#8221;. It happens sparsely, so the average numbers are not affected. This is a known issue and we are investigating right now.</p>
+</div>
+</div>
+<div class="section" id="software-architecture">
+<h2>5.1.4. Software Architecture<a class="headerlink" href="#software-architecture" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/OOB_SW_arch.png" src="../../_images/OOB_SW_arch.png" />
+</div>
+<div class="section" id="building-blocks">
+<h2>5.1.5. Building Blocks<a class="headerlink" href="#building-blocks" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>User Interface:</strong>&nbsp;The GUI was built by using <a class="reference external" href="https://dev.ti.com/gc/designer/help/GC_UserGuide_v2/index.html">GUI Composer</a>. The
+Benchmark Demo is the second page where inputs and outputs can be
+accessed.</li>
+<li><strong>Web Server:</strong>&nbsp;The benchmark data is sent between the GUI and the
+AM64x via HTTP communication. New data are pulled from the AM64x and
+sent to the GUI every second, while data sending from the GUI to the
+AM64x is transmitted every time &#8220;Load&#8221; is clicked. The data are
+transmitted and received in JSON format.</li>
+<li><strong>R5 and A53 Applications:</strong><ul>
+<li>IPC RPMsg_char library for R5: it provides a API for R5
+application to&nbsp;receive/send a RPMsg_char message from/to A53</li>
+<li>CMSIS DSP library 5.6.0&nbsp;compiled with&nbsp;TI CGT for R5</li>
+<li>CMSIS CFFT benchmark for R5: CFFT benchmark application using
+CMSIS DSP library for R5</li>
+<li>CMSIS FIR benchmark for R5:&nbsp;FIR benchmark application using CMSIS
+DSP library for R5</li>
+<li>CMSIS FOC benchmark for R5:&nbsp;FOC benchmark application using CMSIS
+DSP library for R5</li>
+<li>ADC/PWM benchmark for R5: ADC/PWM loop&nbsp;benchmark application for
+R5</li>
+<li>Linux application code handles the IPC RPMsg_char and the JSON
+file update for A53</li>
+<li>Web server code is built on Node JS</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="demo-internals">
+<h2>5.1.6. Demo Internals<a class="headerlink" href="#demo-internals" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="programming-paradigm">
+<h3>5.1.6.1. Programming Paradigm<a class="headerlink" href="#programming-paradigm" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The user interface of the demo is built from GUI Composer and runs on
+a PC&#8217;s browser</li>
+<li>The web server is built on Node JS, transmits and receives data in
+JSON format, and runs on the Linux A53 core</li>
+<li>The linux app is written in C and runs on the Linux A53 core</li>
+<li>Each of the CMSIS applications run on any given baremetal R5F core<ul>
+<li>Applications are chosen using the Imperative Programming Paradigm
+(Procedural Programming Paradigm)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="node-js">
+<h3>5.1.6.2. Node JS<a class="headerlink" href="#node-js" title="Permalink to this headline">¶</a></h3>
+<p>When the AM64x boots, an initialization script executes the web server
+code by calling the Node JS code. Several node packages are used to edit
+the JSON file, create the demo instance, and serve up the files to the
+client.</p>
+</div>
+<div class="section" id="http">
+<h3>5.1.6.3. HTTP<a class="headerlink" href="#http" title="Permalink to this headline">¶</a></h3>
+<p>All data communication is handled via HTTP. Benchmark data from the
+AM64x is requested by the GUI every second, whereas the option selection
+data is pushed from the GUI to the AM64x when the &#8220;Load&#8221; button is clicked.
+The HTTP requests are handled with jQuery, and the body of each HTTP request
+is a JSON string containing the input/output benchmark data.</p>
+</div>
+<div class="section" id="json">
+<h3>5.1.6.4. JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h3>
+<p>A JSON file has been used to exchange&nbsp;structured information between the
+web server and the A53 Linux&nbsp;application (a user space application
+program). It will read the&nbsp;user input such as&nbsp;the input application and
+parameters used to run on the desired R5F core. On the other hand, the
+A53 Linux application will also get the benchmark data from the R5 cores
+and then update the JSON file accordingly. The updated JSON file
+will&nbsp;then be displayed on the GUI every second.</p>
+</div>
+</div>
+<div class="section" id="build-linux-baremetal-demos-and-update-sd-card">
+<h2>5.1.7. Build Linux+Baremetal Demos and Update SD card<a class="headerlink" href="#build-linux-baremetal-demos-and-update-sd-card" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Install the Sitara SDK on a Linux machine at
+&lt;PSDK_PATH&gt;</li>
+<li>Change directory</li>
+</ol>
+<div class="highlight-text"><div class="highlight"><pre>cd &lt;PSDK_PATH&gt;/sitara-apps
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>Build the demo</li>
+</ol>
+<div class="highlight-text"><div class="highlight"><pre>make common_libs benchmark_demo BUILD_LINUX_APPS=1 RTOS_ONLY_BUILD=0
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li>The R5 apps will be in
+&lt;PSDK_PATH&gt;/apps/benchmark_demo/out/AM64X/R5F/NO_OS/release</li>
+<li>The A53 app will be in
+&lt;PSDK_PATH&gt;/apps/benchmark_demo/webserver_app/linux_app/rpmsg_json</li>
+<li>Update the SD card with above newly built R5 apps and A53 app<ul>
+<li>Copy the R5 apps from &lt;PSDK_PATH&gt;/apps/benchmark_demo/out/AM64X/R5F/NO_OS/release/*.out
+to /lib/firmware/sitara-apps/sitara-benchmark-demo/ of rootfs partition on SD card</li>
+<li>Copy the A53 app from&nbsp;&lt;PSDK_PATH&gt;/apps/benchmark_demo/webserver_app/linux_app/rpmsg_json
+to&nbsp;/usr/bin/rpmsg_json of rootfs partition of SD card</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="build-baremetal-demos-and-update-sd-card">
+<h2>5.1.8. Build Baremetal Demos and Update SD card<a class="headerlink" href="#build-baremetal-demos-and-update-sd-card" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Install the Sitara SDK on a Linux or a Windows machine at
+&lt;PSDK_PATH&gt;</li>
+<li>Change directory</li>
+</ol>
+<div class="highlight-text"><div class="highlight"><pre>cd &lt;PSDK_PATH&gt;/sitara-apps
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>Build the demo</li>
+</ol>
+<div class="highlight-text"><div class="highlight"><pre>make common_libs benchmark_demo BUILD_LINUX_APPS=0 RTOS_ONLY_BUILD=1   (for Linux)
+gmake common_libs benchmark_demo BUILD_LINUX_APPS=0 RTOS_ONLY_BUILD=1  (for Windows)
+</pre></div>
+</div>
+<ol class="arabic" start="4">
+<li><p class="first">The 3 baremetal SD card bootable files will be in
+&lt;PSDK_PATH&gt;/apps/benchmark_demo/out/AM64X/SDCardImage</p>
+</li>
+<li><p class="first">Update the SD card with above newly built Baremetal SD card bootable files</p>
+<ul class="simple">
+<li>Delete all files from the SD card boot partition</li>
+<li>Copy the 3 baremetal SD card bootable files from
+&lt;PSDK_PATH&gt;/apps/benchmark_demo/out/AM64X/SDCardImage
+to boot partition on SD card</li>
+</ul>
+</li>
+<li><p class="first">Display the benchmark statistics for baremetal only SD card boot</p>
+<ul>
+<li><p class="first">Because the baremetal only demo will not be able to display anything on
+webserver, in order to see the benchmark statstics, CCS has to be used</p>
+</li>
+<li><p class="first">Create a target configuration (ccxml) file with no gel file attached to DSMC core</p>
+</li>
+<li><dl class="first docutils">
+<dt>Put the AM64x EVM in SD card boot mode:</dt>
+<dd><ul class="first last simple">
+<li>SW2(1:8) on, on, off, off, off, off, on, off</li>
+<li>SW3(1:8) off, on, off, off, off, off, off, off</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Boot for a baremetal only SD card, wait until the Linux boot is completed</p>
+</li>
+<li><p class="first">Launch the target configuration file without gel file on DSMC core</p>
+</li>
+<li><p class="first">Connect to the R5F core of interest (R5_0_0, R5_0_1, R5_1_0, or R5_1_1)</p>
+</li>
+<li><dl class="first docutils">
+<dt>To examine the statistics, you will need to add gCoreStat into your Expressions.</dt>
+<dd><ul class="first last simple">
+<li>gCoreStat.output.cload.cur: the current CPU loading in percentage</li>
+<li>gCoreStat.output.cload.ave: the average CPU loading in percentage</li>
+<li>gCoreStat.output.cload.max: the maximum CPU loading in percentage</li>
+<li>gCoreStat.output.ilate.ave: the average interrupt latency in ns</li>
+<li>gCoreStat.output.ilate.max: the maximum interrupt latency in ns</li>
+<li>gCoreStat.output.ccploop.ave: the average cycle count per loop</li>
+<li>gCoreStat.output.ccploop.max: the maximum cycle count per loop</li>
+<li>gCoreStat.output.ave_count: the number of loops has been perfomed in this benchmark</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="directory-structure">
+<h2>5.1.9. Directory Structure<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="35%" />
+<col width="61%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head"><strong>Directory&nbsp;Name</strong></th>
+<th class="head"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>apps/common/ipc_rpmsg_lib</td>
+<td>IPC RPMsg_char library for R5</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>apps/common/libs/cmsis</td>
+<td>CMSIS DSP library 5.6.0&nbsp;compiled with&nbsp;TI CGT</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>apps/benchmark_demo/cmsis_cfft</td>
+<td>CMSIS CFFT benchmark for R5</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>apps/benchmark_demo/cmsis_fir</td>
+<td>CMSIS FIR filtering benchmark for R5</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>apps/benchmark_demo/cmsis_foc</td>
+<td>CMSIS FOC benchmark for R5</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>apps/benchmark_demo/cmsis_pid</td>
+<td>CMSIS speed/position control benchmark for R5</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>apps/benchmark_demo/adc_pwm</td>
+<td>ADC/PWM benchmark for R5</td>
+</tr>
+<tr class="row-odd"><td>8</td>
+<td>apps/benchmark_demo/webserver_app/app</td>
+<td>GUI code and component files</td>
+</tr>
+<tr class="row-even"><td>9</td>
+<td>apps/benchmark_demo/webserver_app/linux_app</td>
+<td>Linux application code handles the IPC RPMsg_char and the JSON file update for A53</td>
+</tr>
+<tr class="row-odd"><td>10</td>
+<td>apps/benchmark_demo/webserver_app/webserver</td>
+<td>Web server and node files</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="benchmark-results">
+<h2>5.1.10. Benchmark Results<a class="headerlink" href="#benchmark-results" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="r5-benchmarks-average">
+<h3>5.1.10.1. R5 Benchmarks (Average)<a class="headerlink" href="#r5-benchmarks-average" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="17%" />
+<col width="10%" />
+<col width="10%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Application</th>
+<th class="head">Cycle Count Per Loop</th>
+<th class="head">CPU Usage %</th>
+<th class="head">RAM Usage %</th>
+<th class="head">Interrupt Latency ns</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>CFFT (SP, 128pt) &#64; 1Khz*</td>
+<td>9857</td>
+<td>1</td>
+<td>38</td>
+<td>80</td>
+</tr>
+<tr class="row-odd"><td>CFFT (SP, 256pt) &#64; 1Khz</td>
+<td>20770</td>
+<td>2</td>
+<td>38</td>
+<td>80</td>
+</tr>
+<tr class="row-even"><td>CFFT (SP, 512pt) &#64; 1Khz</td>
+<td>45421</td>
+<td>5</td>
+<td>38</td>
+<td>80</td>
+</tr>
+<tr class="row-odd"><td>CFFT (SP, 1024pt) &#64; 1Khz</td>
+<td>107701</td>
+<td>13</td>
+<td>38</td>
+<td>80</td>
+</tr>
+<tr class="row-even"><td>FIR Filtering (SP, 320pt, 29 taps) &#64; 1Khz*</td>
+<td>20169</td>
+<td>2</td>
+<td>28</td>
+<td>80</td>
+</tr>
+<tr class="row-odd"><td>FIR Filtering (SP, 320pt, 29 taps) &#64; 2Khz</td>
+<td>20154</td>
+<td>5</td>
+<td>28</td>
+<td>80</td>
+</tr>
+<tr class="row-even"><td>FIR Filtering (SP, 320pt, 29 taps) &#64; 4Khz</td>
+<td>20166</td>
+<td>10</td>
+<td>28</td>
+<td>80</td>
+</tr>
+<tr class="row-odd"><td>FIR Filtering (SP, 320pt, 29 taps) &#64; 8Khz</td>
+<td>20169</td>
+<td>20</td>
+<td>28</td>
+<td>80</td>
+</tr>
+<tr class="row-even"><td>FOC Control Loop using CMSIS funcs &#64; 16Khz*</td>
+<td>326</td>
+<td>0</td>
+<td>27</td>
+<td>80</td>
+</tr>
+<tr class="row-odd"><td>FOC Control Loop using CMSIS funcs &#64; 32Khz</td>
+<td>330</td>
+<td>1</td>
+<td>27</td>
+<td>80</td>
+</tr>
+<tr class="row-even"><td>FOC Control Loop using CMSIS funcs &#64; 100Khz</td>
+<td>328</td>
+<td>4</td>
+<td>27</td>
+<td>80</td>
+</tr>
+<tr class="row-odd"><td>FOC Control Loop using CMSIS funcs &#64; 250Khz</td>
+<td>290</td>
+<td>9</td>
+<td>27</td>
+<td>80</td>
+</tr>
+<tr class="row-even"><td>5 ADC Sampling and Conversion and 1 ePWM Write &#64; 8Khz*</td>
+<td>604</td>
+<td>0</td>
+<td>27</td>
+<td>N/A</td>
+</tr>
+<tr class="row-odd"><td>5 ADC Sampling and Conversion and 1 ePWM Write &#64; 16Khz</td>
+<td>604</td>
+<td>1</td>
+<td>27</td>
+<td>N/A</td>
+</tr>
+<tr class="row-even"><td>5 ADC Sampling and Conversion and 1 ePWM Write &#64; 32Khz</td>
+<td>606</td>
+<td>2</td>
+<td>27</td>
+<td>N/A</td>
+</tr>
+<tr class="row-odd"><td>5 ADC Sampling and Conversion and 1 ePWM Write &#64; 50Khz</td>
+<td>743</td>
+<td>4</td>
+<td>27</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">&#8220;RAM Usage %&#8221; is computed based on 320KB (64KB TCM + 256KB MSMC) per R5F core</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">&#8220;CPU Usage %&#8221; is computed based on R5F core running at 800Mhz</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">&#8220;*&#8221; is the default running frequencywhen the benchmark demo starts</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Servo_Drive_Demo_User_Guide.html" class="btn btn-neutral float-right" title="5.2. Servo Drive Demo - User Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../devices/AM64X/index_Applications.html" class="btn btn-neutral" title="5. Applications" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <a href="https://www.ti.com/corp/docs/legal/copyright.shtml">&copy; Copyright 1995-2021</a>, Texas Instruments Incorporated. All rights reserved. <br>
+      <a href="https://www.ti.com/corp/docs/legal/trademark/trademrk.htm">Trademarks</a> | <a href="https://www.ti.com/corp/docs/legal/privacy.shtml">Privacy policy</a> | <a href="https://www.ti.com/corp/docs/legal/termsofuse.shtml">Terms of use</a> | <a href="https://www.ti.com/lsds/ti/legal/termsofsale.page">Terms of sale</a>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'07_02_00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script src="https://www.ti.com/assets/js/headerfooter/analytics.js" type="text/javascript" charset="utf-8"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+        });
+
+      var menuHeight = window.innerHeight;
+
+      var contentOffset = $(".wy-nav-content-wrap").offset();
+      var contentHeight = $(".wy-nav-content-wrap").height();
+      var contentBottom = contentOffset.top + contentHeight;
+
+      function setNavbarTop() {
+          var scrollTop = $(window).scrollTop();
+          var maxTop = scrollTop + menuHeight;
+
+          // If past the header
+          if (scrollTop > contentOffset.top && maxTop < contentBottom) {
+            stickyTop = scrollTop - contentOffset.top;
+          } else if (maxTop > contentBottom) {
+            stickyTop = scrollTop - contentOffset.top - (maxTop - contentBottom);
+          } else {
+            stickyTop = 0;
+          }
+
+          $(".wy-nav-side").css("top", stickyTop);
+      }
+
+      $(document).ready(function() {
+        setNavbarTop();
+        $(window).scroll(function () {
+          setNavbarTop();
+        });
+      });
+  </script>
+   
+
+<noscript><img src="https://software-dl.ti.com/akam/13/pixel_66ce290e?a=dD1jNTc1ZWIwOGI4ZGVlMGZkZjkyNjUxMGM5NTE3YjAwY2NjNjkxNWUxJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+</html>

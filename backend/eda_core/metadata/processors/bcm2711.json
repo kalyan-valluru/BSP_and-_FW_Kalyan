@@ -1,0 +1,16 @@
+{
+  "id": "bcm2711",
+  "name": "Broadcom BCM2711 Quad Cortex-A72 (Raspberry Pi 4B)",
+  "category": "processors",
+  "metadataVersion": "1.0.0",
+  "schemaVersion": "v2.0",
+  "vendorId": "raspberry-pi",
+  "architecture": "ARM Cortex-A72",
+  "family": "BCM",
+  "registerWidth": 64,
+  "defaultClockMHz": 1500,
+  "coresCount": 4,
+  "memoryRanges": [
+    { "name": "LPDDR4", "start": "0x00000000", "size": "4294967296" }
+  ]
+}

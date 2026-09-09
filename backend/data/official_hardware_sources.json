@@ -1,0 +1,318 @@
+{
+  "policy": "OFFICIAL_VENDOR_ONLY",
+  "documents": [
+    {
+      "vendor": "STMicroelectronics",
+      "product": "STM32F4DISCOVERY",
+      "part": "STM32F407VGT6",
+      "board": "STM32F4DISCOVERY / STM32F407G-DISC1",
+      "type": "Datasheet",
+      "title": "STM32F405/407 Datasheet DS8597",
+      "revision": "official-current",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f407vg.pdf"
+    },
+    {
+      "vendor": "STMicroelectronics",
+      "product": "STM32F4DISCOVERY",
+      "part": "STM32F407VGT6",
+      "board": "STM32F4DISCOVERY / STM32F407G-DISC1",
+      "type": "Reference Manual",
+      "title": "STM32F405/407/415/417 Reference Manual RM0090",
+      "revision": "official-current",
+      "url": "https://www.st.com/resource/en/reference_manual/rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf"
+    },
+    {
+      "vendor": "STMicroelectronics",
+      "product": "STM32F4DISCOVERY",
+      "part": "STM32F407VGT6",
+      "board": "STM32F4DISCOVERY / STM32F407G-DISC1",
+      "type": "Board User Manual",
+      "title": "Discovery kit with STM32F407VG MCU UM1472",
+      "revision": "Rev 9",
+      "url": "https://www.st.com/resource/en/user_manual/um1472-stm32f4-discovery-stmicroelectronics.pdf"
+    },
+    {
+      "vendor": "STMicroelectronics",
+      "product": "STM32F4DISCOVERY",
+      "part": "STM32F407VGT6",
+      "board": "STM32F4DISCOVERY / STM32F407G-DISC1",
+      "type": "Errata",
+      "title": "STM32F405/407xx device errata ES0182",
+      "revision": "official-current",
+      "url": "https://www.st.com/resource/en/errata_sheet/es0182-stm32f405407xx-and-stm32f415417xx-device-limitations-stmicroelectronics.pdf"
+    },
+    {
+      "vendor": "AMD",
+      "product": "Zynq-7000",
+      "part": "7Z020",
+      "board": "ZedBoard",
+      "type": "Technical Reference Manual",
+      "title": "Zynq-7000 SoC Technical Reference Manual UG585",
+      "revision": "1.15",
+      "url": "https://docs.amd.com/r/en-US/ug585-zynq-7000-SoC-TRM"
+    },
+    {
+      "vendor": "AMD",
+      "product": "Zynq-7000",
+      "part": "7Z020",
+      "board": "ZedBoard",
+      "type": "Datasheet",
+      "title": "Zynq-7000 SoC Data Sheet DS187",
+      "revision": "official-current",
+      "url": "https://docs.xilinx.com/v/u/en-US/ds187-Zynq-7000-Data-Sheet"
+    },
+    {
+      "vendor": "AMD",
+      "product": "Zynq UltraScale+ MPSoC",
+      "part": "ZynqMP",
+      "board": "ZCU104 / UltraScale+ target",
+      "type": "Technical Reference Manual",
+      "title": "Zynq UltraScale+ MPSoC Technical Reference Manual UG1085",
+      "revision": "official-current",
+      "url": "https://docs.amd.com/v/u/en-US/ug1085-zynq-ultrascale-trm"
+    },
+    {
+      "vendor": "TI",
+      "product": "Sitara AM335x",
+      "part": "AM335x",
+      "board": "AM335x development target",
+      "type": "Technical Reference Manual",
+      "title": "AM335x and AMIC110 Sitara Processors Technical Reference Manual SPRUH73",
+      "revision": "official-current",
+      "url": "https://www.ti.com/lit/pdf/spruh73"
+    },
+    {
+      "vendor": "TI",
+      "product": "Sitara AM335x",
+      "part": "AM335x",
+      "board": "AM335x development target",
+      "type": "Datasheet",
+      "title": "AM335x Sitara Processors Datasheet",
+      "revision": "official-current",
+      "url": "https://www.ti.com/lit/ds/symlink/am3359.pdf"
+    },
+    {
+      "vendor": "TI",
+      "product": "Sitara AM64x",
+      "part": "AM64x",
+      "board": "AM64x EVM",
+      "type": "Technical Reference Manual",
+      "title": "AM64x/AM243x Processors Technical Reference Manual SPRUIM2",
+      "revision": "official-current",
+      "url": "https://www.ti.com/lit/pdf/spruim2"
+    },
+    {
+      "vendor": "TI",
+      "product": "Sitara AM64x",
+      "part": "AM64x",
+      "board": "AM64x EVM",
+      "type": "EVM User Guide",
+      "title": "Processor SDK AM64x EVM / Demo Documentation",
+      "revision": "official-current",
+      "url": "https://software-dl.ti.com/processor-sdk-sitara/esd/am64x/latest/exports/docs/system/Demo_User_Guides/Benchmark_Demo_User_Guide.html"
+    },
+    {
+      "vendor": "NXP",
+      "product": "i.MX 8M Plus",
+      "part": "MIMX8ML",
+      "board": "i.MX 8M Plus EVK",
+      "type": "Reference Manual",
+      "title": "i.MX 8M Plus Applications Processor Reference Manual IMX8MPRM",
+      "revision": "Rev 3",
+      "url": "https://www.nxp.com/docs/en/reference-manual/IMX8MPRM.pdf"
+    },
+    {
+      "vendor": "NXP",
+      "product": "i.MX 8M Plus",
+      "part": "MIMX8ML",
+      "board": "i.MX 8M Plus EVK",
+      "type": "Datasheet",
+      "title": "i.MX 8M Plus Applications Processor Datasheet IMX8MPIEC",
+      "revision": "Rev 2.2",
+      "url": "https://www.nxp.com/webapp/Download?colCode=IMX8MPIEC"
+    },
+    {
+      "vendor": "NXP",
+      "product": "i.MX 8M Plus",
+      "part": "MIMX8ML",
+      "board": "i.MX 8M Plus EVK",
+      "type": "Board User Guide",
+      "title": "i.MX 8M Plus LPDDR4 EVK Board Hardware User's Guide IMX8MPEVKHUG",
+      "revision": "Rev 0",
+      "url": "https://www.nxp.com/webapp/Download?colCode=IMX8MPEVKHUG"
+    },
+    {
+      "vendor": "NVIDIA",
+      "product": "Jetson Orin NX",
+      "part": "T234",
+      "board": "Jetson Orin NX",
+      "type": "Developer Guide",
+      "title": "Jetson Orin NX and Nano Series Hardware Adaptation and Bring-Up",
+      "revision": "official-current",
+      "url": "https://docs.nvidia.com/jetson/archives/r36.4.4/DeveloperGuide/HR/JetsonModuleAdaptationAndBringUp/JetsonOrinNxNanoSeries.html"
+    },
+    {
+      "vendor": "NVIDIA",
+      "product": "Jetson Orin NX",
+      "part": "T234",
+      "board": "Jetson Orin NX",
+      "type": "Download Center",
+      "title": "Jetson Download Center - Pinmux and board collateral",
+      "revision": "official-current",
+      "url": "https://developer.nvidia.com/embedded/downloads/"
+    },
+    {
+      "vendor": "Raspberry Pi",
+      "product": "Compute Module 4",
+      "part": "BCM2711",
+      "board": "Compute Module 4",
+      "type": "Datasheet",
+      "title": "Raspberry Pi Compute Module 4 Datasheet",
+      "revision": "official-current",
+      "url": "https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf"
+    },
+    {
+      "vendor": "Raspberry Pi",
+      "product": "Compute Module 4",
+      "part": "BCM2711",
+      "board": "Compute Module 4",
+      "type": "Hardware Documentation",
+      "title": "Compute Module Hardware Documentation",
+      "revision": "official-current",
+      "url": "https://www.raspberrypi.com/documentation/computers/compute-module.html"
+    },
+    {
+      "vendor": "STMicroelectronics",
+      "product": "STM32MP157",
+      "part": "STM32MP157C/F",
+      "board": "STM32MP157 Discovery kits",
+      "type": "Reference Manual",
+      "title": "STM32MP157 Reference Manual RM0436",
+      "revision": "official-current",
+      "url": "https://www.st.com/resource/en/reference_manual/rm0436-stm32mp157-advanced-armbased-32bit-mpus-stmicroelectronics.pdf"
+    },
+    {
+      "vendor": "STMicroelectronics",
+      "product": "STM32MP157",
+      "part": "STM32MP157C/F",
+      "board": "STM32MP157 Discovery kits",
+      "type": "Datasheet",
+      "title": "STM32MP157C/F Datasheet DS12505",
+      "revision": "official-current",
+      "url": "https://www.st.com/resource/en/datasheet/stm32mp157f.pdf"
+    },
+    {
+      "vendor": "STMicroelectronics",
+      "product": "STM32MP157",
+      "part": "STM32MP157C/F",
+      "board": "STM32MP157 Discovery kits",
+      "type": "Board User Manual",
+      "title": "Discovery kits with STM32MP157 UM2534",
+      "revision": "Rev 1",
+      "url": "https://www.st.com/resource/en/user_manual/dm00591354.pdf"
+    }
+  ],
+  "board_facts": {
+    "stm32f4discovery": {
+      "mcu": "STM32F407VGT6",
+      "architecture": "ARM Cortex-M4 with FPU",
+      "max_clock_mhz": 168,
+      "flash_kb": 1024,
+      "ram_kb": 192,
+      "user_leds": {
+        "LD3_ORANGE": {
+          "port": "GPIOD",
+          "pin": 13,
+          "signal": "PD13",
+          "active_level": "HIGH"
+        },
+        "LD4_GREEN": {
+          "port": "GPIOD",
+          "pin": 12,
+          "signal": "PD12",
+          "active_level": "HIGH"
+        },
+        "LD5_RED": {
+          "port": "GPIOD",
+          "pin": 14,
+          "signal": "PD14",
+          "active_level": "HIGH"
+        },
+        "LD6_BLUE": {
+          "port": "GPIOD",
+          "pin": 15,
+          "signal": "PD15",
+          "active_level": "HIGH"
+        }
+      },
+      "user_button": {
+        "name": "B1_USER",
+        "port": "GPIOA",
+        "pin": 0,
+        "signal": "PA0"
+      },
+      "usb_vbus_led": {
+        "name": "LD7_GREEN",
+        "port": "GPIOA",
+        "pin": 9,
+        "signal": "PA9"
+      },
+      "usb_overcurrent_led": {
+        "name": "LD8_RED",
+        "port": "GPIOD",
+        "pin": 5,
+        "signal": "PD5"
+      },
+      "default_serial_candidate": {
+        "peripheral": "USART2",
+        "tx": "PA2",
+        "rx": "PA3",
+        "note": "requires external/appropriate VCP wiring; do not assume onboard ST-LINK VCP connection"
+      },
+      "source_manual": "UM1472",
+      "source_authority": "OFFICIAL_VENDOR"
+    }
+  },
+  "demo_document_sets": {
+    "xilinx-zynq-7000": [
+      "Zynq-7000 SoC Technical Reference Manual UG585",
+      "Zynq-7000 SoC Data Sheet DS187"
+    ],
+    "xilinx-zynq-mpsoc": [
+      "Zynq UltraScale+ MPSoC Technical Reference Manual UG1085"
+    ],
+    "ti-sitara-am335x": [
+      "AM335x and AMIC110 Sitara Processors Technical Reference Manual SPRUH73",
+      "AM335x Sitara Processors Datasheet"
+    ],
+    "ti-sitara-am64x": [
+      "AM64x/AM243x Processors Technical Reference Manual SPRUIM2",
+      "Processor SDK AM64x EVM / Demo Documentation"
+    ],
+    "nxp-imx8m-plus": [
+      "i.MX 8M Plus Applications Processor Reference Manual IMX8MPRM",
+      "i.MX 8M Plus Applications Processor Datasheet IMX8MPIEC",
+      "i.MX 8M Plus LPDDR4 EVK Board Hardware User's Guide IMX8MPEVKHUG"
+    ],
+    "nvidia-jetson-orin-nx": [
+      "Jetson Orin NX and Nano Series Hardware Adaptation and Bring-Up",
+      "Jetson Download Center - Pinmux and board collateral"
+    ],
+    "raspberry-pi-cm4": [
+      "Raspberry Pi Compute Module 4 Datasheet",
+      "Compute Module Hardware Documentation"
+    ],
+    "stm32f4discovery": [
+      "STM32F405/407 Datasheet DS8597",
+      "STM32F405/407/415/417 Reference Manual RM0090",
+      "Discovery kit with STM32F407VG MCU UM1472",
+      "STM32F405/407xx device errata ES0182"
+    ],
+    "stm32mp157": [
+      "STM32MP157 Reference Manual RM0436",
+      "STM32MP157C/F Datasheet DS12505",
+      "Discovery kits with STM32MP157 UM2534"
+    ],
+    "unknown-custom-board": []
+  }
+}

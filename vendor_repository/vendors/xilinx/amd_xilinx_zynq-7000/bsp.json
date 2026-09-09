@@ -1,0 +1,21 @@
+{
+  "linkerScriptTemplate": "lscript.ld",
+  "startupAssemblyFile": "startup_ARM.s",
+  "deviceTreeBinding": "system-top.dts",
+  "compilationFlags": [
+    "-O2",
+    "-Wall",
+    "-Wextra"
+  ],
+  "supportedToolchains": [
+    "arm-none-eabi-gcc"
+  ],
+  "provenance": {
+    "document": "amd_xilinx_zynq-7000_TRM.pdf",
+    "documentType": "TRM",
+    "vendor": "XILINX",
+    "chapter": "System Overview",
+    "parser": "trmParser",
+    "confidence": 1
+  }
+}

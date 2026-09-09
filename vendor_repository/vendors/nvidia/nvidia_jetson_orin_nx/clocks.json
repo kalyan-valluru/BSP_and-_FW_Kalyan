@@ -1,0 +1,18 @@
+{
+  "processor": "NVIDIA_JETSON_ORIN_NX",
+  "domains": [
+    {
+      "domainName": "SYS_CLK_ROOT",
+      "nominalFrequencyHz": 400000000,
+      "sourceType": "PLL",
+      "provenance": {
+        "document": "nvidia_jetson_orin_nx_TRM.pdf",
+        "documentType": "TRM",
+        "vendor": "NVIDIA",
+        "chapter": "System Overview",
+        "parser": "trmParser",
+        "confidence": 1
+      }
+    }
+  ]
+}

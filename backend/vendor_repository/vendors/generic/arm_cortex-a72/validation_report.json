@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-08-18T12:28:56.576Z",
+  "processor": "ARM_CORTEX-A72",
+  "passed": true,
+  "missingPeripherals": [],
+  "duplicateRegisters": [],
+  "memoryOverlaps": [],
+  "irqConflicts": [],
+  "clockInconsistencies": [],
+  "brokenProvenance": [],
+  "duplicateSdkVersions": [],
+  "invalidJson": []
+}

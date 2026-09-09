@@ -1,0 +1,43 @@
+{
+  "processor": "TI Sitara AM335x",
+  "operatingSystem": "Linux",
+  "memoryType": "DDR3 SDRAM",
+  "readiness": 98,
+  "buildStatus": "SUCCESS",
+  "timestamp": "2026-08-19 10:00:00",
+  "architecture": "ARM32",
+  "clockSource": "OSC0 24MHz",
+  "resetController": "PRM Reset Controller",
+  "interruptController": "GIC",
+  "axiInterconnect": "AXI4-Lite",
+  "bootDevice": "MMC/SD Card",
+  "peripherals": [
+    {
+      "peripheralBlock": "uart0",
+      "type": "UART",
+      "driverName": "ti,am3352-uart",
+      "baseAddress": "0x44E09000",
+      "interruptNumber": 72,
+      "status": "Active"
+    },
+    {
+      "peripheralBlock": "gpio1",
+      "type": "GPIO",
+      "driverName": "ti,omap4-gpio",
+      "baseAddress": "0x4804C000",
+      "interruptNumber": 98,
+      "status": "Active"
+    }
+  ],
+  "validation": [
+    {
+      "checkName": "uart0",
+      "rule": "Address range configuration check",
+      "status": "PASS",
+      "details": "Address range OK"
+    }
+  ],
+  "compilationLogs": [
+    "[INFO] Device Tree compilation completed successfully"
+  ]
+}

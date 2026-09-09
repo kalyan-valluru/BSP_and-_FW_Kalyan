@@ -1,0 +1,13 @@
+{
+  "artifact": "system.dts",
+  "path": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\scratch\\test_pipeline_run\\test2_repair\\system.dts",
+  "generatedBy": "LLM",
+  "model": "Groq Llama-3.3-70b / AI Router",
+  "hardwareModelVersion": "v2.0",
+  "inputHash": "69f9db4ebbf54dbc",
+  "generatedAt": "2026-08-14T13:50:44.411Z",
+  "validationStatus": "compiled",
+  "compiler": "dtc",
+  "compilerVersion": "1.7.0",
+  "repairAttempts": 1
+}

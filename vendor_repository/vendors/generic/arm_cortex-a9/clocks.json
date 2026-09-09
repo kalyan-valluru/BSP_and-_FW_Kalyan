@@ -1,0 +1,18 @@
+{
+  "processor": "ARM_CORTEX-A9",
+  "domains": [
+    {
+      "domainName": "SYS_CLK_ROOT",
+      "nominalFrequencyHz": 400000000,
+      "sourceType": "PLL",
+      "provenance": {
+        "document": "arm_cortex-a9_TRM.pdf",
+        "documentType": "TRM",
+        "vendor": "GENERIC",
+        "chapter": "System Overview",
+        "parser": "trmParser",
+        "confidence": 1
+      }
+    }
+  ]
+}

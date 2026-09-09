@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-08-18T12:28:56.769Z",
+  "processor": "BCM2711",
+  "passed": false,
+  "missingPeripherals": [],
+  "duplicateRegisters": [],
+  "memoryOverlaps": [],
+  "irqConflicts": [],
+  "clockInconsistencies": [],
+  "brokenProvenance": [
+    "Peripheral 'pcf8523' is missing provenance tracking metadata."
+  ],
+  "duplicateSdkVersions": [],
+  "invalidJson": []
+}

@@ -1,0 +1,1 @@
+set_property PACKAGE_PIN U10 [get_ports {OLEDCtrl_CLK}]

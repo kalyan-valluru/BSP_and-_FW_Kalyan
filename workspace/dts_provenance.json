@@ -1,0 +1,68 @@
+{
+  "artifact": "system.dts",
+  "path": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\workspace\\system.dts",
+  "generatedBy": "LLM",
+  "model": "Groq Llama-3.3-70b / AI Router",
+  "hardwareModelVersion": "v2.0",
+  "inputHash": "731250035a519904",
+  "hardwareModelHash": "731250035a519904",
+  "expectedPeripheralCount": 5,
+  "actualPeripheralCount": 6,
+  "consistencyValidation": {
+    "valid": true,
+    "checksPassed": 6,
+    "checksFailed": 0,
+    "details": [
+      {
+        "name": "UART0",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      },
+      {
+        "name": "GPIO1",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      },
+      {
+        "name": "I2C1",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      },
+      {
+        "name": "SPI0",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      },
+      {
+        "name": "MMC0",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      }
+    ]
+  },
+  "generatedAt": "2026-08-17T13:53:04.136Z",
+  "validationStatus": "compiled",
+  "compiler": "dtc",
+  "compilerVersion": "1.7.0",
+  "repairAttempts": 0
+}

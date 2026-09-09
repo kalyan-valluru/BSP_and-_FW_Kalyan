@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-08-18T12:28:56.565Z",
+  "processor": "ARM_CORE",
+  "passed": true,
+  "missingPeripherals": [],
+  "duplicateRegisters": [],
+  "memoryOverlaps": [],
+  "irqConflicts": [],
+  "clockInconsistencies": [],
+  "brokenProvenance": [],
+  "duplicateSdkVersions": [],
+  "invalidJson": []
+}

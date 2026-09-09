@@ -1,0 +1,13 @@
+{
+  "id": "zedboard",
+  "name": "Avnet ZedBoard Zynq-7000 Evaluation Kit",
+  "category": "boards",
+  "metadataVersion": "1.0.0",
+  "schemaVersion": "v2.0",
+  "vendorId": "amd-xilinx",
+  "processorId": "zynq-7000",
+  "fpgaPartNumber": "xc7z020clg400-1",
+  "flashSizeBytes": 33554432,
+  "ramSizeBytes": 536870912,
+  "onboardPeripherals": ["axi_gpio_0", "axi_uartlite_0"]
+}

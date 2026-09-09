@@ -1,0 +1,15 @@
+Board: STM32F4DISCOVERY / STM32F407G-DISC1
+MCU: STM32F407VGT6
+Board Schematic: ST MB997
+
+Functional Requirement:
+Blink the green user LED LD4 connected to PD12 every 500 ms while the USER button B1 connected to PA0 is pressed.
+
+Behavioral Specification:
+- When USER button B1 (PA0) is pressed: Enable 500 ms blinking of LD4 Green LED (PD12).
+- When USER button B1 (PA0) is released: Disable blinking and ensure LD4 Green LED is turned OFF.
+
+Application-Specific Peripheral Selection:
+- GPIOA (PA0): Required for B1 USER button input.
+- GPIOD (PD12): Required for LD4 Green LED output.
+- Excluded Peripherals: SPI1, I2C1, USART2 (board capabilities, not required by this application).

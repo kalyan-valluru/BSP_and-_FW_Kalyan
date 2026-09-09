@@ -1,0 +1,4136 @@
+[
+  {
+    "name": "flash",
+    "baseAddress": "0x0",
+    "driverName": "jedec,spi-nor",
+    "provenance": {
+      "document": "tegra234-p3701-0000.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "flash",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.617Z"
+    }
+  },
+  {
+    "name": "ina32211_1_40",
+    "baseAddress": "0x40",
+    "driverName": "ti,ina3221",
+    "provenance": {
+      "document": "tegra234-p3701-0000.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "ina3221",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.617Z"
+    }
+  },
+  {
+    "name": "ina3221_1_41",
+    "baseAddress": "0x41",
+    "driverName": "ti,ina3221",
+    "provenance": {
+      "document": "tegra234-p3701-0000.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "ina3221",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.617Z"
+    }
+  },
+  {
+    "name": "vdd_5v0_sys",
+    "baseAddress": "0x0",
+    "driverName": "regulator-fixed",
+    "provenance": {
+      "document": "tegra234-p3701-0000.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "regulator",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.617Z"
+    }
+  },
+  {
+    "name": "vdd_ao_1v8",
+    "baseAddress": "0x1",
+    "driverName": "regulator-fixed",
+    "provenance": {
+      "document": "tegra234-p3701-0000.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "regulator",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.617Z"
+    }
+  },
+  {
+    "name": "vdd_ao_3v3",
+    "baseAddress": "0x2",
+    "driverName": "regulator-fixed",
+    "provenance": {
+      "document": "tegra234-p3701-0000.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "regulator",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.617Z"
+    }
+  },
+  {
+    "name": "xbar_i2s1_port",
+    "baseAddress": "0x14",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_i2s2_port",
+    "baseAddress": "0x15",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_i2s4_port",
+    "baseAddress": "0x17",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_i2s6_port",
+    "baseAddress": "0x19",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_dmic3_port",
+    "baseAddress": "0x1c",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_sfc1_in_port",
+    "baseAddress": "0x20",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_sfc2_in_port",
+    "baseAddress": "0x22",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_sfc3_in_port",
+    "baseAddress": "0x24",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_sfc4_in_port",
+    "baseAddress": "0x26",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_mvc1_in_port",
+    "baseAddress": "0x28",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_mvc2_in_port",
+    "baseAddress": "0x2a",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx1_in1_port",
+    "baseAddress": "0x2c",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx1_in2_port",
+    "baseAddress": "0x2d",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx1_in3_port",
+    "baseAddress": "0x2e",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx1_in4_port",
+    "baseAddress": "0x2f",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx2_in1_port",
+    "baseAddress": "0x31",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx2_in2_port",
+    "baseAddress": "0x32",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx2_in3_port",
+    "baseAddress": "0x33",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx2_in4_port",
+    "baseAddress": "0x34",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx3_in1_port",
+    "baseAddress": "0x36",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx3_in2_port",
+    "baseAddress": "0x37",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx3_in3_port",
+    "baseAddress": "0x38",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx3_in4_port",
+    "baseAddress": "0x39",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx4_in1_port",
+    "baseAddress": "0x3b",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx4_in2_port",
+    "baseAddress": "0x3c",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx4_in3_port",
+    "baseAddress": "0x3d",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_amx4_in4_port",
+    "baseAddress": "0x3e",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_adx1_in_port",
+    "baseAddress": "0x40",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_adx2_in_port",
+    "baseAddress": "0x45",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_adx3_in_port",
+    "baseAddress": "0x4a",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_adx4_in_port",
+    "baseAddress": "0x4f",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_mix_in1_port",
+    "baseAddress": "0x54",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_mix_in2_port",
+    "baseAddress": "0x55",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_mix_in3_port",
+    "baseAddress": "0x56",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_mix_in4_port",
+    "baseAddress": "0x57",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_mix_in5_port",
+    "baseAddress": "0x58",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_mix_in6_port",
+    "baseAddress": "0x59",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_mix_in7_port",
+    "baseAddress": "0x5a",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_mix_in8_port",
+    "baseAddress": "0x5b",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_mix_in9_port",
+    "baseAddress": "0x5c",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "xbar_mix_in10_port",
+    "baseAddress": "0x5d",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "i2s1_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "i2s2_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "i2s4_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "i2s6_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "sfc1_out_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "sfc2_out_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "sfc3_out_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "sfc4_out_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "amx1_out_port",
+    "baseAddress": "0x4",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "amx2_out_port",
+    "baseAddress": "0x4",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "amx3_out_port",
+    "baseAddress": "0x4",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "amx4_out_port",
+    "baseAddress": "0x4",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx1_out1_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx1_out2_port",
+    "baseAddress": "0x2",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx1_out3_port",
+    "baseAddress": "0x3",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx1_out4_port",
+    "baseAddress": "0x4",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx2_out1_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx2_out2_port",
+    "baseAddress": "0x2",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx2_out3_port",
+    "baseAddress": "0x3",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx2_out4_port",
+    "baseAddress": "0x4",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx3_out1_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx3_out2_port",
+    "baseAddress": "0x2",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx3_out3_port",
+    "baseAddress": "0x3",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx3_out4_port",
+    "baseAddress": "0x4",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx4_out1_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx4_out2_port",
+    "baseAddress": "0x2",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx4_out3_port",
+    "baseAddress": "0x3",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "adx4_out4_port",
+    "baseAddress": "0x4",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "dmic3_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "mvc1_out_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "mvc2_out_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "mix_out1_port",
+    "baseAddress": "0xa",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "mix_out2_port",
+    "baseAddress": "0xb",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "mix_out3_port",
+    "baseAddress": "0xc",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "mix_out4_port",
+    "baseAddress": "0xd",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "mix_out5_port",
+    "baseAddress": "0xe",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif0_port",
+    "baseAddress": "0x0",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif1_port",
+    "baseAddress": "0x1",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif2_port",
+    "baseAddress": "0x2",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif3_port",
+    "baseAddress": "0x3",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif4_port",
+    "baseAddress": "0x4",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif5_port",
+    "baseAddress": "0x5",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif6_port",
+    "baseAddress": "0x6",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif7_port",
+    "baseAddress": "0x7",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif8_port",
+    "baseAddress": "0x8",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif9_port",
+    "baseAddress": "0x9",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif10_port",
+    "baseAddress": "0xa",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif11_port",
+    "baseAddress": "0xb",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif12_port",
+    "baseAddress": "0xc",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif13_port",
+    "baseAddress": "0xd",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif14_port",
+    "baseAddress": "0xe",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif15_port",
+    "baseAddress": "0xf",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif16_port",
+    "baseAddress": "0x10",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif17_port",
+    "baseAddress": "0x11",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif18_port",
+    "baseAddress": "0x12",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "admaif19_port",
+    "baseAddress": "0x13",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "port",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "ucsi-ccg",
+    "baseAddress": "0x8",
+    "driverName": "cypress,cypd4226",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "ucsi-ccg",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "ccg_typec_con0",
+    "baseAddress": "0x0",
+    "driverName": "usb-c-connector",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "connector",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "ccg_typec_con1",
+    "baseAddress": "0x1",
+    "driverName": "usb-c-connector",
+    "provenance": {
+      "document": "tegra234-p3737-0000+p3701-0000.dts",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "connector",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.621Z"
+    }
+  },
+  {
+    "name": "bus",
+    "baseAddress": "0x0",
+    "driverName": "simple-bus",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "bus",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "gpcdma",
+    "baseAddress": "0x2600000",
+    "driverName": "nvidia,tegra234-gpcdma,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "dma-controller",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "aconnect",
+    "baseAddress": "0x2900000",
+    "driverName": "nvidia,tegra234-aconnect,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "aconnect",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_ahub",
+    "baseAddress": "0x2900800",
+    "driverName": "nvidia,tegra234-ahub",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "ahub",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_i2s1",
+    "baseAddress": "0x2901000",
+    "driverName": "nvidia,tegra234-i2s,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "i2s",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_i2s2",
+    "baseAddress": "0x2901100",
+    "driverName": "nvidia,tegra234-i2s,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "i2s",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_i2s3",
+    "baseAddress": "0x2901200",
+    "driverName": "nvidia,tegra234-i2s,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "i2s",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_i2s4",
+    "baseAddress": "0x2901300",
+    "driverName": "nvidia,tegra234-i2s,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "i2s",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_i2s5",
+    "baseAddress": "0x2901400",
+    "driverName": "nvidia,tegra234-i2s,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "i2s",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_i2s6",
+    "baseAddress": "0x2901500",
+    "driverName": "nvidia,tegra234-i2s,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "i2s",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_sfc1",
+    "baseAddress": "0x2902000",
+    "driverName": "nvidia,tegra234-sfc,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "sfc",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_sfc2",
+    "baseAddress": "0x2902200",
+    "driverName": "nvidia,tegra234-sfc,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "sfc",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_sfc3",
+    "baseAddress": "0x2902400",
+    "driverName": "nvidia,tegra234-sfc,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "sfc",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_sfc4",
+    "baseAddress": "0x2902600",
+    "driverName": "nvidia,tegra234-sfc,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "sfc",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_amx1",
+    "baseAddress": "0x2903000",
+    "driverName": "nvidia,tegra234-amx,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "amx",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_amx2",
+    "baseAddress": "0x2903100",
+    "driverName": "nvidia,tegra234-amx,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "amx",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_amx3",
+    "baseAddress": "0x2903200",
+    "driverName": "nvidia,tegra234-amx,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "amx",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_amx4",
+    "baseAddress": "0x2903300",
+    "driverName": "nvidia,tegra234-amx,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "amx",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_adx1",
+    "baseAddress": "0x2903800",
+    "driverName": "nvidia,tegra234-adx,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "adx",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_adx2",
+    "baseAddress": "0x2903900",
+    "driverName": "nvidia,tegra234-adx,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "adx",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_adx3",
+    "baseAddress": "0x2903a00",
+    "driverName": "nvidia,tegra234-adx,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "adx",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_adx4",
+    "baseAddress": "0x2903b00",
+    "driverName": "nvidia,tegra234-adx,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "adx",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_dmic1",
+    "baseAddress": "0x2904000",
+    "driverName": "nvidia,tegra234-dmic,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "dmic",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_dmic2",
+    "baseAddress": "0x2904100",
+    "driverName": "nvidia,tegra234-dmic,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "dmic",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_dmic3",
+    "baseAddress": "0x2904200",
+    "driverName": "nvidia,tegra234-dmic,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "dmic",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_dmic4",
+    "baseAddress": "0x2904300",
+    "driverName": "nvidia,tegra234-dmic,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "dmic",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_dspk1",
+    "baseAddress": "0x2905000",
+    "driverName": "nvidia,tegra234-dspk,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "dspk",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_dspk2",
+    "baseAddress": "0x2905100",
+    "driverName": "nvidia,tegra234-dspk,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "dspk",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_mvc1",
+    "baseAddress": "0x290a000",
+    "driverName": "nvidia,tegra234-mvc,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "mvc",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_mvc2",
+    "baseAddress": "0x290a200",
+    "driverName": "nvidia,tegra234-mvc,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "mvc",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_amixer",
+    "baseAddress": "0x290bb00",
+    "driverName": "nvidia,tegra234-amixer,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "amixer",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_admaif",
+    "baseAddress": "0x290f000",
+    "driverName": "nvidia,tegra234-admaif,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "admaif",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "adma",
+    "baseAddress": "0x2930000",
+    "driverName": "nvidia,tegra234-adma,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "dma-controller",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "agic",
+    "baseAddress": "0x2a40000",
+    "driverName": "nvidia,tegra234-agic,",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "interrupt-controller",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "misc",
+    "baseAddress": "0x100000",
+    "driverName": "nvidia,tegra234-misc",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "misc",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "host1x",
+    "baseAddress": "0x13e00000",
+    "driverName": "nvidia,tegra234-host1x",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "host1x",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "vic",
+    "baseAddress": "0x15340000",
+    "driverName": "nvidia,tegra234-vic",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "vic",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "gpio",
+    "baseAddress": "0x2200000",
+    "driverName": "nvidia,tegra234-gpio",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "gpio",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "mc",
+    "baseAddress": "0x2c00000",
+    "driverName": "nvidia,tegra234-mc",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "memory-controller",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "emc",
+    "baseAddress": "0x2c60000",
+    "driverName": "nvidia,tegra234-emc",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "external-memory-controller",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "uarta",
+    "baseAddress": "0x3100000",
+    "driverName": "nvidia,tegra234-uart, nvidia,tegra20-uart",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "serial",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "gen1_i2c",
+    "baseAddress": "0x3160000",
+    "driverName": "nvidia,tegra194-i2c",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "i2c",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cam_i2c",
+    "baseAddress": "0x3180000",
+    "driverName": "nvidia,tegra194-i2c",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "i2c",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "dp_aux_ch1_i2c",
+    "baseAddress": "0x3190000",
+    "driverName": "nvidia,tegra194-i2c",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "i2c",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "dp_aux_ch0_i2c",
+    "baseAddress": "0x31b0000",
+    "driverName": "nvidia,tegra194-i2c",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "i2c",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "dp_aux_ch2_i2c",
+    "baseAddress": "0x31c0000",
+    "driverName": "nvidia,tegra194-i2c",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "i2c",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "dp_aux_ch3_i2c",
+    "baseAddress": "0x31e0000",
+    "driverName": "nvidia,tegra194-i2c",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "i2c",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "spi",
+    "baseAddress": "0x3270000",
+    "driverName": "nvidia,tegra234-qspi",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "spi",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pwm1",
+    "baseAddress": "0x3280000",
+    "driverName": "nvidia,tegra234-pwm, nvidia,tegra194-pwm",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pwm",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pwm2",
+    "baseAddress": "0x3290000",
+    "driverName": "nvidia,tegra234-pwm, nvidia,tegra194-pwm",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pwm",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pwm3",
+    "baseAddress": "0x32a0000",
+    "driverName": "nvidia,tegra234-pwm, nvidia,tegra194-pwm",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pwm",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pwm5",
+    "baseAddress": "0x32c0000",
+    "driverName": "nvidia,tegra234-pwm, nvidia,tegra194-pwm",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pwm",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pwm6",
+    "baseAddress": "0x32d0000",
+    "driverName": "nvidia,tegra234-pwm, nvidia,tegra194-pwm",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pwm",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pwm7",
+    "baseAddress": "0x32e0000",
+    "driverName": "nvidia,tegra234-pwm, nvidia,tegra194-pwm",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pwm",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pwm8",
+    "baseAddress": "0x32f0000",
+    "driverName": "nvidia,tegra234-pwm, nvidia,tegra194-pwm",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pwm",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "spi",
+    "baseAddress": "0x3300000",
+    "driverName": "nvidia,tegra234-qspi",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "spi",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "mmc",
+    "baseAddress": "0x3400000",
+    "driverName": "nvidia,tegra234-sdhci, nvidia,tegra194-sdhci",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "mmc",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "mmc",
+    "baseAddress": "0x3460000",
+    "driverName": "nvidia,tegra234-sdhci, nvidia,tegra186-sdhci",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "mmc",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "hda",
+    "baseAddress": "0x3510000",
+    "driverName": "nvidia,tegra234-hda, nvidia,tegra30-hda",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "hda",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "xusb_padctl",
+    "baseAddress": "0x3520000",
+    "driverName": "nvidia,tegra234-xusb-padctl",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "padctl",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "usb",
+    "baseAddress": "0x3550000",
+    "driverName": "nvidia,tegra234-xudc",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "usb",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "usb",
+    "baseAddress": "0x3610000",
+    "driverName": "nvidia,tegra234-xusb",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "usb",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "fuse",
+    "baseAddress": "0x3810000",
+    "driverName": "nvidia,tegra234-efuse",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "fuse",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "hte_lic",
+    "baseAddress": "0x3aa0000",
+    "driverName": "nvidia,tegra234-gte-lic",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "hardware-timestamp",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "hsp_top0",
+    "baseAddress": "0x3c00000",
+    "driverName": "nvidia,tegra234-hsp, nvidia,tegra194-hsp",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "hsp",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "ethernet",
+    "baseAddress": "0x6800000",
+    "driverName": "nvidia,tegra234-mgbe",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "ethernet",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "ethernet",
+    "baseAddress": "0x6900000",
+    "driverName": "nvidia,tegra234-mgbe",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "ethernet",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "ethernet",
+    "baseAddress": "0x6a00000",
+    "driverName": "nvidia,tegra234-mgbe",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "ethernet",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "ethernet",
+    "baseAddress": "0x6b00000",
+    "driverName": "nvidia,tegra234-mgbe",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "ethernet",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "smmu_niso1",
+    "baseAddress": "0x8000000",
+    "driverName": "nvidia,tegra234-smmu, nvidia,smmu-500",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "iommu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_hsio_0",
+    "baseAddress": "0x3e00000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_hsio_1",
+    "baseAddress": "0x3e10000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_hsio_2",
+    "baseAddress": "0x3e20000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_hsio_3",
+    "baseAddress": "0x3e30000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_hsio_4",
+    "baseAddress": "0x3e40000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_hsio_5",
+    "baseAddress": "0x3e50000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_hsio_6",
+    "baseAddress": "0x3e60000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_hsio_7",
+    "baseAddress": "0x3e70000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_nvhs_0",
+    "baseAddress": "0x3e90000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_nvhs_1",
+    "baseAddress": "0x3ea0000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_nvhs_2",
+    "baseAddress": "0x3eb0000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_nvhs_3",
+    "baseAddress": "0x3ec0000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_nvhs_4",
+    "baseAddress": "0x3ed0000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_nvhs_5",
+    "baseAddress": "0x3ee0000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_nvhs_6",
+    "baseAddress": "0x3ef0000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_nvhs_7",
+    "baseAddress": "0x3f00000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_gbe_0",
+    "baseAddress": "0x3f20000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_gbe_1",
+    "baseAddress": "0x3f30000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_gbe_2",
+    "baseAddress": "0x3f40000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_gbe_3",
+    "baseAddress": "0x3f50000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_gbe_4",
+    "baseAddress": "0x3f60000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_gbe_5",
+    "baseAddress": "0x3f70000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_gbe_6",
+    "baseAddress": "0x3f80000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "p2u_gbe_7",
+    "baseAddress": "0x3f90000",
+    "driverName": "nvidia,tegra234-p2u",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "phy",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "sce-fabric",
+    "baseAddress": "0xb600000",
+    "driverName": "nvidia,tegra234-sce-fabric",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "sce-fabric",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "rce-fabric",
+    "baseAddress": "0xbe00000",
+    "driverName": "nvidia,tegra234-rce-fabric",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "rce-fabric",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "hsp_aon",
+    "baseAddress": "0xc150000",
+    "driverName": "nvidia,tegra234-hsp, nvidia,tegra194-hsp",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "hsp",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "hte_aon",
+    "baseAddress": "0xc1e0000",
+    "driverName": "nvidia,tegra234-gte-aon",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "hardware-timestamp",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "gen2_i2c",
+    "baseAddress": "0xc240000",
+    "driverName": "nvidia,tegra194-i2c",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "i2c",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "gen8_i2c",
+    "baseAddress": "0xc250000",
+    "driverName": "nvidia,tegra194-i2c",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "i2c",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "rtc",
+    "baseAddress": "0xc2a0000",
+    "driverName": "nvidia,tegra234-rtc, nvidia,tegra20-rtc",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "rtc",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "gpio_aon",
+    "baseAddress": "0xc2f0000",
+    "driverName": "nvidia,tegra234-gpio-aon",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "gpio",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pwm4",
+    "baseAddress": "0xc340000",
+    "driverName": "nvidia,tegra234-pwm, nvidia,tegra194-pwm",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pwm",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pmc",
+    "baseAddress": "0xc360000",
+    "driverName": "nvidia,tegra234-pmc",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pmc",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "aon-fabric",
+    "baseAddress": "0xc600000",
+    "driverName": "nvidia,tegra234-aon-fabric",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "aon-fabric",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "bpmp-fabric",
+    "baseAddress": "0xd600000",
+    "driverName": "nvidia,tegra234-bpmp-fabric",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "bpmp-fabric",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "dce-fabric",
+    "baseAddress": "0xde00000",
+    "driverName": "nvidia,tegra234-sce-fabric",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "dce-fabric",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "gic",
+    "baseAddress": "0xf400000",
+    "driverName": "arm,gic-v3",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "interrupt-controller",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "smmu_iso",
+    "baseAddress": "0x10000000",
+    "driverName": "nvidia,tegra234-smmu, nvidia,smmu-500",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "iommu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "smmu_niso0",
+    "baseAddress": "0x12000000",
+    "driverName": "nvidia,tegra234-smmu, nvidia,smmu-500",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "iommu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cbb-fabric",
+    "baseAddress": "0x13a00000",
+    "driverName": "nvidia,tegra234-cbb-fabric",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "cbb-fabric",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "ccplex",
+    "baseAddress": "0xe000000",
+    "driverName": "nvidia,tegra234-ccplex-cluster",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "ccplex",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie",
+    "baseAddress": "0x140a0000",
+    "driverName": "nvidia,tegra234-pcie",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie",
+    "baseAddress": "0x140c0000",
+    "driverName": "nvidia,tegra234-pcie",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie",
+    "baseAddress": "0x140e0000",
+    "driverName": "nvidia,tegra234-pcie",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie",
+    "baseAddress": "0x14100000",
+    "driverName": "nvidia,tegra234-pcie",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie",
+    "baseAddress": "0x14120000",
+    "driverName": "nvidia,tegra234-pcie",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie",
+    "baseAddress": "0x14140000",
+    "driverName": "nvidia,tegra234-pcie",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie",
+    "baseAddress": "0x14160000",
+    "driverName": "nvidia,tegra234-pcie",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie",
+    "baseAddress": "0x14180000",
+    "driverName": "nvidia,tegra234-pcie",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie",
+    "baseAddress": "0x141a0000",
+    "driverName": "nvidia,tegra234-pcie",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie",
+    "baseAddress": "0x141c0000",
+    "driverName": "nvidia,tegra234-pcie",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie",
+    "baseAddress": "0x141e0000",
+    "driverName": "nvidia,tegra234-pcie",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie-ep",
+    "baseAddress": "0x141a0000",
+    "driverName": "nvidia,tegra234-pcie-ep",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie-ep",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie-ep",
+    "baseAddress": "0x141c0000",
+    "driverName": "nvidia,tegra234-pcie-ep",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie-ep",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie-ep",
+    "baseAddress": "0x141e0000",
+    "driverName": "nvidia,tegra234-pcie-ep",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie-ep",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "pcie-ep",
+    "baseAddress": "0x140e0000",
+    "driverName": "nvidia,tegra234-pcie-ep",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "pcie-ep",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "sram",
+    "baseAddress": "0x40000000",
+    "driverName": "nvidia,tegra234-sysram, mmio-sram",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "sram",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cpu_bpmp_tx",
+    "baseAddress": "0x70000",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "sram",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cpu_bpmp_rx",
+    "baseAddress": "0x71000",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "sram",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "tegra_tmp451",
+    "baseAddress": "0x4c",
+    "driverName": "ti,tmp451",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "thermal-sensor",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cpu0_0",
+    "baseAddress": "0x0",
+    "driverName": "arm,cortex-a78",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "cpu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cpu0_1",
+    "baseAddress": "0x100",
+    "driverName": "arm,cortex-a78",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "cpu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cpu0_2",
+    "baseAddress": "0x200",
+    "driverName": "arm,cortex-a78",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "cpu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cpu0_3",
+    "baseAddress": "0x300",
+    "driverName": "arm,cortex-a78",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "cpu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cpu1_0",
+    "baseAddress": "0x10000",
+    "driverName": "arm,cortex-a78",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "cpu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cpu1_1",
+    "baseAddress": "0x10100",
+    "driverName": "arm,cortex-a78",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "cpu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cpu1_2",
+    "baseAddress": "0x10200",
+    "driverName": "arm,cortex-a78",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "cpu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cpu1_3",
+    "baseAddress": "0x10300",
+    "driverName": "arm,cortex-a78",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "cpu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cpu2_0",
+    "baseAddress": "0x20000",
+    "driverName": "arm,cortex-a78",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "cpu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cpu2_1",
+    "baseAddress": "0x20100",
+    "driverName": "arm,cortex-a78",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "cpu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cpu2_2",
+    "baseAddress": "0x20200",
+    "driverName": "arm,cortex-a78",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "cpu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  },
+  {
+    "name": "cpu2_3",
+    "baseAddress": "0x20300",
+    "driverName": "arm,cortex-a78",
+    "provenance": {
+      "document": "tegra234.dtsi",
+      "documentType": "DTS",
+      "vendor": "nvidia",
+      "chapter": "Device Nodes Tree",
+      "section": "cpu",
+      "parserVersion": "v2.0.0-ast",
+      "importVersion": "v25.03",
+      "checksum": "dts_hash",
+      "confidence": 0.98,
+      "extractionTimestamp": "2026-08-18T12:28:56.629Z"
+    }
+  }
+]

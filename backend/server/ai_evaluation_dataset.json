@@ -1,0 +1,138 @@
+[
+  {
+    "id": "eval_test_a_deterministic",
+    "category": "TEST A — Deterministic extraction",
+    "description": "Verify that base addresses and IRQs deterministically parsed from input DTS are extracted correctly into HKL.",
+    "input_type": "dts",
+    "hardware_input": "ps7_uart_0: serial@e0000000 { compatible = \"xlnx,xuartps-1.01.a\"; reg = <0xe0000000 0x1000>; interrupts = <0 27 4>; };",
+    "expected": {
+      "processor": "Zynq-7000",
+      "peripherals": ["UART0"],
+      "addresses": {
+        "UART0": "0xE0000000"
+      },
+      "interrupts": {
+        "UART0": 59
+      },
+      "status": "supported",
+      "requires_review": false
+    }
+  },
+  {
+    "id": "eval_test_b_rag_supported",
+    "category": "TEST B — RAG-supported reasoning",
+    "description": "Verify that missing peripheral parameters are resolved using retrieved Vendor Knowledge (UG585 TRM evidence).",
+    "input_type": "hardware_context",
+    "hardware_input": "Zynq-7000 UART0 missing base address",
+    "rag_mock_evidence": [
+      {
+        "source_type": "vendor",
+        "source_document": "AMD/Xilinx Zynq-7000 TRM UG585",
+        "relevance_score": 0.98,
+        "content": "Zynq-7000 TRM UG585 Chapter 4: UART0 register base address is 0xE0000000 with IRQ 59."
+      }
+    ],
+    "expected": {
+      "processor": "Zynq-7000",
+      "peripherals": ["UART0"],
+      "addresses": {
+        "UART0": "0xE0000000"
+      },
+      "interrupts": {
+        "UART0": 59
+      },
+      "status": "supported",
+      "requires_review": false
+    }
+  },
+  {
+    "id": "eval_test_c_no_evidence",
+    "category": "TEST C — No evidence",
+    "description": "Verify that an un-extracted peripheral with ZERO RAG evidence returns insufficient_evidence and baseAddress=null.",
+    "input_type": "hardware_context",
+    "hardware_input": "Zynq-7000 Custom_IP_Unknown missing base address with zero evidence",
+    "rag_mock_evidence": [],
+    "expected": {
+      "processor": "Zynq-7000",
+      "peripherals": ["Custom_IP_Unknown"],
+      "addresses": {
+        "Custom_IP_Unknown": null
+      },
+      "interrupts": {},
+      "status": "insufficient_evidence",
+      "requires_review": true
+    }
+  },
+  {
+    "id": "eval_test_d_conflicting_evidence",
+    "category": "TEST D — Conflicting evidence",
+    "description": "Verify that conflicting Project vs Vendor evidence flags conflicting_evidence and requires_review=true.",
+    "input_type": "hardware_context",
+    "hardware_input": "UART0 with conflicting schematic vs TRM addresses",
+    "rag_mock_evidence": [
+      {
+        "source_type": "project",
+        "source_document": "Uploaded Schematic Rev B",
+        "relevance_score": 0.92,
+        "content": "UART0 assigned to 0xE0000000 on custom PCB trace."
+      },
+      {
+        "source_type": "vendor",
+        "source_document": "Vendor TRM Data Sheet",
+        "relevance_score": 0.95,
+        "content": "UART0 default base address 0xE0001000 in silicon reference."
+      }
+    ],
+    "expected": {
+      "processor": "Zynq-7000",
+      "peripherals": ["UART0"],
+      "addresses": {},
+      "interrupts": {},
+      "status": "conflicting_evidence",
+      "requires_review": true
+    }
+  },
+  {
+    "id": "eval_test_e_hkl_protection",
+    "category": "TEST E — Deterministic HKL protection",
+    "description": "Verify that an existing validated HKL base address cannot be overwritten by unsupported LLM output.",
+    "input_type": "hkl_and_llm_attempt",
+    "hardware_input": "HKL UART0 = 0xE0000000; LLM attempt = 0x99999999",
+    "rag_mock_evidence": [],
+    "expected": {
+      "processor": "Zynq-7000",
+      "peripherals": ["UART0"],
+      "addresses": {
+        "UART0": "0xE0000000"
+      },
+      "interrupts": {},
+      "status": "supported",
+      "requires_review": false
+    }
+  },
+  {
+    "id": "eval_test_f_multi_peripherals",
+    "category": "TEST F — Multiple peripherals",
+    "description": "Verify multi-peripheral extraction and independent parameter handling for UART + GPIO + SPI + I2C.",
+    "input_type": "multi_peripheral_hkl",
+    "hardware_input": "Zynq-7000 UART0 + GPIO0 + SPI0 + I2C0",
+    "expected": {
+      "processor": "Zynq-7000",
+      "peripherals": ["UART0", "GPIO0", "SPI0", "I2C0"],
+      "addresses": {
+        "UART0": "0xE0000000",
+        "GPIO0": "0xE000A000",
+        "SPI0": "0xE0006000",
+        "I2C0": "0xE0004000"
+      },
+      "interrupts": {
+        "UART0": 59,
+        "GPIO0": 52,
+        "SPI0": 58,
+        "I2C0": 57
+      },
+      "status": "supported",
+      "requires_review": false
+    }
+  }
+]

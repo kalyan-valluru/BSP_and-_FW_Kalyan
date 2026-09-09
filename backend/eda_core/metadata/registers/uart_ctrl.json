@@ -1,0 +1,14 @@
+{
+  "id": "reg_uart_ctrl",
+  "name": "UART Control Register",
+  "category": "registers",
+  "metadataVersion": "1.0.0",
+  "schemaVersion": "v2.0",
+  "vendorId": "axi_uartlite_0",
+  "offsetHex": "0x0C",
+  "resetValueHex": "0x00000000",
+  "access": "RW",
+  "attributes": {
+    "peripheralId": "axi_uartlite_0"
+  }
+}

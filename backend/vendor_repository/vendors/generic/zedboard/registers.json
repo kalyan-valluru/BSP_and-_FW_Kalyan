@@ -1,0 +1,18 @@
+[
+  {
+    "peripheralName": "sys_ctrl",
+    "registerName": "CTRL_REG",
+    "offset": "0x00",
+    "resetValue": "0x00000000",
+    "accessMode": "RW",
+    "description": "Main Peripheral Control Register",
+    "provenance": {
+      "document": "zedboard_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "GENERIC",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]

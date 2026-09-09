@@ -1,0 +1,72 @@
+{
+  "artifact": "system.dts",
+  "path": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\workspace\\test_jetson_dts_1787055369918\\system.dts",
+  "generatedBy": "LLM",
+  "model": "Gemini / AI Router",
+  "hardwareModelVersion": "v2.0",
+  "inputHash": "24467862855a254b",
+  "hardwareModelHash": "24467862855a254b",
+  "expectedPeripheralCount": 3,
+  "actualPeripheralCount": 6,
+  "consistencyValidation": {
+    "valid": true,
+    "checksPassed": 4,
+    "checksFailed": 0,
+    "details": [
+      {
+        "name": "UART0",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      },
+      {
+        "name": "I2C1",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      },
+      {
+        "name": "PCIe0",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      }
+    ]
+  },
+  "generatedAt": "2026-08-18T12:16:09.990Z",
+  "validationStatus": "compiled",
+  "compiler": "dtc",
+  "compilerVersion": "1.7.0",
+  "repairAttempts": 0,
+  "documentationGrounded": true,
+  "retrievedSources": [
+    "tegra234.dtsi",
+    "tegra234-p3737-0000+p3701-0000.dts",
+    "tegra234-clock.h"
+  ],
+  "retrievedSourceIds": [
+    "NV_TEGRA234_DTSI",
+    "NV_TEGRA234_DTS",
+    "NV_TEGRA234_CLOCK_H"
+  ],
+  "infrastructureResolvedFromDocumentation": true,
+  "phandleValidation": {
+    "valid": true,
+    "checkedPhandles": [
+      "gic",
+      "clkc"
+    ],
+    "missingLabels": [],
+    "errors": []
+  },
+  "officialDocUrl": "https://docs.nvidia.com/jetson/archives/r36.4.3/DeveloperGuide/SD/Kernel/DeviceTree.html"
+}

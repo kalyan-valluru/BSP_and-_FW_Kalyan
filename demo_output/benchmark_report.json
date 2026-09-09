@@ -1,0 +1,10 @@
+{
+  "repositoryLoadTimeMs": 1.54,
+  "cacheHitRatioPercent": 100,
+  "queryLatencyMs": 0.0019,
+  "hklGenTimeMs": 3.66,
+  "halGenTimeMs": 1.25,
+  "bspGenTimeMs": 2.1,
+  "validationTimeMs": 0.85,
+  "simPrepTimeMs": 0.2
+}

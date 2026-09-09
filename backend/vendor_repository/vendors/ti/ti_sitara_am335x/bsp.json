@@ -1,0 +1,21 @@
+{
+  "linkerScriptTemplate": "lscript.ld",
+  "startupAssemblyFile": "startup_ARM.s",
+  "deviceTreeBinding": "system-top.dts",
+  "compilationFlags": [
+    "-O2",
+    "-Wall",
+    "-Wextra"
+  ],
+  "supportedToolchains": [
+    "arm-none-eabi-gcc"
+  ],
+  "provenance": {
+    "document": "ti_sitara_am335x_TRM.pdf",
+    "documentType": "TRM",
+    "vendor": "TI",
+    "chapter": "System Overview",
+    "parser": "trmParser",
+    "confidence": 1
+  }
+}

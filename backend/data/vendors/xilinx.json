@@ -1,0 +1,13 @@
+{
+  "vendor": "Xilinx",
+  "toolchain": "Vivado / Vitis",
+  "dtsCompatiblePrefix": "xlnx,",
+  "supportedArchitectures": ["ARM Cortex-A9 + FPGA", "ARM Cortex-A53 + FPGA", "MicroBlaze", "Versal ACAP"],
+  "bspHeader": "<xil_types.h>",
+  "driverRules": {
+    "uart": "xuartps",
+    "gpio": "xgpio",
+    "i2c": "xiicps",
+    "spi": "xspips"
+  }
+}

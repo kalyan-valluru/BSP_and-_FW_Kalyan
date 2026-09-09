@@ -1,0 +1,18 @@
+{
+  "processor": "BCM2711",
+  "domains": [
+    {
+      "domainName": "SYS_CLK_ROOT",
+      "nominalFrequencyHz": 400000000,
+      "sourceType": "PLL",
+      "provenance": {
+        "document": "cm4_TRM.pdf",
+        "documentType": "TRM",
+        "vendor": "RASPBERRYPI",
+        "chapter": "System Overview",
+        "parser": "trmParser",
+        "confidence": 1
+      }
+    }
+  ]
+}

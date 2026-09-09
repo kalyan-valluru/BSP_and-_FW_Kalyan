@@ -1,0 +1,50 @@
+{
+  "artifact": "system.dts",
+  "path": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\scratch\\test_consistency_run\\test1_consistent\\system.dts",
+  "generatedBy": "LLM",
+  "model": "Groq Llama-3.3-70b / AI Router",
+  "hardwareModelVersion": "v2.0",
+  "inputHash": "d0e8822e475c403f",
+  "hardwareModelHash": "d0e8822e475c403f",
+  "expectedPeripheralCount": 3,
+  "actualPeripheralCount": 4,
+  "consistencyValidation": {
+    "valid": true,
+    "checksPassed": 4,
+    "checksFailed": 0,
+    "details": [
+      {
+        "name": "UART0",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      },
+      {
+        "name": "MMC0",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      },
+      {
+        "name": "I2C0",
+        "addressPass": true,
+        "compatiblePass": true,
+        "statusPass": true,
+        "interruptPass": true,
+        "overallPass": true,
+        "details": "All attributes match Hardware Model"
+      }
+    ]
+  },
+  "generatedAt": "2026-08-14T13:53:35.650Z",
+  "validationStatus": "compiled",
+  "compiler": "dtc",
+  "compilerVersion": "1.7.0",
+  "repairAttempts": 0
+}

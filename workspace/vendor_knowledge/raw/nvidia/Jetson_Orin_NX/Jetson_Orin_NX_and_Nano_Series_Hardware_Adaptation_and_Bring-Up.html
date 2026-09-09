@@ -1,0 +1,1857 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Jetson Orin NX and Nano Series &#8212; NVIDIA Jetson Linux Developer Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/nvidia-sphinx-theme.css?v=c5edffae" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=767de534" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script rel="preload" src="../../_static/modal-table.js"></script>
+    <script src="../../_static/documentation_options.js?v=b08bce9f"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scrollspy-patch.js?v=edc4054a"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=3ccfd28f"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'HR/JetsonModuleAdaptationAndBringUp/JetsonOrinNxNanoSeries';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '../versions1.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../../_static/version-patch.js?v=c24f8c5d"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Jetson Module Adaptation and Bring-Up: Checklists" href="Checklists.html" />
+    <link rel="prev" title="Jetson AGX Orin Platform Adaptation and Bring-Up" href="JetsonAgxOrinSeries.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Jan 16, 2026"/>
+
+    <!-- Adobe tracking script -->
+    <script src="https://assets.adobedtm.com/5d4962a43b79/814eb6e9b4e1/launch-4bc07f1e0b0b.min.js"></script>
+    
+
+
+  <script >bazadebezolkohpepadr="954124386"</script><script type="text/javascript" src="https://docs.nvidia.com/akam/13/38dec922"  defer></script></head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="NVIDIA Jetson Linux Developer Guide - Home"/>
+    <script>document.write(`<img src="../../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark" alt="NVIDIA Jetson Linux Developer Guide - Home"/>`);</script>
+  
+  
+    <p class="title logo__title">NVIDIA Jetson Linux Developer Guide</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="NVIDIA Jetson Linux Developer Guide - Home"/>
+    <script>document.write(`<img src="../../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark" alt="NVIDIA Jetson Linux Developer Guide - Home"/>`);</script>
+  
+  
+    <p class="title logo__title">NVIDIA Jetson Linux Developer Guide</p>
+  
+</a>
+
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Table of Contents">
+  <p class="bd-links__title" role="heading" aria-level="1">Table of Contents</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../IN/QuickStart.html">Quick Start</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Architecture</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../AR/JetsonSoftwareArchitecture.html">Jetson Software Architecture</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../AR/BootArchitecture.html">Boot Architecture</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../AR/BootArchitecture/JetsonOrinSeriesBootFlow.html">Jetson AGX Orin, Orin NX, and Orin Nano Boot Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../AR/BootArchitecture/PartitionConfiguration.html">Partition Configuration</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Feature Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../SO/JetsonOrinSeries.html">Jetson Orin Series</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Features in Depth</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../SD/FlashingSupport.html">Flashing Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SD/EmulationSupport.html">Emulation Flash Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SD/RootFileSystem.html">Root File System</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../SD/Bootloader.html">Bootloader</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/T23xBCTLoaderIntro.html">T23x Boot Configuration Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/PinmuxGpioConfig.html">Pinmux and GPIO Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/CommonProdConfig.html">Common Prod Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/ControllerProdConfig.html">Controller Product Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/PadVoltageDtBinding.html">Pad Voltage DT Binding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/PmicConfig.html">PMIC Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/StorageDeviceConfig.html">Storage Device Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/UphyLaneConfig.html">UPHY Lane Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/OemFwRachetConfig.html">OEM-FW Ratchet Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/BootROMResetPMICConfig.html">BootROM Reset PMIC Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/MiscConfig.html">Miscellaneous Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/SdramConfig.html">SDRAM Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/DramEcc.html">DRAM-ECC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/GpioInterruptMapConfig.html">GPIO Interrupt Mapping Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/Mb2BctMiscConfig.html">MB2 BCT Misc Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/SecurityConfig.html">Security Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/UEFI.html">UEFI Adaptation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Bootloader/UpdateAndRedundancy.html">Update and Redundancy</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../SD/Kernel.html">Kernel</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Kernel/KernelAdaptation.html">Kernel Adaptation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Kernel/KernelCustomization.html">Kernel Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Kernel/RealTimeKernel.html">Installing Real-Time Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Kernel/BringYourOwnKernel.html">Bring Your Own Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Kernel/GenericTimestampEngine.html">Generic Timestamp Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Kernel/Bmi088ImuIioDriver.html">BMI088 IMU Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Kernel/KernelBootTimeOptimization.html">Kernel Boot Time Optimization</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../SD/Kernel/DisplayConfigurationAndBringUp.html">Display Configuration and Bring-Up</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../SD/Kernel/DisplayConfigurationAndBringUp/CommonDisplayconfig.html">Common Display configurations for all Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SD/Kernel/DisplayConfigurationAndBringUp/OrinDisplayconfig.html">Orin specific Display Configuration</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Kernel/DebuggingTools.html">Kernel Debugging Tools</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../SD/Multimedia.html">Multimedia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Multimedia/MultimediaApis.html">Multimedia APIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Multimedia/AcceleratedDecodeWithFfmpg.html">Accelerated Decode with ffmpeg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Multimedia/AcceleratedGstreamer.html">Accelerated GStreamer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Multimedia/SoftwareEncodeInOrinNano.html">Software Encode in Orin Nano</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SD/HardwareAccelerationInTheWebrtcFramework.html">Hardware Acceleration in the WebRTC Framework</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../SD/Graphics.html">Graphics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Graphics/GraphicsAPIs.html">Graphics APIs</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../SD/Graphics/GraphicsProgramming.html">Graphics Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../SD/Graphics/GraphicsProgramming/BinaryShaderProgramManagement.html">Binary Shader Program Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SD/Graphics/GraphicsProgramming/GlslcShaderProgramCompiler.html">GLSLC Shader Program Compiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SD/Graphics/GraphicsProgramming/OpenglEsProgrammingTips.html">OpenGL ES Programming Tips</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Graphics/Eglstream.html">EGLStream</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Graphics/Egldevice.html">EGLDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Graphics/SampleApplications.html">Sample Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Graphics/OpenWFD.html">OpenWFD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Graphics/VulkanSC.html">Vulkan SC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Graphics/VulkanSCSamples.html">Vulkan SC Samples</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../SD/WindowingSystems.html">Windowing Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/WindowingSystems/WestonWayland.html">Weston (Wayland)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/WindowingSystems/XWindowSystem.html">X Window System</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../SD/CameraDevelopment.html">Camera Development</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/CameraDevelopment/CameraSoftwareDevelopmentSolution.html">Camera Software Development Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/CameraDevelopment/SensorSoftwareDriverProgramming.html">Sensor Software Driver Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/CameraDevelopment/JetsonVirtualChannelWithGmslCameraFramework.html">Jetson Virtual Channel with GMSL Camera Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/CameraDevelopment/ArgusNvrawTool.html">Argus NvRaw Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/CameraDevelopment/CameraDriverPorting.html">Camera Driver Porting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../SD/Security.html">Security</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Security/SecureBoot.html">Secure Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Security/FSKP.html">Factory Secure Key and Expansion Key Provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Security/OpTee.html">OP-TEE: Open Portable Trusted Execution Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Security/DiskEncryption.html">Disk Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Security/SecureStorage.html">Secure Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Security/FirmwareTPM.html">Firmware TPM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Security/RollbackProtection.html">Rollback Protection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Security/MemoryEncryption.html">Memory Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Security/PVAAuthentication.html">PVA Authentication</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../SD/Communications.html">Communications</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Communications/PcieEndpointMode.html">PCIe Endpoint Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Communications/EnablingBluetoothAudio.html">Enabling Bluetooth Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/Communications/AudioSetupAndDevelopment.html">Audio Setup and Development</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SD/Clocks.html">Clocks</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../SD/PlatformPowerAndPerformance.html">Platform Power and Performance</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html">Jetson Orin Nano Series, Jetson Orin NX Series and Jetson AGX Orin Series</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SD/SoftwarePackagesAndTheUpdateMechanism.html">Software Packages and the Update Mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SD/BootTimeOptimization.html">Boot Time Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SD/WorkingWithSources.html">Working With Sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SD/TestPlanValidation.html">Test Plan and Validation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hardware References</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../JetsonDeveloperKitSetup.html">Jetson Developer Kit Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../JetsonEepromLayout.html">Jetson EEPROM Layout</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../JetsonModuleAdaptationAndBringUp.html">Jetson Module Adaptation and Bring-Up</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="JetsonAgxOrinSeries.html">Jetson AGX Orin Series</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Jetson Orin NX and Nano Series</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Checklists.html">Checklists</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ConfiguringTheJetsonExpansionHeaders.html">Configuring the Jetson Expansion Headers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ControllerAreaNetworkCan.html">Controller Area Network (CAN)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Applications and Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../AT/BoardAutomation.html">Board Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../AT/JetsonLinuxToolchain.html">Jetson Linux Toolchain</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../AT/JetsonLinuxDevelopmentTools.html">Jetson Linux Development Tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../AT/JetsonLinuxDevelopmentTools/DebuggingOnJetsonPlatforms.html">Debugging on Jetson Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../AT/JetsonLinuxDevelopmentTools/ProgramTraceMacrocell.html">Program Trace Macrocell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../AT/JetsonLinuxDevelopmentTools/TegrastatsUtility.html">Tegrastats Utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../AT/JetsonLinuxDevelopmentTools/TegraCombinedUART.html">Tegra Combined UART</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../AT/HowToSubmitABugReport.html">How to Submit a Bug Report</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference Material</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../RM/PackageManifest.html">Package Manifest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../RM/RelatedDocumentation.html">Related Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../RM/LegalInformation.html">Legal Information</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+
+
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../JetsonModuleAdaptationAndBringUp.html" class="nav-link">Jetson Module Adaptation and Bring-Up</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Jetson Orin...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="jetson-orin-nx-and-nano-series">
+<h1>Jetson Orin NX and Nano Series<a class="headerlink" href="#jetson-orin-nx-and-nano-series" title="Link to this heading">#</a></h1>
+<p>This guide describes how to port and bring up custom platforms using the NVIDIA® Jetson™ Orin™ NX and Nano modules using the NVIDIA Jetson Linux Driver Package.</p>
+<p>The examples in this document include code for the Jetson Orin NX and Nano modules connected to the Jetson Orin™ Nano carrier board.
+Refer to <a class="reference external" href="https://developer.nvidia.com/t23x-deployment-guidepdf">T234 BCT (Boot configuration Table) Deployment Guide</a> for information about customizing the configuration files.</p>
+<section id="board-configuration">
+<h2>Board Configuration<a class="headerlink" href="#board-configuration" title="Link to this heading">#</a></h2>
+<p>The Jetson Orin Nano Developer Kit consists of a P3767 System on Module (SOM) that is connected to a P3768 carrier board. Part number P3766 designates the complete Jetson Orin Nano Developer Kit. The SOM and carrier board each have an EEPROM where the board ID is saved. The Developer Kit can be used without any software configuration modifications.</p>
+<p>Before you use the SOM with a carrier board other than the P3768, you must first change the kernel device tree, the MB1 configuration, the MB2 configuration, the ODM data, and the flashing configuration to correspond to the new carrier board. The next section provides more information about the changes.</p>
+</section>
+<section id="naming-the-board">
+<h2>Naming the Board<a class="headerlink" href="#naming-the-board" title="Link to this heading">#</a></h2>
+<p>To support a SOM with your carrier board, you must assign the module/carrier board combination with a lowercase alphanumeric name. The name can include hyphens (-) and underscores (_) but not spaces. Some examples of valid names are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">p3768-0000-devkit</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">devboard</span></code></p></li>
+</ul>
+<p>The name you select appears in:</p>
+<ul class="simple">
+<li><p>Filenames and pathnames</p></li>
+<li><p>User-visible device tree filenames</p></li>
+</ul>
+<p>This name is also exposed to the user through various Linux kernel proc files.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this section, <code class="docutils literal notranslate"><span class="pre">&lt;board&gt;</span></code> represents your board name.</p>
+</div>
+<p>You must also select a similarly constructed vendor name, and the same character set rules apply. Here is an example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">nvidia</span></code></p>
+<p>In this section, <code class="docutils literal notranslate"><span class="pre">&lt;vendor&gt;</span></code> represents your vendor name.</p>
+</section>
+<section id="placeholders-in-the-porting-instructions">
+<h2>Placeholders in the Porting Instructions<a class="headerlink" href="#placeholders-in-the-porting-instructions" title="Link to this heading">#</a></h2>
+<p>Placeholders are used throughout this topic, and when executing commands, substitute an appropriate value for each placeholder.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;function&gt;</span></code> is a functional module name, which might be power-tree, pinmux, sdmmc-drv, keys, comm (Wi-Fi/Bluetooth®), camera, and so on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;board&gt;</span></code> is the name you selected to represent your platform.</p>
+<p>For example, p3678 is the name of the carrier board from the Jetson Orin Nano Developer Kit. The NVIDIA &lt;board&gt; names use lower case letters.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;version&gt;</span></code> is a board version number, such as a00.</p>
+<p>Files for NVIDIA reference boards include a version number, and files for customer platforms are not required to include a version number.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;vendor&gt;</span></code> is the name of your organization or the name of the vendor for your board.</p></li>
+</ul>
+</section>
+<section id="root-filesystem-configuration">
+<h2>Root Filesystem Configuration<a class="headerlink" href="#root-filesystem-configuration" title="Link to this heading">#</a></h2>
+<p>Jetson Linux can use any standard or customized Linux root filesystem (rootfs) that is appropriate for its targeted embedded applications. However, some settings must be configured in the rootfs’s boot-up framework to set the default configuration after the boot or some of the core functionalities will not run as expected.</p>
+<p>For example:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">nv.sh</span></code> and <code class="docutils literal notranslate"><span class="pre">nvfb.sh</span></code> boot-up scripts complete some platform-specific configurations in the kernel.</p></li>
+<li><p>The Xorg and X libraries must be correctly configured for the target device.</p></li>
+<li><p>The nvpmodel clock and frequency must be configured for the target device.</p></li>
+</ul>
+<p>In this driver package, these <code class="docutils literal notranslate"><span class="pre">rootfs</span></code> configurations and customizations are provided in the <code class="docutils literal notranslate"><span class="pre">Linux_for_Tegra/nv_tegra/</span></code> directory and its subdirectories.</p>
+<p>You must incorporate the relevant customization for your target rootfs from this location.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the sample Ubuntu root filesystem provided by NVIDIA, this customization is applied using the <code class="docutils literal notranslate"><span class="pre">Linux_for_Tegra/apply_binaries.sh</span></code> script.</p>
+</div>
+</section>
+<section id="mb1-configuration-changes">
+<h2>MB1 Configuration Changes<a class="headerlink" href="#mb1-configuration-changes" title="Link to this heading">#</a></h2>
+<p>Starting in version T234, multiple .dts/dtsi  files define the boot time configuration of the hardware, and these files are applied by Bootloader. The MB1 boot configuration tables are available at <code class="docutils literal notranslate"><span class="pre">&lt;l4t_top&gt;/bootloader/generic/BCT</span></code></p>
+<p>Refer to <a class="reference internal" href="../../SD/Bootloader/T23xBCTLoaderIntro.html#sd-bootloader-t23xbctloaderintro"><span class="std std-ref">T23x Boot Configuration Table</span></a> for more information about configuring BCT.</p>
+<section id="generating-the-pinmux-dtsi-files">
+<h3>Generating the Pinmux dtsi Files<a class="headerlink" href="#generating-the-pinmux-dtsi-files" title="Link to this heading">#</a></h3>
+<p>To define your board’s pinmux configuration, download the Jetson Orin NX Series and Jetson Orin Nano Series Pinmux table from the Jetson Download Center. The table is a spreadsheet that provides the following information:</p>
+<ul class="simple">
+<li><p>The locations and default pinmux settings.</p></li>
+<li><p>The pinmux settings definitions in the source code or device tree.</p></li>
+</ul>
+<p>To access the spreadsheet:</p>
+<ol class="arabic">
+<li><p>Go to <a class="reference external" href="https://developer.nvidia.com/embedded/downloads">https://developer.nvidia.com/embedded/downloads</a>.</p></li>
+<li><p>Search for <strong>pinmux</strong> and download the spreadsheet for Orin NX and Nano Series.</p>
+<p><strong>Before</strong> you open the spreadsheet, ensure that macros are enabled.</p>
+</li>
+<li><p>Ensure the Pin Direction column is consistent with the selected peripheral function.</p>
+<p>For example, I2C pins (clock and data) are both bidirectional signals.</p>
+<ul>
+<li><p>The Req Initial State should be consistent with the direction.</p>
+<p>For example, the Drive 1 and Drive 0 options are applicable only to the output and bidirectional modes.</p>
+</li>
+<li><p>The 3.3V Tolerance option is available only for certain pins.</p>
+<p>When you enable this option, that pin will function as open-drain.</p>
+</li>
+</ul>
+</li>
+<li><p>Customize the spreadsheet to configure your board and click <strong>Generate DT File</strong> to generate the following files:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The names of the generated files depend on the input you provided during Generate DT File.</p>
+<ul class="simple">
+<li><p>pinmux.dtsi</p></li>
+<li><p>gpio.dtsi</p></li>
+<li><p>padvoltage.dtsi</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Copy the padvoltage.dtsi and pinmux.dtsi files to the <code class="docutils literal notranslate"><span class="pre">&lt;l4t_top&gt;/bootloader/generic/BCT/</span></code> directory and copy the <code class="docutils literal notranslate"><span class="pre">gpio.dtsi</span></code> file to the <code class="docutils literal notranslate"><span class="pre">&lt;l4t_top&gt;/bootloader/</span></code> directory.</p>
+</div>
+</li>
+</ol>
+<p>After copying the files, ensure that you point these files to the new board.conf file that you created for your board. Refer to <a class="reference internal" href="#flashing-the-build-image">Flashing the Build Image</a> for more information.</p>
+</section>
+<section id="changing-the-pinmux">
+<h3>Changing the Pinmux<a class="headerlink" href="#changing-the-pinmux" title="Link to this heading">#</a></h3>
+<p>Starting with JetPack 6, you can change the pinmux in the following ways:</p>
+<ul class="simple">
+<li><p>Update the MB1 pinmux BCT as mentioned in <a class="reference internal" href="#generating-the-pinmux-dtsi-files">Generating the Pinmux dtsi Files</a>.</p></li>
+<li><p>For debugging, you can dynamically change the pinmux.</p></li>
+</ul>
+<p>To dynamically change the pinmux:</p>
+<ol class="arabic">
+<li><p>Get the pinmux register address.</p>
+<ol class="loweralpha">
+<li><p>In TRM, click <strong>System Components</strong> → <strong>Multi-Purpose I/O Pins and Pin Multiplexing (PinMux)</strong> → <strong>Pinmux Registers</strong>.</p></li>
+<li><p>Search for the pin name (for example, SOC_GPIO37).</p></li>
+<li><p>Write down the complete pin name.</p>
+<p>For example, PADCTL_G3_SOC_GPIO37_0 and the Offset (for example, SOC_GPIO37: Offset = 0x80).</p>
+</li>
+<li><p>Go to the <em>Jetson Orin Technical Reference Manual</em> at <a class="reference external" href="https://developer.nvidia.com/orin-series-soc-technical-reference-manual">https://developer.nvidia.com/orin-series-soc-technical-reference-manual</a>, and in <em>Table 1-15: Pad Control Grouping</em>, find the G3 pad control block = PADCTL_A0 entry.</p></li>
+<li><p>On the Memory Architecture page, click <strong>Memory Mapped I/O</strong> → <strong>Address Map</strong>.</p></li>
+<li><p>Search for PADCTL_A0.</p>
+<ul class="simple">
+<li><p>The base address is PADCTL_A0 = 0x02430000, and the pinmux register address is PADCTL base address + offset.</p></li>
+<li><p>For example, SOC_GPIO37 Pinmux register address = 0x02430000 + 0x80 = 0x02430080.</p></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>Get the current register value in the device using the devmem tool.</p>
+<ol class="loweralpha">
+<li><p>Install devmem.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install busybox
+$ busybox devmem &lt;32-bit address&gt;
+</pre></div>
+</div>
+<p>For example, busybox devmem 0x02430080.</p>
+</li>
+</ol>
+</li>
+<li><p>To use the pin as GPIO, update the following fields in the PADCTL register:</p>
+<p>Find the register information from the Pinmux Registers section in TRM as mentioned in step 2.</p>
+<ol class="loweralpha simple">
+<li><p>Set GPIO to Bit 10 = 0.</p></li>
+<li><p>For the output, set Bit 4 = 0 ; Bit 6 = 0.</p></li>
+<li><p>For Input, set Bit 4 = 1 ; Bit 6 = 1.</p></li>
+</ol>
+</li>
+<li><p>Use the devmem tool to set the register, for example, busybox devmem 0x02430080 w 0x050.</p></li>
+<li><p>Verify that the register value is set accordingly.</p></li>
+</ol>
+<p><strong>An Example</strong></p>
+<p>To update Pin MCLK05: SOC_GPIO33: PQ6:</p>
+<ol class="arabic simple">
+<li><p>Adjust the pinmux to map the pin to GPIO.</p></li>
+<li><p>Configure the GPIO controller (input, output high, or output low).</p></li>
+</ol>
+<p>To configure the pinmux for this pin:</p>
+<ol class="arabic">
+<li><p>The Pinmux register base address is 0x2430000.</p>
+<ul class="simple">
+<li><p>The Offset is 0x70.</p></li>
+<li><p>The Pinmux register address is 0x2430070.</p></li>
+</ul>
+</li>
+<li><p>Run the following command.</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">busybox</span> <span class="pre">devmem</span> <span class="pre">0x02430070</span></code></p>
+<p>The output value is 0x00000054.</p>
+</li>
+<li><p>To set the pin as the output, run the following command.</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">busybox</span> <span class="pre">devmem</span> <span class="pre">0x02430070</span> <span class="pre">w</span> <span class="pre">0x004</span></code></p>
+</li>
+<li><p>To confirm, check the output.</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">busybox</span> <span class="pre">devmem</span> <span class="pre">0x02430070</span></code></p>
+</li>
+</ol>
+<p>Starting with JetPack 6, the GPIO sysfs has been deprecated.</p>
+<p>To set the direction of the GPIO controller between the input and the output, users can use upstream GPIO tools instead of GPIO sysfs.</p>
+</section>
+</section>
+<section id="identifying-the-gpio-number">
+<h2>Identifying the GPIO Number<a class="headerlink" href="#identifying-the-gpio-number" title="Link to this heading">#</a></h2>
+<p>If you designed your own carrier board, to translate from the SOM connector pins to actual GPIO numbers, you must understand the following GPIO mapping formula. The translated GPIO numbers can be controlled by the driver.</p>
+<p>The Jetson module dynamically registers GPIOs, so search the kernel messages to check the GPIO allocation ranges for each GPIO group. The command and resulting output are similar to the following output:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>root@jetson:/home/ubuntu# dmesg | grep gpiochip
+[    5.726492] gpiochip0: registered GPIOs 348 to 511 on tegra234-gpio
+[    5.732478] gpiochip1: registered GPIOs 316 to 347 on tegra234-gpio-aon
+root@jetson:/home/ubuntu#
+</pre></div>
+</div>
+<p>In the output, there are two Jetson GPIO ports with different base indices:</p>
+<ul class="simple">
+<li><p>tegra234-gpio, at base index 348</p></li>
+<li><p>tegra234-gpio-aon, at base index 316</p></li>
+</ul>
+<p>You can check the GPIO number in one of the following ways:</p>
+<ul>
+<li><p>Using a calculation.</p>
+<ol class="loweralpha">
+<li><p>Before you get started, determine how you plan to configure the offset at each available port.</p>
+<p>Here is the list of the tegra234 GPIO ports and offset mapping:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Port</p></th>
+<th class="head"><p>Number of Pins</p></th>
+<th class="head"><p>Port Offset</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PORT_A</p></td>
+<td><p>8</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_B</p></td>
+<td><p>1</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_C</p></td>
+<td><p>8</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_D</p></td>
+<td><p>4</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_E</p></td>
+<td><p>8</p></td>
+<td><p>21</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_F</p></td>
+<td><p>6</p></td>
+<td><p>29</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_G</p></td>
+<td><p>8</p></td>
+<td><p>35</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_H</p></td>
+<td><p>8</p></td>
+<td><p>43</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_I</p></td>
+<td><p>7</p></td>
+<td><p>51</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_J</p></td>
+<td><p>6</p></td>
+<td><p>58</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_K</p></td>
+<td><p>8</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_L</p></td>
+<td><p>4</p></td>
+<td><p>72</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_M</p></td>
+<td><p>8</p></td>
+<td><p>76</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_N</p></td>
+<td><p>8</p></td>
+<td><p>84</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_P</p></td>
+<td><p>8</p></td>
+<td><p>92</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_Q</p></td>
+<td><p>8</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_R</p></td>
+<td><p>6</p></td>
+<td><p>108</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_X</p></td>
+<td><p>8</p></td>
+<td><p>114</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_Y</p></td>
+<td><p>8</p></td>
+<td><p>122</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_Z</p></td>
+<td><p>8</p></td>
+<td><p>130</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_AC</p></td>
+<td><p>8</p></td>
+<td><p>138</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_AD</p></td>
+<td><p>4</p></td>
+<td><p>146</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_AE</p></td>
+<td><p>2</p></td>
+<td><p>150</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_AF</p></td>
+<td><p>4</p></td>
+<td><p>152</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_AG</p></td>
+<td><p>8</p></td>
+<td><p>156</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_AA</p></td>
+<td><p>8</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_BB</p></td>
+<td><p>4</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_CC</p></td>
+<td><p>8</p></td>
+<td><p>12</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_DD</p></td>
+<td><p>3</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-odd"><td><p>PORT_EE</p></td>
+<td><p>8</p></td>
+<td><p>23</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT_GG</p></td>
+<td><p>1</p></td>
+<td><p>31</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li><p>Search for the pin details from the Jetson Orin NX Series and Jetson Orin Nano Series Pinmux table (refer to <a class="reference internal" href="#generating-the-pinmux-dtsi-files">Generating the Pinmux dtsi Files</a>).</p>
+<p>For example SOC_GPIO08 is GPIO3_PB.00.</p>
+</li>
+<li><p>Identify the port as B and the Pin_offset as 0.</p></li>
+<li><p>Calculate the pin number with the following formula:</p>
+<p><code class="docutils literal notranslate"><span class="pre">base</span> <span class="pre">+</span> <span class="pre">port_offset</span> <span class="pre">+</span> <span class="pre">pin_offset</span></code></p>
+</li>
+<li><p>Verify the following values:</p>
+<ul>
+<li><p>The base is 348.</p>
+<p>This value comes from the kernel boot log, it is already noted <code class="docutils literal notranslate"><span class="pre">tegra234-gpio</span></code>, at base index 348.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port_offset</span></code> of port B = 8</p>
+<p>This value comes from the tegra234 GPIO port and the offset mapping above.</p>
+</li>
+<li><p>pin_offset = 0</p></li>
+<li><p>Pin number = 348 + 8 + 0 = 356</p></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>Using Kernel debugfs.</p>
+<ol class="loweralpha">
+<li><p>Search for the GPIO pin in the Jetson Orin NX Series and Jetson Orin Nano Series Pinmux table (refer to <a class="reference internal" href="#generating-the-pinmux-dtsi-files">Generating the Pinmux dtsi Files</a>).</p>
+<p>For example, SOC_GPIO08, which is GPIO3_PB.00.</p>
+</li>
+<li><p>Follow the gpio debugfs look up that use the port and offset.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">/sys/kernel/debug/gpio</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">PB.00</span></code></p>
+</li>
+<li><p>The GPIO  number is mentioned in the first column as gpio-356.</p>
+<p><code class="docutils literal notranslate"><span class="pre">root&#64;jetson:/home/ubuntu#</span> <span class="pre">cat</span> <span class="pre">/sys/kernel/debug/gpio</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">PB.00</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">gpio-356</span> <span class="pre">(PB.00</span></code></p>
+</li>
+</ol>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use a pin as the GPIO, ensure that the <strong>E_IO_HV</strong> field is disabled in the corresponding pinmux register of the GPIO pin. You can disable the <strong>3.3V Tolerance Enable</strong> field in the pinmux spreadsheet.</p>
+<p>Also, make sure <strong>Pin Direction</strong> is set to <strong>Bidirectional</strong> so that the userspace framework can operate GPIO in both input and output direction.
+After these configurations, reflash the board with the updated pinmux file.</p>
+</div>
+</section>
+<section id="configuring-the-pinmux-setting-of-i2c-and-dp1-aux">
+<h2>Configuring the pinmux Setting of I2C and DP1_AUX<a class="headerlink" href="#configuring-the-pinmux-setting-of-i2c-and-dp1-aux" title="Link to this heading">#</a></h2>
+<p>Use the following configuration in the device tree to configure pinmux between I2C and DP1_AUX, as they cannot be configured using the pinmux spreadsheet.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>miscreg-dpaux@00100000 {
+
+        compatible = &quot;nvidia,tegra194-misc-dpaux-padctl&quot;;
+        reg = &lt;0x0 0x00100000 0x0 0xf000&gt;;
+        dpaux_default: pinmux@0 {
+
+                dpaux0_pins {
+                        pins = &quot;dpaux-0&quot;;
+                        function = &quot;i2c&quot;;
+                };
+        };
+};
+
+i2c@31b0000 {
+        pinctrl-names = &quot;default&quot;;
+        pinctrl-0 = &lt;&amp;dpaux_default&gt;;
+};
+</pre></div>
+</div>
+</section>
+<section id="changing-the-gpio-pins">
+<h2>Changing the GPIO Pins<a class="headerlink" href="#changing-the-gpio-pins" title="Link to this heading">#</a></h2>
+<p>If the pin meets the following conditions, users can dynamically change the pin settings by using the GPIO tools:</p>
+<ul>
+<li><p>The pin is part of the 40-pin header.</p>
+<p>To confirm whether the pin is one of the 40-pin headers, check the Jetson Orin NX Series and Jetson Orin Nano Series Pinmux spreadsheet.</p>
+</li>
+<li><p>The pin is not configured as an SFIO pin by the MB1 BCT.</p></li>
+<li><p>The pin is configured to be bidirectional by the MB1 BCT.</p></li>
+</ul>
+</section>
+<section id="eeprom-modifications">
+<h2>EEPROM Modifications<a class="headerlink" href="#eeprom-modifications" title="Link to this heading">#</a></h2>
+<p>EEPROM is an optional component for a customized carrier board. If the carrier board is designed without an EEPROM, the following modifications will be needed on the MB2 BCT file:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Linux_for_Tegra/bootloader/generic/BCT/tegra234-mb2-bct-misc-p3767-0000.dts</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- cvb_eeprom_read_size = &lt;0x100&gt;
++ cvb_eeprom_read_size = &lt;0x0&gt;
+</pre></div>
+</div>
+</section>
+<section id="porting-the-linux-kernel-device-tree">
+<h2>Porting the Linux Kernel Device Tree<a class="headerlink" href="#porting-the-linux-kernel-device-tree" title="Link to this heading">#</a></h2>
+<section id="overview-of-t23x-device-tree-structure">
+<span id="hr-jetsonmoduleadaptation-orinnxnano-dt-structure"></span><h3>Overview of T23x Device Tree Structure<a class="headerlink" href="#overview-of-t23x-device-tree-structure" title="Link to this heading">#</a></h3>
+<p>Refer to <a class="reference internal" href="../../SD/Kernel/KernelCustomization.html#sd-kernel-kernelcustomization"><span class="std std-ref">Kernel Customization</span></a> for more
+information about downloading and building the device tree files.</p>
+<p>After you complete the steps from the link above, the device tree files will be in the following location:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Linux_for_Tegra/source/hardware/nvidia/t23x/nv-public</span></code></p>
+<p>The device tree is structured as two distinct layers:</p>
+<ul>
+<li><p>The bottom layer comes from the upstream Linux kernel, which keeps the NVIDIA sources aligned with the upstream.</p>
+<p>These files are in the root of the <code class="docutils literal notranslate"><span class="pre">nv-public</span></code> folder (for example, see
+<code class="docutils literal notranslate"><span class="pre">nv-public/tegra234-p3768-0000+p3767-0005.dts</span></code>).</p>
+</li>
+<li><p>The top layer comes from the nv-platform directory.</p>
+<p>The main dts file for each platform is named to coincide with the upstream
+dts file. However, instead of <code class="docutils literal notranslate"><span class="pre">&lt;board&gt;.dts</span></code> it is <code class="docutils literal notranslate"><span class="pre">&lt;board&gt;-nv.dts</span></code>. For
+example, the <code class="docutils literal notranslate"><span class="pre">nv-public/nv-platform/tegra234-p3768-0000+p3767-0005-nv.dts</span></code>
+file includes the upstream dts file and also adds content and updates.</p>
+</li>
+</ul>
+<p>There are variations of each dtb file for each supported module SKU. The
+Orin Nano Developer Kit can be used with P3767 modules SKU 0, 1, 3, 4, 5.
+Correspondingly these are the top-level dtb files:</p>
+<ul class="simple">
+<li><p>tegra234-p3768-0000+p3767-0000-nv.dtb</p></li>
+<li><p>tegra234-p3768-0000+p3767-0001-nv.dtb</p></li>
+<li><p>tegra234-p3768-0000+p3767-0003-nv.dtb</p></li>
+<li><p>tegra234-p3768-0000+p3767-0004-nv.dtb</p></li>
+<li><p>tegra234-p3768-0000+p3767-0005-nv.dtb</p></li>
+</ul>
+<p>Each of these files has a corresponding dts file in the <code class="docutils literal notranslate"><span class="pre">nv-platform</span></code> directory.</p>
+</section>
+<section id="updating-dtb-files">
+<h3>Updating DTB Files<a class="headerlink" href="#updating-dtb-files" title="Link to this heading">#</a></h3>
+<p>After creating or modifying a dtb file, copy the file to the
+<code class="docutils literal notranslate"><span class="pre">Linux_for_Tegra/kernel/dtb</span></code> directory where it will get picked up by
+the <code class="docutils literal notranslate"><span class="pre">flash.sh</span></code> script as determined by the <code class="docutils literal notranslate"><span class="pre">DTB_FILE</span></code> variable in the
+associated flash configuration file.</p>
+<p>By default, UEFI is configured for extlinux boot, so it looks
+for an <code class="docutils literal notranslate"><span class="pre">FDT</span></code> entry in the <code class="docutils literal notranslate"><span class="pre">/boot/extlinux/extlinux.conf</span></code> file. If an entry
+is found, and the file exists, the UEFI uses that file from the rootfs when
+loading the kernel dtb file. If it is not specified, or not found, the UEFI
+falls back to using its own dtb file to load the kernel dtb.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">fdtdump</span></code> to verify whether your changes have taken effect as expected.</p>
+<p>For example, to help you quickly search the output (vim-style search), <code class="docutils literal notranslate"><span class="pre">fdtdump</span></code> can be used with <code class="docutils literal notranslate"><span class="pre">less</span></code>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>fdtdump tegra234-p3768-0000+p3767-0005-nv.dtb | less
+</pre></div>
+</div>
+</div>
+</section>
+<section id="device-tree-overlays">
+<h3>Device Tree Overlays<a class="headerlink" href="#device-tree-overlays" title="Link to this heading">#</a></h3>
+<p>Overlay files that are part of the <code class="docutils literal notranslate"><span class="pre">OVERLAY_DTB_FILE</span></code> variable in the flash
+configuration will be flashed into the UEFI partition (A/B-cpu_bootloader).
+These overlays are applied for both UEFI and kernel. Optionally, the
+<code class="docutils literal notranslate"><span class="pre">extlinux.conf</span></code> file can be used to specify additional overlay files using the
+<code class="docutils literal notranslate"><span class="pre">OVERLAYS</span></code> keyword, but the overlays specified in <code class="docutils literal notranslate"><span class="pre">extlinux.conf</span></code> are applied <strong>only</strong>
+to the kernel dtb.</p>
+</section>
+</section>
+<section id="configuring-the-pcie-controller">
+<h2>Configuring the PCIe Controller<a class="headerlink" href="#configuring-the-pcie-controller" title="Link to this heading">#</a></h2>
+<p>The PCIe host controller is based on the Synopsys Designware PCIe intellectual property, so the host inherits the common properties that are defined in the information file at:</p>
+<p><code class="docutils literal notranslate"><span class="pre">$(KERNEL_TOP)/Documentation/devicetree/bindings/pci/nvidia,tegra194-pcie.txt</span></code></p>
+<p>This file covers topics that include configuring maximum link speed, link width, and the advertisement of different ASPM states.</p>
+<section id="pcie-controller-features">
+<h3>PCIe Controller Features<a class="headerlink" href="#pcie-controller-features" title="Link to this heading">#</a></h3>
+<p>Jetson Orin NX/Nano series has the following PCIe controllers with these specifications:</p>
+<ul class="simple">
+<li><p>Speed:</p>
+<ul>
+<li><p>Jetson Orin NX supports up to Gen4 speed</p></li>
+<li><p>Jetson Orin Nano supports up to Gen3 speed.</p></li>
+</ul>
+</li>
+<li><p>Lane width:</p>
+<ul>
+<li><p>C4: up to x4</p></li>
+<li><p>C7: up to x2 (1 lane multiplexed with C9)</p></li>
+<li><p>C9: x1</p></li>
+<li><p>C1: x1</p></li>
+</ul>
+</li>
+<li><p>Controllers:</p>
+<ul>
+<li><p>Controller C4 supports dual mode (root port or endpoint)</p></li>
+<li><p>C1, C7, and C9 support root port only</p></li>
+</ul>
+</li>
+<li><p>ASPM: All controllers support ASPM.</p></li>
+</ul>
+</section>
+<section id="enabling-pcie-in-a-customer-carrier-board-design">
+<h3>Enabling PCIe in a Customer Carrier Board Design<a class="headerlink" href="#enabling-pcie-in-a-customer-carrier-board-design" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Select the appropriate UPHY configuration that suits the carrier board design and update ODMDATA accordingly (refer to Configuring the UPHY Lane for more information).</p></li>
+<li><p>Enable the appropriate PCIe node from the table below.</p></li>
+<li><p>Ensure  that the controller Pins CLK and RST are configured correctly in MB1 Pinmux and gpio dtsi (refer to <a class="reference internal" href="#generating-the-pinmux-dtsi-files">Generating the Pinmux dtsi Files</a> for more information).</p></li>
+<li><p>Add the pipe2uphy phandle entries as a phy property  in the PCIe controller DT node.</p></li>
+</ol>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pipe2uphy DT nodes are defined in SoC DT at $(TOP)/hardware/nvidia/soc/t234/kernel-dts/tegra234-soc/tegra234-soc-pcie.dtsi.
+</pre></div>
+</div>
+<p>Each pipe2uphy node is a 1:1 map to the UPHY lanes that are defined in Configuring the UPHY Lane.</p>
+<p>Here are the PCIe controller DT modes:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>PCIe Controller and Mode</p></th>
+<th class="head"><p>PCIe Controller DT Mode</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PCIe C1 RP</p></td>
+<td><p><a class="reference external" href="mailto:pcie&#37;&#52;&#48;14100000">pcie<span>&#64;</span>14100000</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>PCIe C4 RP</p></td>
+<td><p><a class="reference external" href="mailto:pcie&#37;&#52;&#48;14160000">pcie<span>&#64;</span>14160000</a></p></td>
+</tr>
+<tr class="row-even"><td><p>PCIe C4 EP</p></td>
+<td><p><a class="reference external" href="mailto:pcie_ep&#37;&#52;&#48;14160000">pcie_ep<span>&#64;</span>14160000</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>PCIe C7 RP</p></td>
+<td><p><a class="reference external" href="mailto:pcie&#37;&#52;&#48;141e0000">pcie<span>&#64;</span>141e0000</a></p></td>
+</tr>
+<tr class="row-even"><td><p>PCIe C9 RP</p></td>
+<td><p><a class="reference external" href="mailto:pcie&#37;&#52;&#48;140c0000">pcie<span>&#64;</span>140c0000</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="porting-universal-serial-bus">
+<h2>Porting Universal Serial Bus<a class="headerlink" href="#porting-universal-serial-bus" title="Link to this heading">#</a></h2>
+<p>Jetson Orin NX/Nano can support up to three enhanced SuperSpeed Universal Serial Bus (USB) ports. In some implementations, not all of these ports can be used because of UPHY lane sharing among PCIE, UFS, and XUSB. If you designed your carrier board, verify the Universal physical layer (UPHY) lane mapping and compatibility between P3767 and your custom board by consulting the NVIDIA team.</p>
+<section id="usb-structure">
+<h3>USB Structure<a class="headerlink" href="#usb-structure" title="Link to this heading">#</a></h3>
+<p>An enhanced SuperSpeed USB port has nine pins:</p>
+<ul class="simple">
+<li><p>VBUS.</p></li>
+<li><p>GND.</p></li>
+<li><p>D+.</p></li>
+<li><p>D−.</p></li>
+<li><p>Two differential signal pairs for SuperSpeed data transfer.</p></li>
+<li><p>One ground (<code class="docutils literal notranslate"><span class="pre">GND_DRAIN</span></code>) for drain wire termination and managing EMI,
+RFI, and signal integrity.</p></li>
+</ul>
+<figure class="align-default">
+<img alt="USB SuperSpeed port pinout" src="../../_images/UsbSuperspeedPortPinout.svg" />
+</figure>
+<p>The <code class="docutils literal notranslate"><span class="pre">D+</span></code>/<code class="docutils literal notranslate"><span class="pre">D−</span></code> signal pins connect to UTMI pads. The <code class="docutils literal notranslate"><span class="pre">SSTX</span></code>/<code class="docutils literal notranslate"><span class="pre">SSRX</span></code> signal pins
+connect to UPHY and are handled by one UPHY lane. As UPHY lanes are
+shared between PPCIE, UFS, and XUSB, the UPHY lanes must be assigned
+based on the custom carrier board’s requirements.</p>
+</section>
+<section id="usb-serdes-lane-assignment">
+<h3>USB SerDes Lane Assignment<a class="headerlink" href="#usb-serdes-lane-assignment" title="Link to this heading">#</a></h3>
+<p>The SerDes lanes for USB SuperSpeed are part of the UPHY block. The Jetson P3767 SOM USB ports have the following UPHY lanes:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Jetson SODIMM Signal Name</p></th>
+<th class="head"><p>Orin UPHY Block and Lane</p></th>
+<th class="head"><p>Jetson Orin NX/Nano Function</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>USBSS0_RX/TX</p></td>
+<td><p>UPHY0, Lane 0</p></td>
+<td><p>USB 3.2 (P0)</p></td>
+</tr>
+<tr class="row-odd"><td><p>DP0_TXD0/1</p></td>
+<td><p>UPHY0, Lane 1</p></td>
+<td><p>USB 3.2 (P1)</p></td>
+</tr>
+<tr class="row-even"><td><p>DP0_TXD2/3</p></td>
+<td><p>UPHY0, Lane 2</p></td>
+<td><p>USB 3.2 (P2)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Refer to <a class="reference internal" href="#uphy-lane-configuration">UPHY Lane Configuration</a> for a list of the supported PCIe configurations.</p>
+<p>Before you design your custom board, refer to the <a class="reference external" href="https://developer.nvidia.com/orin-series-soc-technical-reference-manual">NVIDIA Jetson Orin Series SOC Technical Reference Manual (TRM)</a>, the NVIDIA Jetson Orin NX Series and Orin Nano Product Design Guide (DG), and then contact NVIDIA.</p>
+</section>
+<section id="required-device-tree-changes">
+<h3>Required Device Tree Changes<a class="headerlink" href="#required-device-tree-changes" title="Link to this heading">#</a></h3>
+<p>This section gives step-by-step guidance for checking schematics and
+configuring USB ports in the device tree. The examples are based on the P3767 SOM and P3678 carrier board.</p>
+<section id="for-a-host-only-port">
+<h4>For a Host-Only Port<a class="headerlink" href="#for-a-host-only-port" title="Link to this heading">#</a></h4>
+<p>This section takes a J6 type A stacked connector as an example of a host-only port. The USB signals (USB2.0 and USB3.2) for the J6 are coming from the Port 0 USBSS lines of the SOM through USB HUB as shown in the following image.</p>
+<a class="reference internal image-reference" href="../../_images/HostOnlyPort.png"><img alt="../../_images/HostOnlyPort.png" src="../../_images/HostOnlyPort.png" style="width: 400px;" />
+</a>
+<section id="the-xusb-padctl-node">
+<h5>The xusb_padctl Node<a class="headerlink" href="#the-xusb-padctl-node" title="Link to this heading">#</a></h5>
+<p>The device tree’s <code class="docutils literal notranslate"><span class="pre">xusb_padctl</span></code> node follows the conventions of
+<code class="docutils literal notranslate"><span class="pre">pinctrl-bindings.txt</span></code>. It contains two groups, named <code class="docutils literal notranslate"><span class="pre">pads</span></code> and <code class="docutils literal notranslate"><span class="pre">ports</span></code>,
+which describe USB2 and USB3 signals along with parameters and port
+numbers. The name of each parameter description subnode in <code class="docutils literal notranslate"><span class="pre">pads</span></code> and
+<code class="docutils literal notranslate"><span class="pre">ports</span></code> must be in the form <code class="docutils literal notranslate"><span class="pre">&lt;type&gt;-&lt;port_number&gt;</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;type&gt;</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;usb2&quot;</span></code>
+or <code class="docutils literal notranslate"><span class="pre">&quot;usb3&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&lt;port_number&gt;</span></code> is the associated port number.</p>
+</section>
+<section id="the-pads-subnode">
+<h5>The pads Subnode<a class="headerlink" href="#the-pads-subnode" title="Link to this heading">#</a></h5>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia,function</span></code>: A string containing the name of the function to mux
+to the pin or group. Must be <code class="docutils literal notranslate"><span class="pre">xusb</span></code>.</p></li>
+</ul>
+</section>
+<section id="the-ports-subnode">
+<h5>The ports Subnode<a class="headerlink" href="#the-ports-subnode" title="Link to this heading">#</a></h5>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code>: A string that describes USB port capability.</p>
+<blockquote>
+<div><p>A port for USB2 must have this property. It must be one of these values:</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peripheral</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OTG</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia,usb2-companion</span></code>: USB2 port (0, 1, or 2) to which the port is
+mapped.</p>
+<blockquote>
+<div><p>A port for USB3 must have this property.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia,oc-pin</span></code>: The overcurrent <code class="docutils literal notranslate"><span class="pre">VBUS</span></code> pin the port is using.</p>
+<blockquote>
+<div><p>The value must be positive or zero.</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some Type-C port controllers, such as from Cypress can handle the overcurrent detection and handling. Therefore, you do not need to set this property for USB type C connectors that have Type-C port controllers.</p>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vbus-supply</span></code>: <code class="docutils literal notranslate"><span class="pre">VBUS</span></code> regulator for the corresponding UTMI pad.</p>
+<blockquote>
+<div><p>Set to <code class="docutils literal notranslate"><span class="pre">&amp;vdd_5v0_sys</span></code> for a dummy regulator.</p>
+<blockquote>
+<div><p>Refer to <a class="reference external" href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/devicetree/bindings/phy/nvidia,tegra194-xusb-padctl.yaml">https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/devicetree/bindings/phy/nvidia,tegra194-xusb-padctl.yaml</a> for more information about <code class="docutils literal notranslate"><span class="pre">xusb_padctl</span></code>.</p>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>Example: USB Port Enablement for xusb_padctl</strong></p>
+<p>Take J6 (Type-A stacked port), for example, and create a pad/port node and property list:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> xusb_padctl: padctl@3520000 {
+ ...
+ pads {
+       usb2 {
+             lanes {
+                    ...
+                    usb2-1 {
+                          nvidia,function = &quot;xusb&quot;;
+                          status = &quot;okay&quot;;
+                    };
+                    ...
+             };
+       };
+       usb3 {
+             lanes {
+                    ...
+                    usb3-0 {
+                          nvidia,function = &quot;xusb&quot;;
+                          status = &quot;okay&quot;;
+                    };
+                    ...
+             };
+       };
+ };
+ ports {
+        ...
+        usb2-1 {
+              mode = &quot;host&quot;;
+              status = &quot;okay&quot;;
+            };
+            ...
+            usb3-0 {
+                  nvidia,usb2-companion = &lt;1&gt;;
+                  status = &quot;okay&quot;;
+            };
+            ...
+ };
+};
+</pre></div>
+</div>
+</section>
+<section id="under-the-xhci-node">
+<h5>Under the xHCI Node<a class="headerlink" href="#under-the-xhci-node" title="Link to this heading">#</a></h5>
+<p>The Jetson Orin xHCI controller complies with xHCI specifications, which supports the USB 2.0 HighSpeed/FullSpeed/LowSpeed and USB 3.2 SuperSpeed protocols.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">phys</span></code>: Must contain an entry for each entry in <code class="docutils literal notranslate"><span class="pre">phy-names</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phy-names</span></code>: Must include an entry for each PHY used by the controller.</p>
+<blockquote>
+<div><p>Names must be in the form <code class="docutils literal notranslate"><span class="pre">&lt;type&gt;-&lt;port_number&gt;</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;type&gt;</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;usb2&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;usb3&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&lt;port_number&gt;</span></code> is the associated port number.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia,xusb-padctl</span></code>: A pointer to the <code class="docutils literal notranslate"><span class="pre">xusb-padctl</span></code> node.</p></li>
+</ul>
+<p>Refer to <a class="reference external" href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/devicetree/bindings/usb/nvidia,tegra234-xusb.yaml">https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/devicetree/bindings/usb/nvidia,tegra234-xusb.yaml</a> for more information about xHCI.</p>
+<p><strong>Example: USB Port Enablement or tegra_xhci</strong></p>
+<p>This example contains a J6 example and creates an xHCI node and property list:</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>usb@3610000 {
+    ...
+    phys = &lt;&amp;{/bus@0/padctl@3520000/pads/usb2/lanes/usb2-1}&gt;,
+           &lt;&amp;{/bus@0/padctl@3520000/pads/usb3/lanes/usb3-2}&gt;;
+    phy-names = &quot;usb2-1&quot;, &quot;usb3-2&quot;;
+    nvidia,xusb-padctl = &lt;&amp;xusb_padctl&gt;;
+    status = &quot;okay&quot;;
+    ...
+};
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="for-an-on-the-go-port">
+<h4>For an On-The-Go Port<a class="headerlink" href="#for-an-on-the-go-port" title="Link to this heading">#</a></h4>
+<p>For an example OTG implementation, refer to <a class="reference internal" href="JetsonAgxOrinSeries.html#hr-jetsonmoduleadaptationandbringup-jetsonagxorinseries-portingtheuniversalserialbus-otgport"><span class="std std-ref">For an On-The-GO Port</span></a>. The Orin Nano Developer Kit implementation is similar, but it uses the fusb301 controller instead of the ucsi_ccg controller.</p>
+<p><strong>Removing Type-C Connectors and FUSB301 Driver from the Device Tree</strong></p>
+<p>In some custom carrier boards, Type-C connectors may not be present. In such cases, adjustments to the device tree are necessary to reflect the absence of these components. The following steps outline the process of removing Type-C connectors and the FUSB301 driver:</p>
+<ol class="arabic">
+<li><p>Remove the fusb301 Type-C Controller from <code class="docutils literal notranslate"><span class="pre">i2c&#64;c240000</span></code>.</p>
+<p>If the ONSEMI FUSB301 Type-C Controller is not required, it should be removed from the corresponding entry in the device tree under <code class="docutils literal notranslate"><span class="pre">i2c&#64;c240000</span></code>.</p>
+</li>
+<li><p>Remove the USB Port Endpoint.</p>
+<p>The entry for the <code class="docutils literal notranslate"><span class="pre">usb2-0/port</span></code> under <code class="docutils literal notranslate"><span class="pre">padctl&#64;3520000/ports</span></code> should be removed. This is necessary because the associated remote-endpoint is no longer required after the removal of the connector.</p>
+</li>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">role-switch-default-mode</span></code> property for USB Ports (optional).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">role-switch-default-mode</span></code> property is optional and may be used for USB OTG and peripheral ports to explicitly define the default USB role when no Type-C connector is present.</p>
+</li>
+</ol>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>diff --git a/nv-platform/tegra234-p3768-0000+p3767-xxxx-nv-common.dtsi b/nv-platform/tegra234-p3768-0000+p3767-xxxx-nv-common.dtsi
+index 4ac4ff0629fb..00f90ffffd2c 100644
+--- a/nv-platform/tegra234-p3768-0000+p3767-xxxx-nv-common.dtsi
++++ b/nv-platform/tegra234-p3768-0000+p3767-xxxx-nv-common.dtsi
+@@ -162,36 +162,8 @@
+                        };
+                };
+
+-               padctl@3520000 {
+-                       ports {
+-                               usb2-0 {
+-                                       port {
+-                                               typec_p0: endpoint {
+-                                                       remote-endpoint = &lt;&amp;fusb_p0&gt;;
+-                                               };
+-                                       };
+-                               };
+-                       };
+-               };
+-
+                i2c@c240000 {
+                        status = &quot;okay&quot;;
+-                       fusb301@25 {
+-                               compatible = &quot;onsemi,fusb301&quot;;
+-                               reg = &lt;0x25&gt;;
+-                               status = &quot;okay&quot;;
+-                               #address-cells = &lt;1&gt;;
+-                               #size-cells = &lt;0&gt;;
+-                               interrupt-parent = &lt;&amp;gpio&gt;;
+-                               interrupts = &lt;TEGRA234_MAIN_GPIO(Z, 1) IRQ_TYPE_LEVEL_LOW&gt;;
+-                               connector@0 {
+-                                       port@0 {
+-                                               fusb_p0: endpoint {
+-                                                       remote-endpoint = &lt;&amp;typec_p0&gt;;
+-                                               };
+-                                       };
+-                               };
+-                       };
+                };
+
+                /* PWM1, 40pin header, pin 15 */
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>diff --git a/tegra234-p3768-0000+p3767.dtsi b/tegra234-p3768-0000+p3767.dtsi
+index 19340d13f789..9d935400baa0 100644
+--- a/tegra234-p3768-0000+p3767.dtsi
++++ b/tegra234-p3768-0000+p3767.dtsi
+@@ -102,6 +102,7 @@
+                                        vbus-supply = &lt;&amp;vdd_5v0_sys&gt;;
+                                        status = &quot;okay&quot;;
+                                        usb-role-switch;
++                                       role-switch-default-mode = &quot;peripheral&quot;;
+                                };
+
+                                /* hub */
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="uphy-lane-configuration">
+<h2>UPHY Lane Configuration<a class="headerlink" href="#uphy-lane-configuration" title="Link to this heading">#</a></h2>
+<p>The Jetson Orin NX/Nano SOM supports the following UPHY configurations:</p>
+<blockquote>
+<div><div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head" colspan="4"><p>UPHY0 (HSIO) Configuration Options</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>Lane</p></th>
+<th class="head"><p>hsio-uphy-config-0</p></th>
+<th class="head"><p>hsio-uphy-config-40</p></th>
+<th class="head"><p>hsio-uphy-config-41</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>USB 3.2 (P0)</p></td>
+<td><p>USB 3.2 (P0)</p></td>
+<td><p>USB 3.2 (P0)</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>USB 3.2 (P1)</p></td>
+<td><p>USB 3.2 (P1)</p></td>
+<td><p>USB 3.2 (P1)</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>USB 3.2 (P2)</p></td>
+<td><p>USB 3.2 (P2)</p></td>
+<td><p>Unused</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>PCIe x1 (C1), RP</p></td>
+<td><p>PCIe x1 (C1), RP (Gen2)</p></td>
+<td><p>PCIe x1 (C1), RP</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td rowspan="4"><p>PCIe x4 (C4), RP</p></td>
+<td rowspan="4"><p>PCIe x4 (C4), EP</p></td>
+<td rowspan="4"><p>PCIe x4 (C4), EP</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></blockquote>
+<p>When selecting hsio-uphy-config-40, PCIe C1 RP will be restricted to Gen2 speeds.</p>
+<blockquote>
+<div><div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>UPHY2 (GBE) Configuration Options</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>Lane</p></th>
+<th class="head"><p>gbe-uphy-config-8</p></th>
+<th class="head"><p>gbe-uphy-config-9</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>0</p></td>
+<td rowspan="2"><p>PCIe x2 (C7), RP</p></td>
+<td><p>PCIe x1 (C7), RP</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>PCIe x1 (C9), RP</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></blockquote>
+<p>UPHY0/1/2 are called HSIO, NVHS, and GBE respectively. The Orin NX/Nano SOM does not use NVHS, and it is powered down.</p>
+<p>The UPHY configuration is specified using the ODMDATA variable in the flash configuration file. The out-of-box configuration
+as defined in p3767.conf.common looks like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ODMDATA=&quot;gbe-uphy-config-8,hsstp-lane-map-3,hsio-uphy-config-0&quot;;</span></code></p>
+<p>The GBE configuration and HSIO configuration are independent. For example, to use PCIe C7 and C9 as independent 1-lane controllers,
+select the gbe-uphy-config-9 configuration by adding a line like the following to your flash configuration file:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ODMDATA=&quot;gbe-uphy-config-9,hsstp-lane-map-3,hsio-uphy-config-0&quot;;</span></code></p>
+<p>Do not edit this variable directly in the p3767.conf.common file. You should instead append that variable in your flash configuration
+file to override the default. To use PCIE C4 as an endpoint, use configuration hsio-uphy-config-40 or hsio-uphy-config-41 above.
+Refer to <a class="reference internal" href="../../SD/Communications/PcieEndpointMode.html#sd-communications-pcieendpointmode"><span class="std std-ref">PCIE Endpoint Mode</span></a> for more information.</p>
+<section id="odm-data-for-t234">
+<h3>ODM Data for T234<a class="headerlink" href="#odm-data-for-t234" title="Link to this heading">#</a></h3>
+<p>The following table provides information about the ODM data for T234.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>31:26</p></th>
+<th class="head"><p>25:23</p></th>
+<th class="head"><p>22:18</p></th>
+<th class="head"><p>17</p></th>
+<th class="head"><p>16</p></th>
+<th class="head"><p>15</p></th>
+<th class="head"><p>14</p></th>
+<th class="head"><p>13:0</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>HSIO UPHY Config</p></td>
+<td><p>NVHS UPHY Config</p></td>
+<td><p>GBE UPHY Config</p></td>
+<td><p>GBE3 Mode</p></td>
+<td><p>GBE2 Mode</p></td>
+<td><p>GBE1 Mode</p></td>
+<td><p>GBE0 Mode</p></td>
+<td><p>Reserved</p></td>
+</tr>
+<tr class="row-odd"><td><p>Config Number in HSIO UPHY Lane Mapping Options</p></td>
+<td><p>Config Number in NVHS UPHY Lane Mapping Options</p></td>
+<td><p>Config Number in GBE UPHY Lane Mapping Options</p></td>
+<td><p>0:5G, 1:10G</p></td>
+<td><p>0:5G, 1:10G</p></td>
+<td><p>0:5G, 1:10G</p></td>
+<td><p>0:5G, 1:10G</p></td>
+<td><p>TBD</p></td>
+</tr>
+<tr class="row-even"><td><p>BPMP-FW DTB <cite>/uphy/hsio-uphy-config</cite></p></td>
+<td><p>BPMP-FW DTB <cite>/uphy/nvhs-uphy-config</cite></p></td>
+<td><p>BPMP-FW DTB <cite>/uphy/gbe-uphy-config</cite></p></td>
+<td><p>BPMP-FW DTB <cite>/uphy/gbe3-enable-10g</cite></p></td>
+<td><p>BPMP-FW DTB <cite>/uphy/gbe2-enable-10g</cite></p></td>
+<td><p>BPMP-FW DTB <cite>/uphy/gbe1-enable-10g</cite></p></td>
+<td><p>BPMP-FW DTB <cite>/uphy/gbe0-enable-10g</cite></p></td>
+<td><p>TBD</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="hsio-uphy-lane-mapping-options">
+<h3>HSIO UPHY Lane Mapping Options<a class="headerlink" href="#hsio-uphy-lane-mapping-options" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Config Number</p></th>
+<th class="head"><p>PLL0</p></th>
+<th class="head"><p>Lane 0</p></th>
+<th class="head"><p>Lane 1</p></th>
+<th class="head"><p>PLL1</p></th>
+<th class="head"><p>Lane 2</p></th>
+<th class="head"><p>Lane 3</p></th>
+<th class="head"><p>PLL2</p></th>
+<th class="head"><p>Lane 4</p></th>
+<th class="head"><p>Lane 5</p></th>
+<th class="head"><p>Lane 6</p></th>
+<th class="head"><p>Lane 7</p></th>
+<th class="head"><p>PLL3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Disabled</p></td>
+<td><p>USB3.1 P0</p></td>
+<td><p>USB3.1 P1</p></td>
+<td><p>USB3/PCIE G2</p></td>
+<td><p>USB3.1 P2</p></td>
+<td><p>PCIE x1 C1</p></td>
+<td><p>PCIE G4</p></td>
+<td><p>PCIE x4 C4</p></td>
+<td><p>PCIE x4 C4</p></td>
+<td><p>PCIE x4 C4</p></td>
+<td><p>PCIE x4 C4</p></td>
+<td><p>USB3/PCIE G2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="gbe-uphy-lane-mapping-options">
+<h3>GBE UPHY Lane Mapping Options<a class="headerlink" href="#gbe-uphy-lane-mapping-options" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Config Number</p></th>
+<th class="head"><p>PLL0</p></th>
+<th class="head"><p>Lane 0</p></th>
+<th class="head"><p>Lane 1</p></th>
+<th class="head"><p>Lane 2</p></th>
+<th class="head"><p>Lane 3</p></th>
+<th class="head"><p>PLL1</p></th>
+<th class="head"><p>Lane 4</p></th>
+<th class="head"><p>Lane 5</p></th>
+<th class="head"><p>Lane 6</p></th>
+<th class="head"><p>Lane 7</p></th>
+<th class="head"><p>PLL2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>USB3/PCIE G2</p></td>
+<td><p>PCIE x2 C7</p></td>
+<td><p>PCIE x2 C7</p></td>
+<td><p>PCIE x2 C8</p></td>
+<td><p>PCIE x2 C8</p></td>
+<td><p>PCIE G4</p></td>
+<td><p>PCIE x2 C10</p></td>
+<td><p>PCIE x2 C10</p></td>
+<td><p>PCIE x2 C9</p></td>
+<td><p>PCIE x2 C9</p></td>
+<td><p>USB3/PCIE G2</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>USB3/PCIE G2</p></td>
+<td><p>PCIE x1 C7</p></td>
+<td><p>PCIE x1 C9</p></td>
+<td><p>PCIE x2 C8</p></td>
+<td><p>PCIE x2 C8</p></td>
+<td><p>PCIE G4</p></td>
+<td><p>PCIE x4 C10</p></td>
+<td><p>PCIE x4 C10</p></td>
+<td><p>PCIE x4 C10</p></td>
+<td><p>PCIE x4 C10</p></td>
+<td><p>PCIE C10 Only</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="flashing-the-build-image">
+<h3>Flashing the Build Image<a class="headerlink" href="#flashing-the-build-image" title="Link to this heading">#</a></h3>
+<p>When flashing the build image, use your specific board name. The flashing script uses the configuration in the <code class="docutils literal notranslate"><span class="pre">&lt;board&gt;.conf</span></code> file during the flashing process.</p>
+<p>Here is an example of a flash configuration script:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>source &quot;${LDK_DIR}/p3767.conf.common&quot;;
+
+PINMUX_CONFIG=&quot;tegra234-mb1-bct-pinmux-p3767-dp-a03.dtsi&quot;;
+PMC_CONFIG=&quot;tegra234-mb1-bct-padvoltage-p3767-dp-a03.dtsi&quot;;
+BPFDTB_FILE=&quot;tegra234-bpmp-3767-0000-a02-3509-a02.dtb&quot;;
+DTB_FILE=&quot;tegra234-p3767-0000-p3768-0000-a0.dtb&quot;;
+TBCDTB_FILE=&quot;${DTB_FILE}&quot;;
+EMMC_CFG=&quot;flash_t234_qspi_sd.xml&quot;;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To be reflected in the flashed image, the parameters must be specified after sourcing the <code class="docutils literal notranslate"><span class="pre">&lt;xxx&gt;.conf.common</span></code> file .</p>
+</div>
+<p>For example, you can flash to NVMe like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
+  -c tools/kernel_flash//flash_l4t_t234_nvme.xml -p &quot;-c bootloader/generic/cfg/flash_t234_qspi.xml&quot; \
+  --showlogs --network usb0 &lt;board&gt; internal
+</pre></div>
+</div>
+<p>For more flashing support and options, refer to <a class="reference internal" href="../../SD/FlashingSupport.html#sd-flashingsupport"><span class="std std-ref">Flashing Support</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>UEFI picks the kernel image and dtb from the rootfs path that is mentioned in /boot/extlinux/extlinux.conf file. If you mentioned an image and dtb in this file, these items will be given precedence. For example, you might want to scp the file to the Jetson target path in the file. If this information is not mentioned, or the file is not present, the Kernel Image or dtb will be selected from the flashed partition in the storage device.</p>
+</div>
+</section>
+<section id="setting-optional-environmental-variables">
+<h3>Setting Optional Environmental Variables<a class="headerlink" href="#setting-optional-environmental-variables" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">flash.sh</span></code> script updates the following environment variables based on board EEPROM and other parameters that were passed. To provide specific values to these variables, define them in the board-specific file board.conf file to override the default values.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Optional Environment Variables:
+# BCTFILE ---------------- Boot control table configuration file to be used.
+# BOARDID ---------------- Pass boardid to override EEPROM value
+# BOARDREV --------------- Pass board_revision to override EEPROM value
+# BOARDSKU --------------- Pass board_sku to override EEPROM value
+# BOOTLOADER ------------- Bootloader binary to be flashed
+# BOOTPARTLIMIT ---------- GPT data limit. (== Max BCT size + PPT size)
+# BOOTPARTSIZE ----------- Total eMMC HW boot partition size.
+# CFGFILE ---------------- Partition table configuration file to be used.
+# CMDLINE ---------------- Target cmdline. See help for more information.
+# DEVSECTSIZE ------------ Device Sector size. (default = 512Byte).
+# DTBFILE ---------------- Device Tree file to be used.
+# EMMCSIZE --------------- Size of target device eMMC (boot0+boot1+user).
+# FLASHAPP --------------- Flash application running in host machine.
+# FLASHER ---------------- Flash server running in target machine.
+# INITRD ----------------- Initrd image file to be flashed.
+# KERNEL_IMAGE ----------- Linux kernel zImage file to be flashed.
+# MTS -------------------- MTS file name such as mts_si.
+# MTSPREBOOT ------------- MTS preboot file name such as mts_preboot_si.
+# NFSARGS ---------------- Static Network assignments.
+#                          &lt;C-ipa&gt;:&lt;S-ipa&gt;:&lt;G-ipa&gt;:&lt;netmask&gt;
+# NFSROOT ---------------- NFSROOT i.e. &lt;my IP addr&gt;:/exported/rootfs_dir.
+# ODMDATA ---------------- Odmdata to be used.
+# PKCKEY ----------------- RSA key file to use to sign bootloader images.
+# ROOTFSSIZE ------------- Linux RootFS size (internal emmc/nand only).
+# ROOTFS_DIR ------------- Linux RootFS directory name.
+# SBKKEY ----------------- SBK key file to use to encrypt bootloader images.
+# SCEFILE ---------------- SCE firmware file such as camera-rtcpu-sce.img.
+# SPEFILE ---------------- SPE firmware file path such as bootloader/spe.bin.
+# FAB -------------------- Target board&#39;s FAB ID.
+# TEGRABOOT -------------- lowerlayer bootloader such as nvtboot.bin.
+# WB0BOOT ---------------- Warmboot code such as nvtbootwb0.bin
+</pre></div>
+</div>
+</section>
+</section>
+<section id="hdmi-support">
+<h2>HDMI Support<a class="headerlink" href="#hdmi-support" title="Link to this heading">#</a></h2>
+<p>Jetson Orin NX and Nano modules support HDMI in addition to DP. Refer to <a class="reference internal" href="../../SO/JetsonOrinSeries.html#so-jetsonorinseries-hdmi"><span class="std std-ref">HDMI support</span></a> for more information about HDMI capabilities.
+You can either customize the carrier baseboard to HDMI or plug Orin NX or Nano modules to Xavier NX carrier board that comes with HDMI port.
+You need to use <code class="docutils literal notranslate"><span class="pre">p3509-a02-p3767-0000.conf</span></code> config file to flash the board.</p>
+<p>For example, flash the device with HDMI support:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
+  -c tools/kernel_flash/flash_l4t_t234_nvme.xml -p &quot;-c bootloader/generic/cfg/flash_t234_qspi.xml&quot; \
+  --showlogs --network usb0 p3509-a02-p3767-0000 internal
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="JetsonAgxOrinSeries.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Jetson AGX Orin Platform Adaptation and Bring-Up</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Checklists.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Jetson Module Adaptation and Bring-Up: Checklists</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#board-configuration">Board Configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-the-board">Naming the Board</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#placeholders-in-the-porting-instructions">Placeholders in the Porting Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#root-filesystem-configuration">Root Filesystem Configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mb1-configuration-changes">MB1 Configuration Changes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-the-pinmux-dtsi-files">Generating the Pinmux dtsi Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-pinmux">Changing the Pinmux</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#identifying-the-gpio-number">Identifying the GPIO Number</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuring-the-pinmux-setting-of-i2c-and-dp1-aux">Configuring the pinmux Setting of I2C and DP1_AUX</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-gpio-pins">Changing the GPIO Pins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeprom-modifications">EEPROM Modifications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#porting-the-linux-kernel-device-tree">Porting the Linux Kernel Device Tree</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-t23x-device-tree-structure">Overview of T23x Device Tree Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-dtb-files">Updating DTB Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#device-tree-overlays">Device Tree Overlays</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuring-the-pcie-controller">Configuring the PCIe Controller</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pcie-controller-features">PCIe Controller Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enabling-pcie-in-a-customer-carrier-board-design">Enabling PCIe in a Customer Carrier Board Design</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#porting-universal-serial-bus">Porting Universal Serial Bus</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usb-structure">USB Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usb-serdes-lane-assignment">USB SerDes Lane Assignment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#required-device-tree-changes">Required Device Tree Changes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#for-a-host-only-port">For a Host-Only Port</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#the-xusb-padctl-node">The xusb_padctl Node</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pads-subnode">The pads Subnode</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ports-subnode">The ports Subnode</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#under-the-xhci-node">Under the xHCI Node</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#for-an-on-the-go-port">For an On-The-Go Port</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uphy-lane-configuration">UPHY Lane Configuration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#odm-data-for-t234">ODM Data for T234</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hsio-uphy-lane-mapping-options">HSIO UPHY Lane Mapping Options</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gbe-uphy-lane-mapping-options">GBE UPHY Lane Mapping Options</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flashing-the-build-image">Flashing the Build Image</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-optional-environmental-variables">Setting Optional Environmental Variables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hdmi-support">HDMI Support</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+<a class="footer-brand logo" href="https://www.nvidia.com">
+  <img src="../../_static/nvidia-logo-horiz-rgb-1c-blk-for-screen.svg" class="logo__image only-light" alt="NVIDIA"/>
+  <img src="../../_static/nvidia-logo-horiz-rgb-1c-wht-for-screen.svg" class="logo__image only-dark" alt="NVIDIA"/>
+</a></div>
+      
+        <div class="footer-item">
+
+<div class="footer-links">
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/">Privacy Policy</a>
+   | 
+  
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/">Manage My Privacy</a>
+   | 
+  
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/preferences/start/">Do Not Sell or Share My Data</a>
+   | 
+  
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/">Terms of Service</a>
+   | 
+  
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/about-nvidia/accessibility/">Accessibility</a>
+   | 
+  
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/about-nvidia/company-policies/">Corporate Policies</a>
+   | 
+  
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/product-security/">Product Security</a>
+   | 
+  
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/contact/">Contact</a>
+  
+  
+  
+</div>
+</div>
+      
+        <div class="footer-item">
+
+
+
+  <p class="copyright">
+    
+      Copyright © 2024-2026, NVIDIA Corporation.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Jan 16, 2026.
+  <br/>
+</p></div>
+      
+        <div class="footer-item">
+<div class="extra_footer">
+  
+      <!-- Invoking Adobe tracking -->
+    <script type="text/javascript">_satellite.pageBottom();</script>
+    
+  
+</div></div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  <noscript><img src="https://docs.nvidia.com/akam/13/pixel_38dec922?a=dD0yMjE1MGU0ZGE3NmY2YmY3OGIzYWY5MmMyNTgzZWZhYmY5NWIyZWU3JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+</html>

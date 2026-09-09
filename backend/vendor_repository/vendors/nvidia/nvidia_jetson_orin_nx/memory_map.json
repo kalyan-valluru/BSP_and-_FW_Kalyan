@@ -1,0 +1,22 @@
+{
+  "processor": "NVIDIA_JETSON_ORIN_NX",
+  "pageAlignmentBytes": 4096,
+  "regions": [
+    {
+      "regionName": "MMIO_PERIPHERALS",
+      "startAddress": "0x0",
+      "endAddress": "0x5FFFFFFF",
+      "sizeBytes": 536870912,
+      "isExecutable": false,
+      "accessMode": "MMIO",
+      "provenance": {
+        "document": "nvidia_jetson_orin_nx_TRM.pdf",
+        "documentType": "TRM",
+        "vendor": "NVIDIA",
+        "chapter": "System Overview",
+        "parser": "trmParser",
+        "confidence": 1
+      }
+    }
+  ]
+}

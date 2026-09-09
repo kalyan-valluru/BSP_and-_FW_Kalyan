@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-08-18T12:28:56.693Z",
+  "processor": "i.MX 8M Plus",
+  "passed": true,
+  "missingPeripherals": [],
+  "duplicateRegisters": [],
+  "memoryOverlaps": [],
+  "irqConflicts": [],
+  "clockInconsistencies": [],
+  "brokenProvenance": [],
+  "duplicateSdkVersions": [],
+  "invalidJson": []
+}

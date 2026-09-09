@@ -1,0 +1,22 @@
+{
+  "processor": "IMX8MP_BASE_BOARD",
+  "pageAlignmentBytes": 4096,
+  "regions": [
+    {
+      "regionName": "MMIO_PERIPHERALS",
+      "startAddress": "0x40000000",
+      "endAddress": "0x5FFFFFFF",
+      "sizeBytes": 536870912,
+      "isExecutable": false,
+      "accessMode": "MMIO",
+      "provenance": {
+        "document": "imx8mp_base_board_TRM.pdf",
+        "documentType": "TRM",
+        "vendor": "NXP",
+        "chapter": "System Overview",
+        "parser": "trmParser",
+        "confidence": 1
+      }
+    }
+  ]
+}

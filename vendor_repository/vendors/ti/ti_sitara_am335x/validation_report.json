@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-08-18T12:28:56.891Z",
+  "processor": "TI_SITARA_AM335X",
+  "passed": true,
+  "missingPeripherals": [],
+  "duplicateRegisters": [],
+  "memoryOverlaps": [],
+  "irqConflicts": [],
+  "clockInconsistencies": [],
+  "brokenProvenance": [],
+  "duplicateSdkVersions": [],
+  "invalidJson": []
+}

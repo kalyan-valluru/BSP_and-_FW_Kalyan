@@ -1,0 +1,13 @@
+{
+  "artifact": "dtb",
+  "path": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\workspace\\test_jetson_dts_1787055369918\\system.dtb",
+  "compiler": "dtc",
+  "compilerSource": "configured",
+  "compilerVersion": "1.7.0",
+  "input": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\workspace\\test_jetson_dts_1787055369918\\system.dts",
+  "output": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\workspace\\test_jetson_dts_1787055369918\\system.dtb",
+  "exitCode": 0,
+  "fileSize": 1306,
+  "magicValid": true,
+  "generatedAt": "2026-08-18T12:16:09.989Z"
+}

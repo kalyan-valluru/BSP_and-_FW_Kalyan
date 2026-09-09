@@ -1,0 +1,16 @@
+[
+  {
+    "irqNumber": 32,
+    "name": "pcf8523_IRQ",
+    "peripheralBlock": "pcf8523",
+    "controllerType": "GIC",
+    "provenance": {
+      "document": "cm4_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "RASPBERRYPI",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]

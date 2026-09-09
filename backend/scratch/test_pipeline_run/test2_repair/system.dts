@@ -1,0 +1,17 @@
+/dts-v1/;
+
+/ {
+	model = "TI AM335x EVM (TI Sitara AM335x)";
+	compatible = "ti,am335x-evm", "ti,am335x";
+	#address-cells = <1>;
+	#size-cells = <1>;
+
+	chosen {
+		bootargs = "console=ttyO0,115200n8 root=/dev/mmcblk0p2 rw rootwait";
+	};
+
+	memory@80000000 {
+		device_type = "memory";
+		reg = <0x80000000 0x20000000>;
+	};
+};

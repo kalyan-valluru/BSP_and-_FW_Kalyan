@@ -1,0 +1,37 @@
+/dts-v1/;
+
+/ {
+	model = "Generic Board (TI Sitara AM335x)";
+	compatible = "ti,am335x-evm", "ti,am335x";
+	#address-cells = <1>;
+	#size-cells = <1>;
+
+	chosen {
+		bootargs = "console=ttyO0,115200n8 root=/dev/mmcblk0p2 rw rootwait";
+	};
+
+	memory@80000000 {
+		device_type = "memory";
+		reg = <0x80000000 0x20000000>;
+	};
+	uart0@44E09000 {
+		compatible = "generic,uart0";
+		reg = <0x44E09000 0x1000>;
+		interrupts = <72>;
+		status = "okay";
+	};
+
+	i2c0@44E0B000 {
+		compatible = "generic,i2c0";
+		reg = <0x44E0B000 0x1000>;
+		interrupts = <70>;
+		status = "okay";
+	};
+
+	gpio1@4804C000 {
+		compatible = "generic,gpio1";
+		reg = <0x4804C000 0x1000>;
+		interrupts = <98>;
+		status = "okay";
+	};
+};

@@ -1,0 +1,18 @@
+[
+  {
+    "peripheralName": "flash",
+    "registerName": "CTRL_REG",
+    "offset": "0x00",
+    "resetValue": "0x00000000",
+    "accessMode": "RW",
+    "description": "Main Peripheral Control Register",
+    "provenance": {
+      "document": "nvidia_jetson_orin_nx_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "NVIDIA",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]

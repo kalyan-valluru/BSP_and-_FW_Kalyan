@@ -1,0 +1,15 @@
+[
+  {
+    "name": "sys_ctrl",
+    "baseAddress": "0x30000000",
+    "busInterface": "AHB/AXI",
+    "provenance": {
+      "document": "rm0436-stm32mp157-advanced-armbased-32bit-mpus-stmicroelectronics.pdf",
+      "documentType": "TRM",
+      "vendor": "ST",
+      "chapter": "Peripheral Registers",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]

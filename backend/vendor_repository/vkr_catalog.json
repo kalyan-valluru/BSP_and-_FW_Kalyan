@@ -1,0 +1,506 @@
+{
+  "generic_arm_core": {
+    "vendor": "generic",
+    "family": "arm_core",
+    "processorName": "ARM_CORE",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.552Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "arm_core_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "GENERIC",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "generic_arm_cortex-a72": {
+    "vendor": "generic",
+    "family": "arm_cortex-a72",
+    "processorName": "ARM_CORTEX-A72",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.566Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "arm_cortex-a72_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "GENERIC",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "generic_arm_cortex-a9": {
+    "vendor": "generic",
+    "family": "arm_cortex-a9",
+    "processorName": "ARM_CORTEX-A9",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.577Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "arm_cortex-a9_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "GENERIC",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "generic_digilent_zedboard": {
+    "vendor": "generic",
+    "family": "digilent_zedboard",
+    "processorName": "DIGILENT_ZEDBOARD",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.588Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "digilent_zedboard_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "GENERIC",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "generic_zedboard": {
+    "vendor": "generic",
+    "family": "zedboard",
+    "processorName": "ZEDBOARD",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.600Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "zedboard_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "GENERIC",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "nvidia_nvidia_jetson_orin_nx": {
+    "vendor": "nvidia",
+    "family": "nvidia_jetson_orin_nx",
+    "processorName": "NVIDIA_JETSON_ORIN_NX",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.611Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "nvidia_jetson_orin_nx_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "NVIDIA",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "nxp_imx8mp": {
+    "vendor": "nxp",
+    "family": "imx8mp",
+    "processorName": "i.MX 8M Plus",
+    "cpuArchitecture": "ARM Cortex-A (64-bit / 32-bit)",
+    "coreCount": 4,
+    "maxFrequency": "1.6 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.642Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "imx8mp_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "NXP",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "nxp_imx8mp_base_board": {
+    "vendor": "nxp",
+    "family": "imx8mp_base_board",
+    "processorName": "IMX8MP_BASE_BOARD",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.694Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "imx8mp_base_board_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "NXP",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "nxp_imx8mp_cpu_board": {
+    "vendor": "nxp",
+    "family": "imx8mp_cpu_board",
+    "processorName": "IMX8MP_CPU_BOARD",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.703Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "imx8mp_cpu_board_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "NXP",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "nxp_nxp_i_mx_8m_plus": {
+    "vendor": "nxp",
+    "family": "nxp_i_mx_8m_plus",
+    "processorName": "NXP_I_MX_8M_PLUS",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.713Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "nxp_i_mx_8m_plus_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "NXP",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "raspberrypi_cm4": {
+    "vendor": "raspberrypi",
+    "family": "cm4",
+    "processorName": "BCM2711",
+    "cpuArchitecture": "ARM / RISC-V Heterogeneous Architecture",
+    "coreCount": 1,
+    "maxFrequency": "400 MHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.725Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "cm4_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "RASPBERRYPI",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "raspberrypi_raspberry_pi_cm4": {
+    "vendor": "raspberrypi",
+    "family": "raspberry_pi_cm4",
+    "processorName": "RASPBERRY_PI_CM4",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.770Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "raspberry_pi_cm4_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "RASPBERRYPI",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "st_stm32h7": {
+    "vendor": "st",
+    "family": "stm32h7",
+    "processorName": "STM32H7",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.780Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "stm32h7_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "ST",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "st_stm32mp157": {
+    "vendor": "st",
+    "family": "stm32mp157",
+    "processorName": "STM32MP157",
+    "cpuArchitecture": "ARM Cortex-A (64-bit / 32-bit)",
+    "coreCount": 2,
+    "maxFrequency": "650 MHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.790Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "stm32mp157_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "ST",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "ti_ti_sitara_am335x": {
+    "vendor": "ti",
+    "family": "ti_sitara_am335x",
+    "processorName": "TI_SITARA_AM335X",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.882Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "ti_sitara_am335x_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "TI",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "xilinx_amd_xilinx_zynq-7000": {
+    "vendor": "xilinx",
+    "family": "amd_xilinx_zynq-7000",
+    "processorName": "AMD_XILINX_ZYNQ-7000",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.893Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "amd_xilinx_zynq-7000_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "XILINX",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "xilinx_amd_xilinx_zynq_ultrascale_": {
+    "vendor": "xilinx",
+    "family": "amd_xilinx_zynq_ultrascale_",
+    "processorName": "AMD_XILINX_ZYNQ_ULTRASCALE_",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.903Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "amd_xilinx_zynq_ultrascale__TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "XILINX",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  },
+  "xilinx_zynq-7000": {
+    "vendor": "xilinx",
+    "family": "zynq-7000",
+    "processorName": "ZYNQ-7000",
+    "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+    "coreCount": 4,
+    "maxFrequency": "1.2 GHz",
+    "operatingVoltage": "1.8V / 3.3V",
+    "packageType": "BGA / QFP Package",
+    "operatingTemperature": "-40°C to +105°C",
+    "versionInfo": {
+      "trmRevision": "Rev. 3.0",
+      "datasheetRevision": "Rev. 1.2",
+      "sdkVersion": "v25.03",
+      "bspVersion": "v6.6",
+      "importTimestamp": "2026-08-18T12:28:56.913Z",
+      "checksum": "sha256_indexed",
+      "status": "ACTIVE"
+    },
+    "provenance": {
+      "document": "zynq-7000_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "XILINX",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+}

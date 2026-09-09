@@ -1,0 +1,28 @@
+{
+  "vendor": "ti",
+  "family": "ti_sitara_am335x",
+  "processorName": "TI_SITARA_AM335X",
+  "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+  "coreCount": 4,
+  "maxFrequency": "1.2 GHz",
+  "operatingVoltage": "1.8V / 3.3V",
+  "packageType": "BGA / QFP Package",
+  "operatingTemperature": "-40°C to +105°C",
+  "versionInfo": {
+    "trmRevision": "Rev. 3.0",
+    "datasheetRevision": "Rev. 1.2",
+    "sdkVersion": "v25.03",
+    "bspVersion": "v6.6",
+    "importTimestamp": "2026-08-18T12:28:56.882Z",
+    "checksum": "sha256_indexed",
+    "status": "ACTIVE"
+  },
+  "provenance": {
+    "document": "ti_sitara_am335x_TRM.pdf",
+    "documentType": "TRM",
+    "vendor": "TI",
+    "chapter": "System Overview",
+    "parser": "trmParser",
+    "confidence": 1
+  }
+}

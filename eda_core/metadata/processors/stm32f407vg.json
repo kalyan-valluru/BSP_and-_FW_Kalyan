@@ -1,0 +1,17 @@
+{
+  "id": "stm32f407vg",
+  "name": "STM32F407VG STM32F4DISCOVERY ARM Cortex-M4 MCU",
+  "category": "processors",
+  "metadataVersion": "1.0.0",
+  "schemaVersion": "v2.0",
+  "vendorId": "stmicroelectronics",
+  "architecture": "ARM Cortex-M4",
+  "family": "STM32",
+  "registerWidth": 32,
+  "defaultClockMHz": 168,
+  "coresCount": 1,
+  "memoryRanges": [
+    { "name": "FLASH", "start": "0x08000000", "size": "196608" },
+    { "name": "SRAM", "start": "0x20000000", "size": "196608" }
+  ]
+}

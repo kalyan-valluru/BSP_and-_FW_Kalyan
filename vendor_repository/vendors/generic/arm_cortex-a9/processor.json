@@ -1,0 +1,28 @@
+{
+  "vendor": "generic",
+  "family": "arm_cortex-a9",
+  "processorName": "ARM_CORTEX-A9",
+  "cpuArchitecture": "ARM Cortex-A / Cortex-M",
+  "coreCount": 4,
+  "maxFrequency": "1.2 GHz",
+  "operatingVoltage": "1.8V / 3.3V",
+  "packageType": "BGA / QFP Package",
+  "operatingTemperature": "-40°C to +105°C",
+  "versionInfo": {
+    "trmRevision": "Rev. 3.0",
+    "datasheetRevision": "Rev. 1.2",
+    "sdkVersion": "v25.03",
+    "bspVersion": "v6.6",
+    "importTimestamp": "2026-08-18T12:28:56.577Z",
+    "checksum": "sha256_indexed",
+    "status": "ACTIVE"
+  },
+  "provenance": {
+    "document": "arm_cortex-a9_TRM.pdf",
+    "documentType": "TRM",
+    "vendor": "GENERIC",
+    "chapter": "System Overview",
+    "parser": "trmParser",
+    "confidence": 1
+  }
+}

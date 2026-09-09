@@ -1,0 +1,12 @@
+{
+  "id": "vivado-vitis-2025.2",
+  "name": "AMD Vivado & Vitis Toolchain Suite",
+  "category": "toolchains",
+  "metadataVersion": "1.0.0",
+  "schemaVersion": "v2.0",
+  "vendorId": "amd-xilinx",
+  "compilerBinary": "arm-none-eabi-gcc.exe",
+  "supportedArchitectures": ["ARM Cortex-A9", "ARM Cortex-A53", "MicroBlaze"],
+  "minimumVersion": "2025.2",
+  "defaultFlags": "-mcpu=cortex-a9 -O2 -Wall"
+}

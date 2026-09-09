@@ -1,0 +1,10 @@
+{
+  "id": "rule-address-overlap-01",
+  "name": "Address Overlap Verification",
+  "category": "rules",
+  "metadataVersion": "1.0.0",
+  "schemaVersion": "v2.0",
+  "severity": "critical",
+  "enabled": true,
+  "description": "Verifies that no two peripheral blocks share overlapping base address memory bounds."
+}

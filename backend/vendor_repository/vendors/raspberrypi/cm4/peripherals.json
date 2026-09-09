@@ -1,0 +1,21 @@
+[
+  {
+    "name": "pcf8523",
+    "peripheralBlock": "pcf8523",
+    "type": "RTC",
+    "bus": "I2C",
+    "baseAddress": "0x68",
+    "driverName": "nxp,pcf8523",
+    "operatingMode": "I2C Polling",
+    "physicalPinMapping": "I2C1_SDA / I2C1_SCL (GPIO44/45)",
+    "provenance": {
+      "document": "example1-overlay.dts",
+      "documentType": "DTS",
+      "vendor": "raspberrypi",
+      "chapter": "Device Nodes Tree",
+      "section": "pcf8523",
+      "parserVersion": "v2.0.0-ast",
+      "confidence": 0.98
+    }
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "processor": "AMD_XILINX_ZYNQ-7000",
+  "domains": [
+    {
+      "domainName": "SYS_CLK_ROOT",
+      "nominalFrequencyHz": 400000000,
+      "sourceType": "PLL",
+      "provenance": {
+        "document": "amd_xilinx_zynq-7000_TRM.pdf",
+        "documentType": "TRM",
+        "vendor": "XILINX",
+        "chapter": "System Overview",
+        "parser": "trmParser",
+        "confidence": 1
+      }
+    }
+  ]
+}

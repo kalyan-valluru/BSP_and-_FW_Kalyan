@@ -1,0 +1,31 @@
+/dts-v1/;
+
+/ {
+	model = "NVIDIA Jetson Orin NX";
+	compatible = "nvidia,tegra234";
+	#address-cells = <2>;
+	#size-cells = <2>;
+	gic: interrupt-controller@2f00000 {
+		compatible = "arm,gic-v3";
+		#interrupt-cells = <3>;
+		interrupt-controller;
+		reg = <0x0 0x02f00000 0x0 0x10000>,
+		      <0x0 0x02f10000 0x0 0x20000>;
+	};
+
+	clkc: clock-controller@2930000 {
+		compatible = "nvidia,tegra234-car";
+		#clock-cells = <1>;
+		reg = <0x0 0x02930000 0x0 0x10000>;
+	};
+
+
+	uart0@03100000 {
+		compatible = "nvidia,tegra234-uart";
+		reg = <0x0 0x03100000 0x0 0x1000>;
+		interrupt-parent = <&gic>;
+		interrupts = <0 112 4>;
+		clocks = <&clkc 112>;
+		status = "okay";
+	};
+};

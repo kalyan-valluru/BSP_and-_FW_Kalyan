@@ -1,0 +1,13 @@
+{
+  "artifact": "dtb",
+  "path": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\workspace\\test_nv_gic_1787056734386\\system.dtb",
+  "compiler": "dtc",
+  "compilerSource": "configured",
+  "compilerVersion": "1.7.0",
+  "input": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\workspace\\test_nv_gic_1787056734386\\system.dts",
+  "output": "C:\\Users\\Administrator\\Desktop\\GenAi-Baremetal-Linux-2.0-agent\\backend\\workspace\\test_nv_gic_1787056734386\\system.dtb",
+  "exitCode": 0,
+  "fileSize": 974,
+  "magicValid": true,
+  "generatedAt": "2026-08-18T12:38:54.444Z"
+}

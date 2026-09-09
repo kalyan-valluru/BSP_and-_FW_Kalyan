@@ -1,0 +1,16 @@
+[
+  {
+    "pinNumber": "A1",
+    "pinName": "PAD_UART1_TX",
+    "signalName": "UART1_TX",
+    "ioType": "OUTPUT",
+    "provenance": {
+      "document": "nvidia_jetson_orin_nx_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "NVIDIA",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "processor": "ZEDBOARD",
+  "domains": [
+    {
+      "domainName": "SYS_CLK_ROOT",
+      "nominalFrequencyHz": 400000000,
+      "sourceType": "PLL",
+      "provenance": {
+        "document": "zedboard_TRM.pdf",
+        "documentType": "TRM",
+        "vendor": "GENERIC",
+        "chapter": "System Overview",
+        "parser": "trmParser",
+        "confidence": 1
+      }
+    }
+  ]
+}

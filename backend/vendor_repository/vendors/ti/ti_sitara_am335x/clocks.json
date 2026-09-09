@@ -1,0 +1,18 @@
+{
+  "processor": "TI_SITARA_AM335X",
+  "domains": [
+    {
+      "domainName": "SYS_CLK_ROOT",
+      "nominalFrequencyHz": 400000000,
+      "sourceType": "PLL",
+      "provenance": {
+        "document": "ti_sitara_am335x_TRM.pdf",
+        "documentType": "TRM",
+        "vendor": "TI",
+        "chapter": "System Overview",
+        "parser": "trmParser",
+        "confidence": 1
+      }
+    }
+  ]
+}

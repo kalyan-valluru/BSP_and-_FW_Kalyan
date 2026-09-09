@@ -1,0 +1,16 @@
+[
+  {
+    "irqNumber": 32,
+    "name": "sys_ctrl_IRQ",
+    "peripheralBlock": "sys_ctrl",
+    "controllerType": "GIC",
+    "provenance": {
+      "document": "arm_cortex-a72_TRM.pdf",
+      "documentType": "TRM",
+      "vendor": "GENERIC",
+      "chapter": "System Overview",
+      "parser": "trmParser",
+      "confidence": 1
+    }
+  }
+]
