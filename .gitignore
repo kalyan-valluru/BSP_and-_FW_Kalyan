@@ -30,10 +30,12 @@ backend/.venv/
 *.iso
 *.tar.gz
 *.zip
-*.pdf
+
 vendor_repository/raw/
 backend/vendor_repository/raw/
+workspace/vendor_knowledge/raw/
 workspace/locks/
 workspace/generated/
 workspace/knowledge_import/
 backend/workspace/
+
