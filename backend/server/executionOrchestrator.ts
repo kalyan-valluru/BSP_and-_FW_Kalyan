@@ -315,19 +315,16 @@ async function runStrategyDrivenPipeline(
 ): Promise<CompilationResult> {
   onLog('system', `[INSTRUMENTATION ENTRY] runStrategyDrivenPipeline() | File: executionOrchestrator.ts | Workflow: ${workflow}`);
   const sessionId = metadata.sessionId || `sess_${Date.now()}`;
-  const boardConfig = detectBoardConfig(metadata.processorName || presetId || 'Zynq', metadata.architecture);
+  const boardConfig = detectBoardConfig(metadata.processorName || presetId, metadata.architecture);
   onLog('system', `[SYSTEM] RAG: Detected board configuration: ${boardConfig.vendor} ${boardConfig.soc} (${boardConfig.processor})`);
 
   const toolchainRes = resolveToolchain(
     boardConfig.processor,
-    boardConfig.architecture || metadata.architecture || 'ARM',
-    metadata.fpgaDevice || 'xc7z020'
+    boardConfig.architecture || metadata.architecture || '',
+    metadata.fpgaDevice || metadata.fpgaPart || ''
   );
 
   let workspace = path.join(process.cwd(), 'workspace', 'generated', 'projects', sessionId);
-  if (process.platform === 'win32') {
-    workspace = path.join('C:\\', 'temp_bsp', sessionId);
-  }
 
   onLog("system", `[DEBUG] uploadedFileNames = ${JSON.stringify(uploadedFileNames)}`);
   onLog("system", `[DEBUG] metadata = ${JSON.stringify(metadata)}`);
