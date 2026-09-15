@@ -1,0 +1,28 @@
+name: Production Readiness Gate
+
+on:
+  push:
+    branches: [main, realtime-production-upgrade]
+  pull_request:
+    branches: [main]
+
+jobs:
+  application-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Frontend build
+        run: npm run build
+      - name: Fabrication/default audit
+        run: npm run production:audit
