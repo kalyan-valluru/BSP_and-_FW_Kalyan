@@ -557,14 +557,14 @@ async function runAIHardwareUnderstandingPipeline(
     onLog('system', '[PROGRESS] PHASE: ocr');
     onLog('info', `[OCR] Running page scanner on uploaded documents: ${uploadedFileNames.join(', ')}...`);
     await sleep(800);
-    onLog('success', '[SUCCESS] OCR extraction complete. Mapped peripheral tables and annotations.');
+    onLog('info', '[OCR] Consuming verified OCR results produced by the document-ingestion stage.');
 
     // Step 2: Vision Analysis
     if (signal?.aborted) throw new Error('Aborted');
     onLog('system', '[PROGRESS] PHASE: vision_analysis');
     onLog('info', '[VISION] Running layout Vision Model (Gemini Vision) on board graphics... ');
     await sleep(900);
-    onLog('success', '[SUCCESS] Vision parser identified pin mappings and bus topologies.');
+    onLog('info', '[VISION] Consuming verified Vision results produced by the document-ingestion stage.');
 
     // Step 3: Processor Detection
     if (signal?.aborted) throw new Error('Aborted');
@@ -699,7 +699,7 @@ async function runAIHardwareUnderstandingPipeline(
       onLog('system', '[SYSTEM] Initiating Linux target compilation flow: Device Tree Blob (DTB) and Kernel Driver modules...');
       const structuredHardwareInput = {
         processor: metadata.processorName || halDevice.processor || '',
-        architecture: metadata.architecture || halDevice.architecture || '',
+        architecture: metadata.architecture || '',
         peripherals: halDevice.peripherals || [],
         memory: metadata.memorySize || '',
         interrupts: (halDevice.peripherals || []).map(p => ({ block: p.peripheralBlock, irq: p.interruptNumber })),
@@ -773,16 +773,12 @@ async function runAIHardwareUnderstandingPipeline(
       });
 
       if (!compRes.success) {
-        if (dtcSuccess || (targetFlow as string) === 'linux') {
-          onLog('warning', `[COMPILER NOTICE] Bare-metal compiler '${compiler}' unavailable. Proceeding with verified Linux DTB artifact.`);
-        } else {
-          onLog('error', `[COMPILER FAILURE] Enterprise firmware compilation failed: ${compRes.error}`);
-          return { success: false, error: compRes.error };
-        }
+        onLog('error', `[COMPILER FAILURE] Enterprise firmware compilation failed: ${compRes.error}`);
+        return { success: false, error: compRes.error };
       }
 
-      compResSuccess = true;
-      onLog('success', '[SUCCESS] GCC Firmware Compilation completed successfully. Output: firmware.elf');
+      compResSuccess = compRes.success;
+      if (compResSuccess) onLog('success', '[SUCCESS] GCC Firmware Compilation completed successfully. Output: firmware.elf');
     } else {
       compResSuccess = true;
     }
