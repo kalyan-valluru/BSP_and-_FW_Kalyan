@@ -1,0 +1,34 @@
+name: One-time production hardening
+
+on:
+  push:
+    branches: [realtime-production-upgrade]
+
+permissions:
+  contents: write
+
+jobs:
+  harden:
+    if: github.actor == 'kalyan-valluru'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: realtime-production-upgrade
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Apply line-ending-safe hardening
+        run: node scripts/harden-legacy3.mjs
+      - name: Commit hardening changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add backend/server/executionOrchestrator.ts server/index.ts
+          if git diff --cached --quiet; then
+            echo "No hardening changes required."
+          else
+            git commit -m "fix: remove remaining runtime defaults"
+            git push origin realtime-production-upgrade
+          fi
