@@ -471,8 +471,9 @@ async function runStrategyDrivenPipeline(
     const buildDir = path.join(workspace, 'build');
     const reportsDir = path.join(workspace, 'reports');
     const bspDest = path.join(workspace, 'bsp');
-    const procNameVal = ctx.state.procName || 'ps7_cortexa9_0';
-    const isZynq7000Val = ctx.state.isZynq7000 !== false;
+    const procNameVal = ctx.state.procName || metadata.processorName || '';
+    if (!procNameVal) throw new Error('Verified processor identity is required for artifact collection.');
+    const isZynq7000Val = ctx.state.isZynq7000 === true;
 
     if (resolvedStrategy.metadata.strategyId === 'amd-xilinx') {
       const bspSrc = path.join(buildDir, 'vitis_ws', 'my_platform', procNameVal, 'standalone_domain', 'bsp', procNameVal);
@@ -501,7 +502,7 @@ async function runStrategyDrivenPipeline(
       targetFlow,
       processor: metadata.processorName || caps.processorFamily || toolchainRes.capabilities.processorFamily,
       vendor: resolvedStrategy.metadata.vendor,
-      architecture: metadata.architecture || 'ARM Cortex-A9',
+      architecture: metadata.architecture || caps.architecture || '',
       toolchain: resolvedStrategy.metadata.supportedToolchains[0] || toolchainRes.toolchain,
       procName: procNameVal,
       isZynq7000: isZynq7000Val,
@@ -569,7 +570,8 @@ async function runAIHardwareUnderstandingPipeline(
     if (signal?.aborted) throw new Error('Aborted');
     onLog('system', '[PROGRESS] PHASE: processor_detection');
     const pid = (presetId || '').toLowerCase();
-    const architecture = pid.includes('microblaze') ? 'MicroBlaze' : (pid.includes('stm32') ? 'STM32' : (pid.includes('raspberry') || pid.includes('cm4') || pid.includes('bcm2711') ? 'ARM Cortex-A72 (BCM2711)' : (metadata.processorName || 'ARM Cortex-A9')));
+    const architecture = String(metadata.architecture || metadata.processorName || '').trim();
+    if (!architecture) throw new Error('Hardware understanding requires verified processor and architecture data.');
     onLog('info', `[PROCESSOR] Core processor detected: ${architecture}`);
     await sleep(600);
 
@@ -593,16 +595,16 @@ async function runAIHardwareUnderstandingPipeline(
     onLog('system', '[PROGRESS] PHASE: hal_generation');
     onLog('info', '[HAL] Instantiating HAL Device model from configuration...');
     const halDevice = mapToHALDevice({
-      boardName: presetId || 'AI Board',
+      boardName: metadata.boardName || presetId || '',
       processor: architecture,
-      architecture: (presetId || '').toLowerCase().includes('microblaze') ? 'MicroBlaze' : 'ARM',
+      architecture: metadata.architecture || halDevice.architecture || '',
       peripherals: peripherals.map(p => ({
         name: p.peripheralBlock,
         baseAddress: p.baseAddress,
-        driverName: p.driverName || 'N/A',
+        driverName: p.driverName || '',
         pins: p.physicalPinMapping ? [p.physicalPinMapping] : [],
-        clockSource: p.clockSource || 'FCLK0',
-        clockFrequency: p.clockFrequency || '100 MHz'
+        clockSource: p.clockSource || '',
+        clockFrequency: p.clockFrequency || ''
       }))
     });
     await fs.writeFile(path.join(workspace, 'hal_device.json'), JSON.stringify(halDevice, null, 2));
@@ -640,8 +642,8 @@ async function runAIHardwareUnderstandingPipeline(
         hkl: {
           processor: metadata.processorName || halDevice.processor,
           fpgaPart: metadata.fpgaDevice || (presetId.includes('mpsoc') ? 'xczu3eg-sbva484-1-e' : 'xc7z020clg400-1'),
-          clock: '100MHz',
-          clockFrequency: '100MHz',
+          clock: metadata.clockFrequency || '',
+          clockFrequency: metadata.clockFrequency || '',
           peripherals: halDevice.peripherals,
           pinMappings: metadata.pinMappings,
         },
@@ -913,10 +915,10 @@ async function runHardwareSpecAnalysisPipeline(
       peripherals: peripherals.map(p => ({
         name: p.peripheralBlock,
         baseAddress: p.baseAddress,
-        driverName: p.driverName || 'N/A',
+        driverName: p.driverName || '',
         pins: p.physicalPinMapping ? [p.physicalPinMapping] : [],
-        clockSource: p.clockSource || 'FCLK0',
-        clockFrequency: p.clockFrequency || '100 MHz'
+        clockSource: p.clockSource || '',
+        clockFrequency: p.clockFrequency || ''
       }))
     });
     await fs.writeFile(path.join(workspace, 'hal_device.json'), JSON.stringify(halDevice, null, 2));
