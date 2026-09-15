@@ -439,15 +439,15 @@ app.post('/api/hal/validate-simulate-generate', (req: Request, res: Response) =>
       validationResult,
       metrics: {
         engineeringScore: validationResult.readiness,
-        hardwareConfidence: validationResult.qualityMetrics.hardwareCompleteness.score * 6.6,
-        firmwareReadiness: validationResult.qualityMetrics.driverCompleteness.score * 6.6,
-        linuxReadiness: validationResult.targetFlow === 'bare_metal' ? 100 : 85,
-        compilationReadiness: validationResult.qualityMetrics.vivadoDrcQuality.score * 5,
-        simulationReadiness: simulationConfigs.renodeRepl ? 100 : 0,
-        documentationScore: 100,
+        hardwareConfidence: validationResult.qualityMetrics.hardwareCompleteness.score,
+        firmwareReadiness: validationResult.qualityMetrics.driverCompleteness.score,
+        linuxReadiness: validationResult.targetFlow === 'bare_metal' ? 0 : validationResult.readiness,
+        compilationReadiness: validationResult.qualityMetrics.vivadoDrcQuality.score,
+        simulationReadiness: 0,
+        documentationScore: 0,
         validationScore: validationResult.readiness,
         riskScore: validationResult.summary.criticalErrors * 30 + validationResult.summary.totalWarnings * 2,
-        coverageScore: 100
+        coverageScore: validationResult.qualityMetrics.hardwareCompleteness.score
       }
     });
   } catch (error: any) {
@@ -481,7 +481,7 @@ app.post('/api/hal/download-package', (req: Request, res: Response) => {
     ].join('\n');
 
     const manifest = {
-      sessionId: req.body.sessionId || 'dev_session',
+      sessionId: req.body.sessionId || crypto.randomUUID(),
       boardName: halDevice.boardName,
       processor: halDevice.processor,
       architecture: halDevice.architecture,
@@ -2634,15 +2634,15 @@ app.post('/api/hal/validate-simulate-generate', (req: Request, res: Response) =>
       validationResult,
       metrics: {
         engineeringScore: validationResult.readiness,
-        hardwareConfidence: validationResult.qualityMetrics.hardwareCompleteness.score * 6.6,
-        firmwareReadiness: validationResult.qualityMetrics.driverCompleteness.score * 6.6,
-        linuxReadiness: validationResult.targetFlow === 'bare_metal' ? 100 : 85,
-        compilationReadiness: validationResult.qualityMetrics.vivadoDrcQuality.score * 5,
-        simulationReadiness: simulationConfigs.renodeRepl ? 100 : 0,
-        documentationScore: 100,
+        hardwareConfidence: validationResult.qualityMetrics.hardwareCompleteness.score,
+        firmwareReadiness: validationResult.qualityMetrics.driverCompleteness.score,
+        linuxReadiness: validationResult.targetFlow === 'bare_metal' ? 0 : validationResult.readiness,
+        compilationReadiness: validationResult.qualityMetrics.vivadoDrcQuality.score,
+        simulationReadiness: 0,
+        documentationScore: 0,
         validationScore: validationResult.readiness,
         riskScore: validationResult.summary.criticalErrors * 30 + validationResult.summary.totalWarnings * 2,
-        coverageScore: 100
+        coverageScore: validationResult.qualityMetrics.hardwareCompleteness.score
       }
     });
   } catch (error: any) {
@@ -2676,7 +2676,7 @@ app.post('/api/hal/download-package', (req: Request, res: Response) => {
     ].join('\n');
 
     const manifest = {
-      sessionId: req.body.sessionId || 'dev_session',
+      sessionId: req.body.sessionId || crypto.randomUUID(),
       boardName: halDevice.boardName,
       processor: halDevice.processor,
       architecture: halDevice.architecture,
