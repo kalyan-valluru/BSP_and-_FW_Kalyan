@@ -19,8 +19,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Apply hardening codemod
-        run: node scripts/harden-legacy.mjs
+      - name: Apply hardening codemods
+        run: |
+          node scripts/harden-legacy.mjs
+          node scripts/harden-legacy2.mjs
       - name: Commit hardening changes
         run: |
           git config user.name "github-actions[bot]"
@@ -29,6 +31,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No hardening changes required."
           else
-            git commit -m "fix: remove legacy production hardcoding"
+            git commit -m "fix: remove remaining runtime defaults"
             git push origin realtime-production-upgrade
           fi
