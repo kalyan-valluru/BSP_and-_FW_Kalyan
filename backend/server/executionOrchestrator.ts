@@ -902,11 +902,12 @@ async function runHardwareSpecAnalysisPipeline(
     onLog('system', '[PROGRESS] PHASE: hal_generation');
     onLog('info', '[HAL] Emitting HAL API bindings...');
     const pidStr = (presetId || '').toLowerCase();
-    const architecture = pidStr.includes('microblaze') ? 'MicroBlaze' : pidStr.includes('stm32') ? 'STM32' : 'ARM Cortex-A9';
+    const architecture = String(metadata.architecture || metadata.processorName || '').trim();
+    if (!architecture) throw new Error('Specification analysis requires verified processor and architecture data.');
     const halDevice = mapToHALDevice({
-      boardName: presetId || 'Spec Board',
+      boardName: metadata.boardName || presetId || '',
       processor: architecture,
-      architecture: pidStr.includes('microblaze') ? 'MicroBlaze' : 'ARM',
+      architecture: metadata.architecture || '',
       peripherals: peripherals.map(p => ({
         name: p.peripheralBlock,
         baseAddress: p.baseAddress,
@@ -959,7 +960,8 @@ async function runHardwareSpecAnalysisPipeline(
       onLog('system', '[SYSTEM] Skip bare-metal firmware compilation (Target Flow is Linux-only).');
     } else {
       onLog('info', '[COMPILER] Running cross-compiler on bare-metal firmware.c...');
-      const compiler = process.env.GCC_PATH || TOOL_PATHS.gccAarch32 || 'arm-none-eabi-gcc';
+      const compiler = process.env.GCC_PATH || (TOOL_PATHS as any).gccAarch32 || '';
+      if (!compiler) throw new Error('No configured cross-compiler is available for this target.');
       const mainPath = path.join(workspace, 'main.c');
       const compRes = await new Promise<{ success: boolean; error?: string }>((resolve) => {
         const proc = spawn(compiler, ['-O2', '-Wall', '--specs=nosys.specs', mainPath, '-o', firmwareElfPath], { shell: false });
@@ -968,6 +970,8 @@ async function runHardwareSpecAnalysisPipeline(
         proc.on('close', (code: number) => {
           if (code === 0) resolve({ success: true });
           else {
+            resolve({ success: false, error: `Cross-compiler exited with code ${code}: ${errStr}` });
+            return;
             const hostGcc = spawn('gcc', ['-O2', '-Wall', mainPath, '-o', firmwareElfPath], { shell: false });
             hostGcc.on('close', (hCode: number) => {
               if (hCode === 0) resolve({ success: true });
@@ -986,8 +990,8 @@ async function runHardwareSpecAnalysisPipeline(
         });
       });
       if (!compRes.success) {
-        onLog('warning', `[COMPILER SKIPPED] Target cross-compiler toolchain unavailable (${compRes.error}). Emitting validated C source & binary placeholder.`);
-        await fs.writeFile(firmwareElfPath, Buffer.from('FIRMWARE_BINARY_PLACEHOLDER'));
+        onLog('error', `[COMPILER FAILURE] Target cross-compiler unavailable: ${compRes.error}`);
+        return { success: false, error: compRes.error };
       } else {
         onLog('success', '[SUCCESS] GCC Cross-Compilation successful. ELF binary linked.');
       }
@@ -998,7 +1002,8 @@ async function runHardwareSpecAnalysisPipeline(
       : firmwareElfPath;
 
     if (targetFlow === 'linux') {
-      await fs.writeFile(finalResultPath, deviceTreeCode || '/* Mock Linux Device Tree */');
+      if (!deviceTreeCode?.trim()) throw new Error('Linux workflow requires validated Device Tree source or a real generated DTS artifact.');
+      await fs.writeFile(finalResultPath, deviceTreeCode);
     }
 
     return { success: true, binaryPath: finalResultPath };
@@ -1047,11 +1052,11 @@ async function runDeviceTreePipeline(
     onLog('system', '[PROGRESS] PHASE: compile_dts');
 
     const structuredHardwareInput = {
-      processor: metadata.processorName || presetId,
+      processor: metadata.processorName || '',
       architecture: metadata.architecture || '',
       peripherals: (peripherals && peripherals.length > 0) ? peripherals : (metadata.hkl?.peripherals || []),
       memory: metadata.memorySize || '',
-      board: metadata.boardName || presetId,
+      board: metadata.boardName || '',
       vendor: metadata.vendor || ''
     };
 
