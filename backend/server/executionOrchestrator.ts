@@ -1051,7 +1051,7 @@ async function runDeviceTreePipeline(
 
     const structuredHardwareInput = {
       processor: metadata.processorName || presetId,
-      architecture: metadata.architecture || 'ARM',
+      architecture: metadata.architecture || '',
       peripherals: (peripherals && peripherals.length > 0) ? peripherals : (metadata.hkl?.peripherals || []),
       memory: metadata.memorySize || '512MB',
       board: metadata.boardName || presetId,
