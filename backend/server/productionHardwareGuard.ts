@@ -22,6 +22,9 @@ const HARDWARE_FIELDS = [
   'memorySize', 'bus', 'driverName'
 ] as const;
 
+const PERIPHERAL_FIELDS = ['baseAddress', 'interruptNumber', 'physicalPinMapping', 'clockFrequency', 'bus', 'driverName'] as const;
+const authoritativeTypes = new Set(['native_project', 'vendor_document', 'project_document']);
+
 function meaningful(value: unknown): boolean {
   if (value === undefined || value === null) return false;
   if (typeof value === 'string') {
@@ -44,23 +47,35 @@ export function normalizeEvidence(input: unknown): HardwareEvidenceRef[] {
 }
 
 export function hasAuthoritativeEvidence(evidence: HardwareEvidenceRef[]): boolean {
-  return evidence.some(e => e.sourceType === 'native_project' || e.sourceType === 'vendor_document' || e.sourceType === 'project_document');
+  return evidence.some(e => authoritativeTypes.has(e.sourceType));
+}
+
+function evidenceForField(value: any, field: string): HardwareEvidenceRef[] {
+  const all = normalizeEvidence(value?.evidence || value?.provenance || []);
+  return all.filter(e => {
+    const text = `${e.excerpt || ''} ${e.locator || ''}`.toLowerCase();
+    return !text || text.includes(field.toLowerCase()) || e.sourceType === 'native_project';
+  });
 }
 
 export function verifyHardwareClaims(metadata: any, peripherals: any[] = []): { status: HardwareVerificationStatus; missing: string[]; conflicts: string[] } {
   const missing: string[] = [];
   const conflicts: string[] = [];
-  const rootEvidence = normalizeEvidence(metadata?.evidence || metadata?.provenance || []);
 
   for (const field of HARDWARE_FIELDS) {
-    if (['baseAddress', 'interruptNumber', 'physicalPinMapping', 'clockFrequency', 'driverName', 'bus'].includes(field)) continue;
-    if (meaningful(metadata?.[field]) && !hasAuthoritativeEvidence(rootEvidence)) missing.push(field);
+    const value = metadata?.[field];
+    if (!meaningful(value)) continue;
+    const evidence = evidenceForField(metadata, field);
+    if (!hasAuthoritativeEvidence(evidence)) missing.push(field);
   }
 
   for (const p of Array.isArray(peripherals) ? peripherals : []) {
-    const evidence = normalizeEvidence(p?.evidence || p?.provenance || []);
-    if (meaningful(p?.baseAddress) && !hasAuthoritativeEvidence(evidence)) conflicts.push(`${p.peripheralBlock || p.name || 'peripheral'}: baseAddress has no authoritative evidence`);
-    if (meaningful(p?.interruptNumber) && !hasAuthoritativeEvidence(evidence)) conflicts.push(`${p.peripheralBlock || p.name || 'peripheral'}: interruptNumber has no authoritative evidence`);
+    const name = p?.peripheralBlock || p?.name || 'peripheral';
+    for (const field of PERIPHERAL_FIELDS) {
+      if (!meaningful(p?.[field])) continue;
+      const evidence = evidenceForField(p, field);
+      if (!hasAuthoritativeEvidence(evidence)) conflicts.push(`${name}: ${field} has no authoritative evidence`);
+    }
   }
 
   if (conflicts.length || missing.length) return { status: 'REQUIRES_REVIEW', missing, conflicts };
