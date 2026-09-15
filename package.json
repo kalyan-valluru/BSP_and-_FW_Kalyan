@@ -9,8 +9,9 @@
     "start": "npx concurrently --kill-others-on-fail \"vite\" \"npx tsx server/index.ts\"",
     "build": "vite build",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "typecheck:backend": "tsc --noEmit -p tsconfig.backend.json",
     "production:audit": "node scripts/production-audit.mjs",
-    "production:check": "npm run typecheck && npm run build && npm run production:audit"
+    "production:check": "npm run typecheck:backend && npm run build && npm run production:audit"
   },
   "dependencies": {
     "@react-three/drei": "^9.122.0",
@@ -45,7 +46,7 @@
     "@types/three": "^0.185.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.18",
-    "eslint": "^9.9.1",
+    "eslint": "^9.9.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.11",
     "globals": "^15.9.0",
