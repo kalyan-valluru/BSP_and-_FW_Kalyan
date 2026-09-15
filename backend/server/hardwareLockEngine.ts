@@ -18,6 +18,14 @@ export interface HardwareLock {
   peripherals: HardwarePeripheral[];
 }
 
+function requireHardwareIdentity(value: unknown, field: string): string {
+  const normalized = String(value ?? '').trim();
+  if (!normalized || /^(unknown|generic|target|n\/a|na)$/i.test(normalized)) {
+    throw new Error(`Cannot create hardware lock: verified ${field} is missing.`);
+  }
+  return normalized;
+}
+
 export function computeHardwareModelHash(peripherals: HardwarePeripheral[], board: string, processor: string): string {
   const immutableContent = peripherals.map(p => ({
     name: p.peripheralBlock,
@@ -40,12 +48,23 @@ export async function createHardwareLock(
   targetFlow: 'bare_metal' | 'linux' | 'both',
   sessionContext: { sessionId: string; boardName?: string; processorName?: string; vendor?: string; architecture?: string; evidenceReferences?: string[] }
 ): Promise<HardwareLock> {
-  const periphs: HardwarePeripheral[] = Array.isArray(hkl.peripherals) ? hkl.peripherals : [];
-  const board = sessionContext.boardName || hkl.boardName || 'Target Board';
-  const processor = sessionContext.processorName || hkl.processorName || 'Target Processor';
-  const vendor = sessionContext.vendor || hkl.vendor || 'Generic Vendor';
-  const architecture = sessionContext.architecture || hkl.architecture || 'ARM';
-  const memory = hkl.memorySize || 'Standard RAM';
+  const periphs: HardwarePeripheral[] = Array.isArray(hkl?.peripherals) ? hkl.peripherals : [];
+  if (!periphs.length) {
+    throw new Error('Cannot create hardware lock: no verified peripherals were supplied.');
+  }
+
+  const board = requireHardwareIdentity(sessionContext.boardName || hkl?.boardName, 'board');
+  const processor = requireHardwareIdentity(sessionContext.processorName || hkl?.processorName, 'processor');
+  const vendor = requireHardwareIdentity(sessionContext.vendor || hkl?.vendor, 'vendor');
+  const architecture = requireHardwareIdentity(sessionContext.architecture || hkl?.architecture, 'architecture');
+  const memory = requireHardwareIdentity(hkl?.memorySize, 'memory size');
+  const evidenceReferences = Array.isArray(sessionContext.evidenceReferences)
+    ? sessionContext.evidenceReferences.filter(Boolean).map(String)
+    : [];
+
+  if (!evidenceReferences.length) {
+    throw new Error('Cannot create hardware lock: no evidence references were supplied.');
+  }
 
   const hash = computeHardwareModelHash(periphs, board, processor);
   const lockId = `HWLOCK-${Date.now()}-${hash.slice(0, 8)}`;
@@ -61,7 +80,7 @@ export async function createHardwareLock(
     targetFlow,
     locked: true,
     lockedAt: new Date().toISOString(),
-    evidenceReferences: sessionContext.evidenceReferences || ['Authoritative Hardware Evidence'],
+    evidenceReferences,
     peripherals: periphs
   };
 
@@ -85,36 +104,19 @@ export function validateHardwareLockImmutability(
 
   for (const candidate of candidatePeripherals) {
     const lockedPeriph = lock.peripherals.find(p => p.peripheralBlock === candidate.peripheralBlock || p.id === candidate.id);
-    if (!lockedPeriph) {
-      continue; // New candidate peripherals require review, but don't break existing locked ones
-    }
+    if (!lockedPeriph) continue;
 
     if (lockedPeriph.baseAddress && candidate.baseAddress && lockedPeriph.baseAddress !== candidate.baseAddress) {
-      return {
-        valid: false,
-        conflictReason: `Attempted modification of locked MMIO baseAddress for '${candidate.peripheralBlock}' (Locked: ${lockedPeriph.baseAddress}, Candidate: ${candidate.baseAddress})`
-      };
+      return { valid: false, conflictReason: `Attempted modification of locked MMIO baseAddress for '${candidate.peripheralBlock}' (Locked: ${lockedPeriph.baseAddress}, Candidate: ${candidate.baseAddress})` };
     }
-
     if ((lockedPeriph as any).deviceAddress && (candidate as any).deviceAddress && (lockedPeriph as any).deviceAddress !== (candidate as any).deviceAddress) {
-      return {
-        valid: false,
-        conflictReason: `Attempted modification of locked deviceAddress for '${candidate.peripheralBlock}' (Locked: ${(lockedPeriph as any).deviceAddress}, Candidate: ${(candidate as any).deviceAddress})`
-      };
+      return { valid: false, conflictReason: `Attempted modification of locked deviceAddress for '${candidate.peripheralBlock}' (Locked: ${(lockedPeriph as any).deviceAddress}, Candidate: ${(candidate as any).deviceAddress})` };
     }
-
     if (lockedPeriph.interruptNumber !== null && lockedPeriph.interruptNumber !== undefined && candidate.interruptNumber !== lockedPeriph.interruptNumber) {
-      return {
-        valid: false,
-        conflictReason: `Attempted modification of locked IRQ for '${candidate.peripheralBlock}' (Locked: ${lockedPeriph.interruptNumber}, Candidate: ${candidate.interruptNumber})`
-      };
+      return { valid: false, conflictReason: `Attempted modification of locked IRQ for '${candidate.peripheralBlock}' (Locked: ${lockedPeriph.interruptNumber}, Candidate: ${candidate.interruptNumber})` };
     }
-
     if (lockedPeriph.type && candidate.type && lockedPeriph.type !== candidate.type) {
-      return {
-        valid: false,
-        conflictReason: `Attempted modification of locked peripheral type for '${candidate.peripheralBlock}' (Locked: ${lockedPeriph.type}, Candidate: ${candidate.type})`
-      };
+      return { valid: false, conflictReason: `Attempted modification of locked peripheral type for '${candidate.peripheralBlock}' (Locked: ${lockedPeriph.type}, Candidate: ${candidate.type})` };
     }
   }
 
