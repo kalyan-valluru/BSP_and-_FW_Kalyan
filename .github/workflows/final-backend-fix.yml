@@ -22,6 +22,7 @@ jobs:
       - name: Harden backend
         run: |
           node scripts/harden-legacy3.mjs
+          node scripts/harden-spec.mjs
           node scripts/fix-index-syntax.mjs
       - name: Commit backend fixes safely
         run: |
