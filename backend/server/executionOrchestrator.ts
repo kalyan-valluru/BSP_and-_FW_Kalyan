@@ -582,9 +582,8 @@ async function runAIHardwareUnderstandingPipeline(
     await sleep(700);
 
     // Write base files
-    const effectiveCode = (bareMetalCode && bareMetalCode.length > 50 && !bareMetalCode.includes('// TI Sitara Peripheral Initialization'))
-      ? bareMetalCode
-      : ((presetId || '').toLowerCase().includes('sitara') || (presetId || '').toLowerCase().includes('am335') ? TI_SITARA_DEFAULT_C_CODE : bareMetalCode);
+    const effectiveCode = bareMetalCode || '';
+    if ((targetFlow === 'bare_metal' || targetFlow === 'both') && !effectiveCode.trim()) throw new Error('Bare-metal generation requires validated/generated source code; synthetic platform code is disabled.');
     await fs.mkdir(workspace, { recursive: true });
     await fs.writeFile(path.join(workspace, 'main.c'), effectiveCode);
     await fs.writeFile(path.join(workspace, 'system.dts'), deviceTreeCode || '/* no dts */');
@@ -597,7 +596,7 @@ async function runAIHardwareUnderstandingPipeline(
     const halDevice = mapToHALDevice({
       boardName: metadata.boardName || presetId || '',
       processor: architecture,
-      architecture: metadata.architecture || halDevice.architecture || '',
+      architecture: metadata.architecture || '',
       peripherals: peripherals.map(p => ({
         name: p.peripheralBlock,
         baseAddress: p.baseAddress,
@@ -641,7 +640,7 @@ async function runAIHardwareUnderstandingPipeline(
       const vivadoRes = await VivadoProjectGenerator.generateAndBuild({
         hkl: {
           processor: metadata.processorName || halDevice.processor,
-          fpgaPart: metadata.fpgaDevice || (presetId.includes('mpsoc') ? 'xczu3eg-sbva484-1-e' : 'xc7z020clg400-1'),
+          fpgaPart: metadata.fpgaDevice || metadata.fpgaPart || '',
           clock: metadata.clockFrequency || '',
           clockFrequency: metadata.clockFrequency || '',
           peripherals: halDevice.peripherals,
@@ -699,16 +698,16 @@ async function runAIHardwareUnderstandingPipeline(
     if (targetFlow === 'linux' || targetFlow === 'both') {
       onLog('system', '[SYSTEM] Initiating Linux target compilation flow: Device Tree Blob (DTB) and Kernel Driver modules...');
       const structuredHardwareInput = {
-        processor: metadata.processorName || halDevice.processor || 'TI Sitara AM335x',
-        architecture: metadata.architecture || halDevice.architecture || 'ARM Cortex-A8',
+        processor: metadata.processorName || halDevice.processor || '',
+        architecture: metadata.architecture || halDevice.architecture || '',
         peripherals: halDevice.peripherals || [],
-        memory: metadata.memorySize || '512MB',
+        memory: metadata.memorySize || '',
         interrupts: (halDevice.peripherals || []).map(p => ({ block: p.peripheralBlock, irq: p.interruptNumber })),
-        clocks: metadata.clockSources || ['100MHz'],
+        clocks: metadata.clockSources || [],
         pinMappings: metadata.pinMappings || [],
         buses: metadata.busInterfaces || [],
-        board: halDevice.boardName || 'TI Sitara AM335x EVM',
-        vendor: metadata.vendor || 'Texas Instruments'
+        board: halDevice.boardName || metadata.boardName || '',
+        vendor: metadata.vendor || ''
       };
 
       const dtcRes = await generateAndCompileDeviceTreeWithRepair(
@@ -1055,7 +1054,7 @@ async function runDeviceTreePipeline(
       processor: metadata.processorName || presetId,
       architecture: metadata.architecture || '',
       peripherals: (peripherals && peripherals.length > 0) ? peripherals : (metadata.hkl?.peripherals || []),
-      memory: metadata.memorySize || '512MB',
+      memory: metadata.memorySize || '',
       board: metadata.boardName || presetId,
       vendor: metadata.vendor || ''
     };
