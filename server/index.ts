@@ -125,7 +125,8 @@ process.on('uncaughtException', (err: any) => {
 import { optionalJwtMiddleware } from './authMiddleware';
 
 const app = express();
-app.use(cors());
+const configuredOrigins = (process.env.CORS_ORIGINS || '').split(',').map(v => v.trim()).filter(Boolean);
+app.use(cors({ origin: configuredOrigins.length ? configuredOrigins : false, credentials: true }));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(optionalJwtMiddleware);
@@ -136,8 +137,10 @@ app.get('/health', (req: Request, res: Response) => {
   res.json({ status: 'HEALTHY', timestamp: new Date().toISOString(), uptimeSeconds: process.uptime() });
 });
 
-app.get('/readiness', (req: Request, res: Response) => {
-  res.json({ status: 'READY', vkrStorage: 'ONLINE', hklEngine: 'ACTIVE', version: '25.03' });
+app.get('/readiness', async (_req: Request, res: Response) => {
+  const hasGeminiKey = Boolean(process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY);
+  const ready = hasGeminiKey;
+  res.status(ready ? 200 : 503).json({ status: ready ? 'READY' : 'NOT_READY', aiProviderConfigured: hasGeminiKey, uptimeSeconds: process.uptime() });
 });
 
 app.get('/version', (req: Request, res: Response) => {
@@ -155,10 +158,10 @@ process_cpu_seconds_total ${process.cpuUsage().user / 1000000}
 process_resident_memory_bytes ${memUsage.rss}
 # HELP vkr_peripherals_indexed Total peripheral blocks indexed in VKR.
 # TYPE vkr_peripherals_indexed gauge
-vkr_peripherals_indexed 184
+vkr_peripherals_indexed 0
 # HELP vkr_readiness_score Repository Readiness Quality Score.
 # TYPE vkr_readiness_score gauge
-vkr_readiness_score 97.2
+vkr_readiness_score 0
 `);
 });
 
@@ -177,22 +180,7 @@ app.use((err: any, req: Request, res: Response, next: any) => {
 app.get('/api/presets', async (_req: Request, res: Response) => {
   let list = hardwarePresets.map(p => ({ id: p.id, name: p.name, vendor: p.vendor }));
   try {
-    const fastRes = await fetch('http://13.233.63.82:3002/api/support/packages');
-    if (fastRes.ok) {
-      const data = await fastRes.json();
-      if (data.success && Array.isArray(data.presets)) {
-        const dynamicList = data.presets.map((p: any) => ({
-          id: p.id,
-          name: p.name,
-          vendor: p.vendor,
-          isDynamic: true,
-        }));
-        list = [...list, ...dynamicList];
-      }
-    }
-  } catch (_err) {
-    // fastapi service offline fallback
-  }
+    
   res.json(list);
 });
 
@@ -203,7 +191,7 @@ const hardwareModelStore = new Map<string, any>();
 app.post('/api/pipeline/run', async (req: Request, res: Response) => {
   const { peripherals, processorName, fileHash, sessionId } = req.body;
 
-  const resolverResult = resolveHardwareKnowledge(peripherals || [], processorName || 'ARM Core');
+  const resolverResult = resolveHardwareKnowledge(peripherals || [], processorName || '');
   let hklPayload = buildHKL({
     peripherals: resolverResult.resolvedPeripherals,
     processorName,
@@ -286,7 +274,7 @@ app.post('/api/pipeline/run', async (req: Request, res: Response) => {
 
 app.post('/api/hkl/validate', async (req: Request, res: Response) => {
   const { peripherals, processorName } = req.body;
-  const report = runValidation(peripherals, processorName || 'ARM Core');
+  const report = runValidation(peripherals, processorName || '');
 
   // Zone 4: Enrich failing checks with AI engineering narratives
   try {
@@ -301,7 +289,7 @@ app.post('/api/hkl/validate', async (req: Request, res: Response) => {
           clockSource: p.clockSource,
           driverName: p.driverName
         })),
-        processorName || 'ARM Core'
+        processorName || ''
       );
       const narrativeMap = new Map(narratives.map(n => [n.id, n]));
       for (const check of report.checks) {
@@ -331,14 +319,14 @@ app.post('/api/kb/lookup', (req: Request, res: Response) => {
 // Phase 3 API endpoints
 app.post('/api/hil/run', (req: Request, res: Response) => {
   const { board, binaryPath } = req.body;
-  const result = runHardwareInTheLoopValidation(board || 'ZedBoard', binaryPath || '/mock/firmware.elf');
+  const result = runHardwareInTheLoopValidation(board || '', binaryPath || '');
   res.json({ success: true, result });
 });
 
 app.post('/api/regression/run', (req: Request, res: Response) => {
   const { peripherals, processorName } = req.body;
   const count = Array.isArray(peripherals) ? peripherals.length : 0;
-  const results = runRegressionTests(count, processorName || 'ARM Core');
+  const results = runRegressionTests(count, processorName || '');
   res.json({ success: true, results });
 });
 
@@ -400,7 +388,7 @@ app.post('/api/validation/universal', async (req: Request, res: Response) => {
         cSourcePaths: [mainPath],
         elfPath
       },
-      allowSimulatedFallbacks: true
+      allowSimulatedFallbacks: false
     });
 
     res.json({ success: true, report });
@@ -428,7 +416,7 @@ app.post('/api/hal/generate', (req: Request, res: Response) => {
 
 app.post('/api/hal/validate-simulate-generate', (req: Request, res: Response) => {
   try {
-    const resolverResult = resolveHardwareKnowledge(req.body.peripherals || [], req.body.processor || req.body.processorName || 'ARM Core');
+    const resolverResult = resolveHardwareKnowledge(req.body.peripherals || [], req.body.processor || req.body.processorName || '');
     req.body.peripherals = resolverResult.resolvedPeripherals;
 
     const halDevice = mapToHALDevice(req.body);
@@ -449,10 +437,10 @@ app.post('/api/hal/validate-simulate-generate', (req: Request, res: Response) =>
       targetFlow: req.body.targetFlow || 'bare_metal',
       logs: [],
       fileArtifacts: {
-        hasBitstream: true,
-        hasXsa: true,
-        hasBsp: true,
-        hasElf: true,
+        hasBitstream: Boolean(req.body.bitstreamPath && fsSync.existsSync(req.body.bitstreamPath)),
+        hasXsa: Boolean(req.body.xsaPath && fsSync.existsSync(req.body.xsaPath)),
+        hasBsp: Boolean(req.body.bspPath && fsSync.existsSync(req.body.bspPath)),
+        hasElf: Boolean(req.body.elfPath && fsSync.existsSync(req.body.elfPath)),
       }
     });
 
@@ -485,7 +473,7 @@ app.post('/api/hal/validate-simulate-generate', (req: Request, res: Response) =>
 
 app.post('/api/hal/download-package', (req: Request, res: Response) => {
   try {
-    const resolverResult = resolveHardwareKnowledge(req.body.peripherals || [], req.body.processor || req.body.processorName || 'ARM Core');
+    const resolverResult = resolveHardwareKnowledge(req.body.peripherals || [], req.body.processor || req.body.processorName || '');
     req.body.peripherals = resolverResult.resolvedPeripherals;
 
     const halDevice = mapToHALDevice(req.body);
@@ -547,19 +535,7 @@ app.get('/api/presets/:id', async (req: Request, res: Response) => {
 
   // Try looking up in the dynamic Processor Support Packages cache
   try {
-    const fastRes = await fetch('http://13.233.63.82:3002/api/support/packages');
-    if (fastRes.ok) {
-      const data = await fastRes.json();
-      if (data.success && Array.isArray(data.presets)) {
-        const dynamicPreset = data.presets.find((p: any) => p.id === req.params.id);
-        if (dynamicPreset) {
-          return res.json(dynamicPreset);
-        }
-      }
-    }
-  } catch (_err) {
-    // fallback
-  }
+    
 
   res.status(404).json({ error: 'Preset not found' });
 });
@@ -944,7 +920,7 @@ app.post('/api/ai/suggest-fixes', async (req: Request, res: Response) => {
 
     const selfHealingResult = await runIntelligentSelfHealingPipeline(
       peripherals,
-      processorName || 'ARM Core',
+      processorName || '',
       boardName || 'Target Board',
       sessionId || `sess_${Date.now()}`
     );
@@ -977,7 +953,7 @@ app.post('/api/ai/compilation-feedback', async (req: Request, res: Response) => 
       return res.status(400).json({ error: 'buildLogs and peripherals must be arrays' });
     }
     const { patchedPeripherals, fixAppliedDescription, stageToRetry } = processCompilationErrorFeedback(
-      buildLogs, peripherals, processorName || 'ARM Core'
+      buildLogs, peripherals, processorName || ''
     );
     return res.json({ success: true, patchedPeripherals, fixAppliedDescription, stageToRetry });
   } catch (error: any) {

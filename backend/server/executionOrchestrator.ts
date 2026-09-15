@@ -224,12 +224,12 @@ export async function runOrchestratedPipeline(
   const metadata: HardwareModelMetadata = {
     ...baseMeta,
     sessionId,
-    fpgaDevice: canonicalFpgaPart,
-    fpgaPart: canonicalFpgaPart,
-    clockSources: baseMeta.clockSources || hklObj?.clockSources || ['FCLK0=100MHz'],
-    memorySize: baseMeta.memorySize || hklObj?.memory || (isUltraScaleTarget ? '4GB DDR4' : '512MB'),
-    interruptController: baseMeta.interruptController || hklObj?.interruptController || 'axi_intc_0',
-    hklStatus: baseMeta.hklStatus || hklObj?.hklStatus || 'READY',
+    fpgaDevice: canonicalFpgaPart || undefined,
+    fpgaPart: canonicalFpgaPart || undefined,
+    clockSources: baseMeta.clockSources || hklObj?.clockSources || [],
+    memorySize: baseMeta.memorySize || hklObj?.memory || '',
+    interruptController: baseMeta.interruptController || hklObj?.interruptController || '',
+    hklStatus: baseMeta.hklStatus || hklObj?.hklStatus || 'UNVERIFIED',
     hkl: hklObj
   };
 
@@ -248,12 +248,6 @@ export async function runOrchestratedPipeline(
         `[ERROR] ${err}`
       ]
     };
-  }
-
-  // Auto-promote HKL status to READY for execution
-  metadata.hklStatus = 'READY';
-  if (metadata.hkl) {
-    metadata.hkl.hklStatus = 'READY';
   }
 
   // Run full validation and check for critical errors (e.g. V007 Architecture Mismatch)
@@ -284,7 +278,8 @@ export async function runOrchestratedPipeline(
   // Derive runtime metadata dynamically
   const safePresetId = typeof presetId === 'string' ? presetId : '';
   const pLower = safePresetId.toLowerCase();
-  const vendor = metadata.vendor || (pLower.includes('stm32') ? 'STMicroelectronics' : (pLower.includes('sitara') ? 'Texas Instruments' : (pLower.includes('raspberry') || pLower.includes('cm4') || pLower.includes('bcm2711') ? 'Raspberry Pi' : 'AMD Xilinx')));
+  const vendor = String(metadata.vendor || '').trim();
+  if (!vendor) { return { success: false, error: 'Verified vendor identity is required before execution.' }; }
   const processor = metadata.processorName || (pLower.includes('raspberry') || pLower.includes('cm4') ? 'ARM Cortex-A72 (BCM2711)' : (presetId ? presetId : (peripherals[0]?.peripheralBlock ? peripherals[0].peripheralBlock : 'ARM Cortex-A9')));
   const fileListStr = uploadedFileNames.length > 0 ? uploadedFileNames.join(', ') : 'None (Preset/Schema Mode)';
 
