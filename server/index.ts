@@ -177,10 +177,8 @@ app.use((err: any, req: Request, res: Response, next: any) => {
 });
 
 // API: Get all hardware presets
-app.get('/api/presets', async (_req: Request, res: Response) => {
-  let list = hardwarePresets.map(p => ({ id: p.id, name: p.name, vendor: p.vendor }));
-  try {
-    
+app.get('/api/presets', (_req: Request, res: Response) => {
+  const list = hardwarePresets.map(p => ({ id: p.id, name: p.name, vendor: p.vendor }));
   res.json(list);
 });
 
@@ -513,17 +511,10 @@ app.post('/api/hal/download-package', (req: Request, res: Response) => {
 });
 
 // API: Get specific preset by ID
-app.get('/api/presets/:id', async (req: Request, res: Response) => {
+app.get('/api/presets/:id', (req: Request, res: Response) => {
   const preset = hardwarePresets.find(p => p.id === req.params.id);
-  if (preset) {
-    return res.json(preset);
-  }
-
-  // Try looking up in the dynamic Processor Support Packages cache
-  try {
-    
-
-  res.status(404).json({ error: 'Preset not found' });
+  if (preset) return res.json(preset);
+  return res.status(404).json({ error: 'Preset not found' });
 });
 
 // API: Validate and save circuit schema
