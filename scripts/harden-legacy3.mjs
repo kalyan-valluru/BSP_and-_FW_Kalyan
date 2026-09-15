@@ -5,7 +5,6 @@ for (const file of ['backend/server/executionOrchestrator.ts', 'server/index.ts'
   const eol = text.includes('\r\n') ? '\r\n' : '\n';
   text = text.replace(/\r\n/g, '\n');
   const original = text;
-
   const replacements = [
     ["detectBoardConfig(metadata.processorName || presetId || 'Zynq', metadata.architecture)", "detectBoardConfig(metadata.processorName || presetId, metadata.architecture)"],
     ["metadata.fpgaDevice || 'xc7z020'", "metadata.fpgaDevice || metadata.fpgaPart || ''"],
@@ -15,17 +14,24 @@ for (const file of ['backend/server/executionOrchestrator.ts', 'server/index.ts'
     ["const isZynq7000Val = ctx.state.isZynq7000 !== false;", "const isZynq7000Val = ctx.state.isZynq7000 === true;"],
     ["architecture: metadata.architecture || 'ARM Cortex-A9',", "architecture: metadata.architecture || caps.architecture || '',"],
     ["const architecture = pid.includes('microblaze') ? 'MicroBlaze' : (pid.includes('stm32') ? 'STM32' : (pid.includes('raspberry') || pid.includes('cm4') || pid.includes('bcm2711') ? 'ARM Cortex-A72 (BCM2711)' : (metadata.processorName || 'ARM Cortex-A9')));", "const architecture = String(metadata.architecture || metadata.processorName || '').trim();\n    if (!architecture) throw new Error('Hardware understanding requires verified processor and architecture data.');"],
+    ["const effectiveCode = (bareMetalCode && bareMetalCode.length > 50 && !bareMetalCode.includes('// TI Sitara Peripheral Initialization'))\n      ? bareMetalCode\n      : ((presetId || '').toLowerCase().includes('sitara') || (presetId || '').toLowerCase().includes('am335') ? TI_SITARA_DEFAULT_C_CODE : bareMetalCode);", "const effectiveCode = bareMetalCode || '';\n    if ((targetFlow === 'bare_metal' || targetFlow === 'both') && !effectiveCode.trim()) throw new Error('Bare-metal generation requires validated/generated source code; synthetic platform code is disabled.');"],
     ["boardName: presetId || 'AI Board',", "boardName: metadata.boardName || presetId || '',"],
-    ["architecture: (presetId || '').toLowerCase().includes('microblaze') ? 'MicroBlaze' : 'ARM',", "architecture: metadata.architecture || halDevice.architecture || '',"],
+    ["architecture: (presetId || '').toLowerCase().includes('microblaze') ? 'MicroBlaze' : 'ARM',", "architecture: metadata.architecture || '',"],
+    ["architecture: metadata.architecture || halDevice.architecture || '',", "architecture: metadata.architecture || '',"],
     ["driverName: p.driverName || 'N/A',", "driverName: p.driverName || '',"],
     ["clockSource: p.clockSource || 'FCLK0',", "clockSource: p.clockSource || '',"],
     ["clockFrequency: p.clockFrequency || '100 MHz'", "clockFrequency: p.clockFrequency || ''"],
+    ["fpgaPart: metadata.fpgaDevice || (presetId.includes('mpsoc') ? 'xczu3eg-sbva484-1-e' : 'xc7z020clg400-1'),", "fpgaPart: metadata.fpgaDevice || metadata.fpgaPart || '',"],
     ["clock: '100MHz',", "clock: metadata.clockFrequency || '',"],
-    ["clockFrequency: '100MHz',", "clockFrequency: metadata.clockFrequency || '',"]
+    ["clockFrequency: '100MHz',", "clockFrequency: metadata.clockFrequency || '',"],
+    ["processor: metadata.processorName || halDevice.processor || 'TI Sitara AM335x',", "processor: metadata.processorName || halDevice.processor || '',"],
+    ["architecture: metadata.architecture || halDevice.architecture || 'ARM Cortex-A8',", "architecture: metadata.architecture || halDevice.architecture || '',"],
+    ["memory: metadata.memorySize || '512MB',", "memory: metadata.memorySize || '',"],
+    ["clocks: metadata.clockSources || ['100MHz'],", "clocks: metadata.clockSources || [],"],
+    ["board: halDevice.boardName || 'TI Sitara AM335x EVM',", "board: halDevice.boardName || metadata.boardName || '',"],
+    ["vendor: metadata.vendor || 'Texas Instruments'", "vendor: metadata.vendor || ''"]
   ];
-
   for (const [from, to] of replacements) text = text.split(from).join(to);
   text = text.replace(/\n\s*if \(process\.platform === 'win32'\) \{[\s\S]*?\n\s*\}/, '');
-
   if (text !== original) await fs.writeFile(file, text.replace(/\n/g, eol), 'utf8');
 }
