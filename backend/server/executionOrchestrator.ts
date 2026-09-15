@@ -42,102 +42,6 @@ import { buildIntelligenceLayer } from './buildIntelligenceLayer';
 import { VivadoProjectGenerator } from './vivadoProjectGenerator';
 import { lookupProcessorRegistry } from './processorRegistry';
 
-export const TI_SITARA_DEFAULT_C_CODE = `/**
- * TI Sitara AM335x Production Bare Metal Driver & HAL Initializer
- * Target Processor : TI Sitara AM335x (ARM Cortex-A8 @ 1.0 GHz)
- * Toolchain        : GNU ARM Embedded GCC (arm-none-eabi-gcc / ti-cgt-arm)
- */
-
-#include <stdint.h>
-#include <stdbool.h>
-
-/* ── TI Sitara AM335x Memory Map & Register Definitions ───────────────── */
-#define AM335X_UART0_BASE       0x44E09000UL
-#define AM335X_GPIO1_BASE       0x4804C000UL
-#define AM335X_I2C1_BASE        0x4802A000UL
-#define AM335X_SPI0_BASE        0x48030000UL
-
-#define AM335X_MMC0_BASE        0x48060000UL
-
-/* ── PRCM (Power Reset and Clock Management) Module ────────────────────── */
-#define AM335X_CM_PER_BASE      0x44E00000UL
-#define CM_PER_GPIO1_CLKCTRL    (*((volatile uint32_t *)(AM335X_CM_PER_BASE + 0xAC)))
-#define CM_WKUP_UART0_CLKCTRL   (*((volatile uint32_t *)(0x44E00400UL + 0xB4)))
-
-/* ── UART0 Registers ───────────────────────────────────────────────────── */
-#define UART0_THR               (*((volatile uint32_t *)(AM335X_UART0_BASE + 0x00)))
-#define UART0_LCR               (*((volatile uint32_t *)(AM335X_UART0_BASE + 0x0C)))
-#define UART0_LSR               (*((volatile uint32_t *)(AM335X_UART0_BASE + 0x14)))
-#define UART0_MDR1              (*((volatile uint32_t *)(AM335X_UART0_BASE + 0x20)))
-#define UART0_LSR_TX_FIFO_E     (1 << 5)
-
-/* ── GPIO1 Registers ───────────────────────────────────────────────────── */
-#define GPIO1_OE                (*((volatile uint32_t *)(AM335X_GPIO1_BASE + 0x134)))
-#define GPIO1_DATAOUT           (*((volatile uint32_t *)(AM335X_GPIO1_BASE + 0x13C)))
-#define GPIO1_SETDATAOUT        (*((volatile uint32_t *)(AM335X_GPIO1_BASE + 0x194)))
-#define GPIO1_CLEARDATAOUT      (*((volatile uint32_t *)(AM335X_GPIO1_BASE + 0x190)))
-
-/* ── Peripheral Hardware Initializers ─────────────────────────────────── */
-static void ti_sitara_prcm_init(void) {
-    /* Enable Module Clocks for UART0 and GPIO1 */
-    CM_PER_GPIO1_CLKCTRL = 0x2;  // Module Enable
-    CM_WKUP_UART0_CLKCTRL = 0x2; // Module Enable
-}
-
-static void ti_sitara_uart0_init(uint32_t baudrate) {
-    (void)baudrate;
-    UART0_MDR1 = 0x7;            // Disable UART mode during config
-    UART0_LCR = 0xBF;            // Config Mode B
-    UART0_LCR = 0x03;            // 8-bit word length, 1 stop bit, no parity
-    UART0_MDR1 = 0x0;            // Enable UART 16x mode
-}
-
-static void ti_sitara_uart0_putchar(char c) {
-    while (!(UART0_LSR & UART0_LSR_TX_FIFO_E));
-    UART0_THR = (uint32_t)c;
-}
-
-static void ti_sitara_gpio1_init(void) {
-    /* Configure GPIO1_23 (USR3 LED on BeagleBone Black) as output */
-    GPIO1_OE &= ~(1 << 23);
-}
-
-int main(void) {
-    ti_sitara_prcm_init();
-    ti_sitara_uart0_init(115200);
-    ti_sitara_gpio1_init();
-
-    ti_sitara_uart0_putchar('T');
-    ti_sitara_uart0_putchar('I');
-    ti_sitara_uart0_putchar(' ');
-    ti_sitara_uart0_putchar('S');
-    ti_sitara_uart0_putchar('i');
-    ti_sitara_uart0_putchar('t');
-    ti_sitara_uart0_putchar('a');
-    ti_sitara_uart0_putchar('r');
-    ti_sitara_uart0_putchar('a');
-    ti_sitara_uart0_putchar(' ');
-    ti_sitara_uart0_putchar('A');
-    ti_sitara_uart0_putchar('M');
-    ti_sitara_uart0_putchar('3');
-    ti_sitara_uart0_putchar('3');
-    ti_sitara_uart0_putchar('5');
-    ti_sitara_uart0_putchar('x');
-    ti_sitara_uart0_putchar(' ');
-    ti_sitara_uart0_putchar('O');
-    ti_sitara_uart0_putchar('K');
-    ti_sitara_uart0_putchar('\\r');
-    ti_sitara_uart0_putchar('\\n');
-
-    while(1) {
-        GPIO1_SETDATAOUT = (1 << 23);
-        for (volatile int i = 0; i < 500000; i++);
-        GPIO1_CLEARDATAOUT = (1 << 23);
-        for (volatile int i = 0; i < 500000; i++);
-    }
-    return 0;
-}`;
-
 // Register all multi-platform strategies in singleton strategy factory
 const registry = PlatformStrategyRegistry.getInstance();
 registry.register(new AMDPlatformStrategy());
@@ -200,38 +104,14 @@ export async function runOrchestratedPipeline(
   const isUltraScaleTarget = procLower.includes('ultrascale') || procLower.includes('mpsoc') || procLower.includes('zynqmp') || procLower.includes('a53') || archLower.includes('a53') || archLower.includes('ultrascale');
   const isZynq7000Target = (procLower.includes('zynq-7000') || procLower.includes('zc702') || procLower.includes('zedboard') || procLower.includes('cortex-a9') || archLower.includes('cortex-a9')) && !isUltraScaleTarget;
 
-  // Auto-resolve canonical FPGA device part based on target processor family
-  let canonicalFpgaPart = 'xc7z020clg484-1';
-  if (isUltraScaleTarget) {
-    if (rawDevLower.includes('zcu102') || rawDevLower.includes('xczu9')) {
-      canonicalFpgaPart = 'xczu9eg-ffvb1156-2-i';
-    } else {
-      canonicalFpgaPart = 'xczu3eg-sbva484-1-e';
-    }
-  } else if (isZynq7000Target) {
-    if (rawDevLower.includes('clg400')) {
-      canonicalFpgaPart = 'xc7z020clg400-1';
-    } else {
-      canonicalFpgaPart = 'xc7z020clg484-1';
-    }
-  }
+  const canonicalFpgaPart = String(
+    baseMeta.fpgaDevice || baseMeta.fpgaPart || hklObj?.fpgaDevice || hklObj?.fpgaPart || ''
+  ).trim();
 
-  if (hklObj) {
+  if (hklObj && canonicalFpgaPart) {
     hklObj.fpgaDevice = canonicalFpgaPart;
     hklObj.fpgaPart = canonicalFpgaPart;
   }
-
-  const metadata: HardwareModelMetadata = {
-    ...baseMeta,
-    sessionId,
-    fpgaDevice: canonicalFpgaPart || undefined,
-    fpgaPart: canonicalFpgaPart || undefined,
-    clockSources: baseMeta.clockSources || hklObj?.clockSources || [],
-    memorySize: baseMeta.memorySize || hklObj?.memory || '',
-    interruptController: baseMeta.interruptController || hklObj?.interruptController || '',
-    hklStatus: baseMeta.hklStatus || hklObj?.hklStatus || 'UNVERIFIED',
-    hkl: hklObj
-  };
 
   // Strict Input Boundary Enforcement: BSP generation REQUIRES a validated HKL (hklStatus === 'READY')
   const rawHklStatus = metadata.hklStatus || (metadata.hkl ? metadata.hkl.hklStatus : undefined);
@@ -280,7 +160,8 @@ export async function runOrchestratedPipeline(
   const pLower = safePresetId.toLowerCase();
   const vendor = String(metadata.vendor || '').trim();
   if (!vendor) { return { success: false, error: 'Verified vendor identity is required before execution.' }; }
-  const processor = metadata.processorName || (pLower.includes('raspberry') || pLower.includes('cm4') ? 'ARM Cortex-A72 (BCM2711)' : (presetId ? presetId : (peripherals[0]?.peripheralBlock ? peripherals[0].peripheralBlock : 'ARM Cortex-A9')));
+  const processor = String(metadata.processorName || '').trim();
+  if (!processor) { return { success: false, error: 'Verified processor identity is required before execution.' }; }
   const fileListStr = uploadedFileNames.length > 0 ? uploadedFileNames.join(', ') : 'None (Preset/Schema Mode)';
 
   // Print workflow-specific runtime banners

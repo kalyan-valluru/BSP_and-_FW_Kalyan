@@ -214,8 +214,8 @@ app.post('/api/pipeline/run', async (req: Request, res: Response) => {
   try {
     const orchestrator = new SubAgentOrchestrator();
     const subAgentCtx = await orchestrator.executePipeline({
-      sessionId: sessionId || `sess_${Date.now()}`,
-      presetId: req.body.boardName || 'Target Board',
+      sessionId,
+      presetId: req.body.boardName || '',
       targetProcessor: processorName,
       uploadedFiles: [],
       hkl: current.hkl,
@@ -355,32 +355,18 @@ app.post('/api/validation/universal', async (req: Request, res: Response) => {
       fsSync.mkdirSync(workspaceDir, { recursive: true });
     }
 
-    // Ensure system.dts and main.c exist for non-FPGA preset validation
+    // Validation consumes only artifacts that already exist; this endpoint never manufactures inputs.
     const dtsPath = path.join(workspaceDir, 'system.dts');
     const mainPath = path.join(workspaceDir, 'main.c');
     const elfPath = path.join(workspaceDir, 'firmware.elf');
 
-    if (!fsSync.existsSync(dtsPath)) {
-      const sampleDts = `/dts-v1/;\n/ {\n    compatible = "${vendor ? vendor.toLowerCase().replace(/\s+/g, '-') : 'arm'},${platformId || 'board'}";\n    model = "${platformName || 'Production Board'}";\n    #address-cells = <1>;\n    #size-cells = <1>;\n};`;
-      fsSync.writeFileSync(dtsPath, sampleDts, 'utf-8');
-    }
-
-    if (!fsSync.existsSync(mainPath)) {
-      const sampleC = `/**\n * main.c — Auto-generated BSP main loop\n */\n#include <stdio.h>\n#include <stdint.h>\n\nint main(void) {\n    printf("[BSP] System online.\\\\n");\n    while(1) {}\n    return 0;\n}\n`;
-      fsSync.writeFileSync(mainPath, sampleC, 'utf-8');
-    }
-
-    if (!fsSync.existsSync(elfPath)) {
-      fsSync.writeFileSync(elfPath, Buffer.from('FIRMWARE_ELF_EXECUTABLE_HEADER'));
-    }
-
     const report = await universalEngine.executeValidation({
-      sessionId: sessionId || `sess_${Date.now()}`,
-      platformId: platformId || platformName || 'generic-non-fpga',
-      platformName: platformName || platformId || 'Generic Non-FPGA Board',
-      vendor: vendor || 'ARM / Multi-Vendor',
-      architecture: architecture || 'ARM',
-      targetFlow: targetFlow || 'both',
+      sessionId,
+      platformId,
+      platformName,
+      vendor,
+      architecture,
+      targetFlow,
       peripherals: peripherals || [],
       workspaceDir,
       sourceFiles: {
@@ -706,7 +692,7 @@ app.post('/api/compile-session', (req: Request, res: Response) => {
     hkl = buildHKL({
       peripherals,
       processorName: isZynq ? 'Zynq-7000' : isSTM ? 'STM32F407VGT6' : isMicroBlaze ? 'MicroBlaze' : isRpi ? 'Raspberry Pi CM4' : (req.body.processorName || 'Target Board'),
-      boardName: isZynq ? 'ZC702 Evaluation Board' : isSTM ? 'STM32 Board' : isMicroBlaze ? 'MicroBlaze Board' : isRpi ? 'Raspberry Pi CM4 Board' : (req.body.boardName || 'Target Board'),
+      boardName: isZynq ? 'ZC702 Evaluation Board' : isSTM ? 'STM32 Board' : isMicroBlaze ? 'MicroBlaze Board' : isRpi ? 'Raspberry Pi CM4 Board' : (req.body.boardName || ''),
       fpgaDevice: (isZynq || (!isSTM && !isMicroBlaze && !isRpi)) ? 'xc7z020clg400-1' : 'N/A',
       architecture: (isZynq || (!isSTM && !isMicroBlaze && !isRpi)) ? 'ARM Cortex-A9' : isSTM ? 'ARM Cortex-M7' : isRpi ? 'ARM Cortex-A72 (BCM2711)' : 'MicroBlaze',
       memorySize: isSTM ? '2 MB' : '512 MB',
@@ -726,7 +712,7 @@ app.post('/api/compile-session', (req: Request, res: Response) => {
     deviceTreeCode: typeof deviceTreeCode === 'string' ? deviceTreeCode : '',
     peripherals: hkl.peripherals || peripherals,
     uploadedFileNames: Array.isArray(uploadedFileNames) ? uploadedFileNames : [],
-    targetFlow: targetFlow || 'both',
+    targetFlow,
     workflow: workflow || undefined,
     metadata: {
       ...req.body.metadata,
@@ -876,12 +862,12 @@ app.post('/api/gemini/repair', async (req: Request, res: Response) => {
     const selfHealingResult = await runIntelligentSelfHealingPipeline(
       periphList,
       processorName || 'Target Core',
-      boardName || 'Target Board',
+      boardName || '',
       sessionId || `sess_${Date.now()}`
     );
 
     const mockCtx: any = {
-      sessionId: sessionId || `sess_${Date.now()}`,
+      sessionId,
       presetId: boardName || 'Generic',
       peripherals: selfHealingResult.peripherals,
       metadata: { processorName: processorName || 'Target Core', architecture: 'ARM' },
@@ -921,7 +907,7 @@ app.post('/api/ai/suggest-fixes', async (req: Request, res: Response) => {
     const selfHealingResult = await runIntelligentSelfHealingPipeline(
       peripherals,
       processorName || '',
-      boardName || 'Target Board',
+      boardName || '',
       sessionId || `sess_${Date.now()}`
     );
 
