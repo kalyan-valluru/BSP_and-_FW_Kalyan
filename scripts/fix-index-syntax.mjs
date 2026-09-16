@@ -17,5 +17,17 @@ if (start2 >= 0 && end2 > start2) {
   text = text.slice(0, start2) + `// API: Get specific preset by ID\napp.get('/api/presets/:id', (req: Request, res: Response) => {\n  const preset = hardwarePresets.find(p => p.id === req.params.id);\n  if (preset) return res.json(preset);\n  return res.status(404).json({ error: 'Preset not found' });\n});\n\n` + text.slice(end2);
 }
 
+// Remove accidental duplicate route content appended after server startup.
+const startup = text.search(/\nconst server = app\.listen\(PORT, \(\) => \{/);
+if (startup >= 0) {
+  const timeoutLine = text.indexOf('\nserver.setTimeout(600000);', startup);
+  if (timeoutLine >= 0) {
+    const lineEnd = text.indexOf('\n', timeoutLine + 1);
+    if (lineEnd >= 0 && lineEnd < text.length - 1) {
+      text = text.slice(0, lineEnd + 1);
+    }
+  }
+}
+
 await fs.writeFile(file, text.replace(/\n/g, eol), 'utf8');
-console.log('Fixed malformed preset route blocks without touching frontend source.');
+console.log('Repaired backend route syntax without touching frontend source.');
