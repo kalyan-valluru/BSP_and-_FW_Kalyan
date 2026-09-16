@@ -1,32 +1,11 @@
 export type SourceType =
-  | 'XSA'
-  | 'XPR'
-  | 'DTS'
-  | 'SVD'
-  | 'NETLIST'
-  | 'SCHEMATIC'
-  | 'DATASHEET'
-  | 'RAG'
-  | 'USER_INPUT'
-  | 'AI_INFERENCE'
-  | 'UNKNOWN'
-  | 'Vision AI'
-  | 'RAG (VKR Index)'
-  | 'RAG (VKR Local KB)'
-  | 'PDF'
-  | 'HWH'
-  | 'Local KB'
-  | 'User';
+  | 'XSA' | 'XPR' | 'DTS' | 'SVD' | 'NETLIST' | 'SCHEMATIC' | 'DATASHEET'
+  | 'RAG' | 'USER_INPUT' | 'AI_INFERENCE' | 'UNKNOWN' | 'Vision AI'
+  | 'RAG (VKR Index)' | 'RAG (VKR Local KB)' | 'PDF' | 'HWH' | 'Local KB' | 'User';
 
 export type VerificationStatus =
-  | 'SOURCE_VERIFIED'
-  | 'VENDOR_SOURCE_VERIFIED'
-  | 'VALIDATED'
-  | 'AI_INFERRED'
-  | 'NOT_HARDWARE_VERIFIED'
-  | 'REQUIRES_REVIEW'
-  | 'CONFLICTING_EVIDENCE'
-  | 'SOURCE_MISMATCH';
+  | 'SOURCE_VERIFIED' | 'VENDOR_SOURCE_VERIFIED' | 'VALIDATED' | 'AI_INFERRED'
+  | 'NOT_HARDWARE_VERIFIED' | 'REQUIRES_REVIEW' | 'CONFLICTING_EVIDENCE' | 'SOURCE_MISMATCH';
 
 export interface FieldSourceMeta {
   value: any;
@@ -50,25 +29,23 @@ export interface HardwarePeripheral {
   baseAddress: string;
   addressType?: 'MMIO' | 'I2C' | 'SPI' | 'MDIO' | 'Logic-Only';
   addressTypeLabel?: string;
-
   name?: string;
   peripheral?: string;
   source_type?: string;
-  // Extended BSP fields
-  type?: string;           // GPIO | UART | SPI | I2C | CAN | Ethernet | Timer | ADC | DAC | PWM | USB | SD | QSPI | PCIe | BRAM | DMA
-  bus?: string;            // AXI4-Lite | AXI4 | APB | AHB | APB/AHB
-  clockSource?: string;    // FCLK0 | s_axi_aclk | PCLK | Internal
-  clockFrequency?: string; // e.g. "100 MHz"
-  version?: string;        // IP version e.g. "4.0"
-  dma?: string;            // "Enabled" | "Disabled"
-  operatingMode?: string;  // "Interrupt" | "Polling" | "DMA"
-  addressRange?: string;   // e.g. "0x41200000 - 0x41200FFF"
+  type?: string;
+  bus?: string;
+  clockSource?: string;
+  clockFrequency?: string;
+  version?: string;
+  dma?: string;
+  operatingMode?: string;
+  addressRange?: string;
   sourceFile?: string;
   driverName?: string;
   interruptNumber?: number | string;
   status?: 'Active' | 'Inactive' | 'Warning' | 'insufficient_evidence';
   requires_review?: boolean;
-  confidence?: number; // percentage, e.g., 95
+  confidence?: number;
   deviceAddress?: string;
   spiChipSelect?: number | string;
   gpioNumber?: number | string;
@@ -76,7 +53,6 @@ export interface HardwarePeripheral {
   correctedAddress?: string;
   provenanceSource?: string;
   verification_status?: VerificationStatus;
-  // Provenance metadata fields per field
   baseAddress_meta?: FieldSourceMeta;
   interruptNumber_meta?: FieldSourceMeta;
   clockSource_meta?: FieldSourceMeta;
@@ -84,7 +60,6 @@ export interface HardwarePeripheral {
   physicalPinMapping_meta?: FieldSourceMeta;
   bus_meta?: FieldSourceMeta;
   dma_meta?: FieldSourceMeta;
-  // Reasoning Layer & Traceability Metadata
   confidenceScore?: number;
   detectionSource?: string[];
   supportingEvidence?: string[];
@@ -104,6 +79,12 @@ export interface HardwarePeripheral {
     driverName?: 'auto-corrected' | 'verified' | 'user-provided' | 'unresolved';
     bus?: 'auto-corrected' | 'verified' | 'user-provided' | 'unresolved';
     physicalPinMapping?: 'auto-corrected' | 'verified' | 'user-provided' | 'unresolved';
+  };
+  provenance?: {
+    status?: VerificationStatus | string;
+    source?: string;
+    evidence?: string[];
+    authoritative?: boolean;
   };
 }
 
@@ -143,6 +124,7 @@ export interface PlatformPreset {
   generatedArtifacts?: string[];
   toolchainUsed?: string;
   supportedFlow?: 'Bare Metal' | 'Linux' | 'Both';
+  processor?: string;
 }
 
 export interface AppState {
@@ -195,4 +177,3 @@ export interface ConfidenceReport {
   overallConfidence: number;
   fieldConfidenceMap?: Record<string, number>;
 }
-
