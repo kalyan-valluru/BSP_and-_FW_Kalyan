@@ -1,39 +1,29 @@
-name: Final backend hardening
+name: Backend hardening check
 
 on:
   push:
     branches: [realtime-production-upgrade]
+  pull_request:
+    branches: [main]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  fix:
-    if: github.actor == 'kalyan-valluru'
+  hardening-check:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: realtime-production-upgrade
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Harden backend
-        run: |
-          node scripts/harden-legacy3.mjs
-          node scripts/harden-spec.mjs
-          node scripts/fix-index-syntax.mjs
-      - name: Commit backend fixes safely
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add backend/server/executionOrchestrator.ts server/index.ts
-          if git diff --cached --quiet; then
-            echo "No backend fixes required."
-            exit 0
-          fi
-          git commit -m "fix: finalize backend hardening"
-          git fetch origin realtime-production-upgrade
-          git rebase origin/realtime-production-upgrade
-          git push origin HEAD:realtime-production-upgrade
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Backend typecheck
+        run: npm run typecheck:backend
+      - name: Production audit
+        run: npm run production:audit
